@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme" parent="android:Theme">
+        <item name="styledAlertDialogStyle">@style/StyledAlertDialog</item>
+        <item name="styledAlertDialogTheme">@style/Theme.StyledAlertDialog</item>
+    </style>
+
+    <style name="Theme.StyledAlertDialog" parent="android:Theme.Dialog">
+        <item name="alertDialogDividerBackground">@android:color/white</item>
+        <item name="alertDialogDividerHeight">2dp</item>
+        <item name="alertDialogTitleHeight">30dp</item>
+        <item name="alertDialogButtonBarHeight">48dp</item>
+        <item name="alertDialogButtonBarBackground">@android:color/white</item>
+        <item name="android:horizontalDivider">@android:color/darker_gray</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

@@ -1,5 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">Alertdialogpro Demo</string>
+    <string name="title_activity_my">MyActivity</string>
+    <string name="show_dialog">Show Dialog</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

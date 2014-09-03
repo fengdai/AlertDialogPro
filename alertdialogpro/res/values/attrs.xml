@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="styledAlertDialogTheme" format="reference" />
+    <attr name="alertDialogDividerBackground" format="reference|color" />
+    <attr name="alertDialogDividerHeight" format="dimension" />
+    <attr name="alertDialogTitleHeight" format="dimension" />
+    <attr name="alertDialogButtonBarHeight" format="dimension" />
+    <attr name="styledAlertDialogStyle" format="reference" />
+
+    <declare-styleable name="StyledAlertDialog">
+        <attr name="layout" format="reference" />
+        <attr name="listItemLayout" format="reference" />
+    </declare-styleable>
+</resources>

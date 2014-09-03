@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StyledAlertDialog">
+        <item name="layout">@layout/alert_dialog_holo</item>
+    </style>
+
+</resources>
