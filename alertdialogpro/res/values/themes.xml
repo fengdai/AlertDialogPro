@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme" parent="android:Theme">
-        <item name="styledAlertDialogStyle">@style/StyledAlertDialog</item>
-        <item name="styledAlertDialogTheme">@style/Theme.StyledAlertDialog</item>
+    <style name="AlertDialogTheme" parent="android:Theme.Dialog"></style>
+
+    <style name="AlertDialogTheme.Base" parent="AlertDialogTheme">
+        <item name="alertDialogTitleDividerBackground">?android:attr/horizontalDivider</item>
+        <item name="alertDialogTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
+        <item name="alertDialogTitleHeight">@dimen/alert_dialog_title_height</item>
+        <item name="buttonBarButtonStyle">?android:attr/borderlessButtonStyle</item>
     </style>
 
-    <style name="Theme.StyledAlertDialog" parent="android:Theme.Dialog">
-        <item name="alertDialogDividerBackground">@android:color/white</item>
-        <item name="alertDialogDividerHeight">2dp</item>
-        <item name="alertDialogTitleHeight">30dp</item>
-        <item name="alertDialogButtonBarHeight">48dp</item>
-        <item name="alertDialogButtonBarBackground">@android:color/white</item>
+    <style name="AlertDialogTheme.Base.StyledAlertDialog">
+        <!--<item name="android:horizontalDivider">@android:color/darker_gray</item>-->
+        <!--<item name="android:windowBackground">@drawable/dialog_bg_rounded</item>-->
+        <item name="android:listViewStyle">?android:attr/listViewStyle</item>
         <item name="android:horizontalDivider">@android:color/darker_gray</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>

@@ -1,25 +1,12 @@
 <resources>
 
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+    <style name="AppBaseTheme" parent="Theme.AppCompat"></style>
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
-        <item name="styledAlertDialogTheme">@style/Theme.Demo.StyledAlertDialog</item>
-        <item name="styledAlertDialogStyle">@style/StyledAlertDialog</item>
+        <item name="styledAlertDialogTheme">@style/AppTheme.StyledAlertDialog</item>
     </style>
 
-    <style name="Theme.Demo.StyledAlertDialog" parent="Theme.Base.AppCompat.Dialog.FixedSize">
-        <item name="alertDialogDividerBackground">@android:color/white</item>
-        <item name="alertDialogDividerHeight">2dp</item>
-        <item name="alertDialogTitleHeight">30dp</item>
-        <item name="alertDialogButtonBarHeight">48dp</item>
-        <!--<item name="alertDialogButtonBarBackground">@android:color/transparent</item>-->
-        <!--<item name="android:horizontalDivider">@android:color/darker_gray</item>-->
-        <!--<item name="android:windowBackground">@drawable/dialog_bg_rounded</item>-->
-    </style>
-
-    <style name="StyledAlertDialog">
-        <!-- Custom AlertDialog Style. -->
-    </style>
+    <style name="AppTheme.StyledAlertDialog" parent="AlertDialogTheme.Base.StyledAlertDialog"></style>
 
 </resources>

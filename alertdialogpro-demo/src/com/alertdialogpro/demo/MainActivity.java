@@ -1,5 +1,7 @@
 package com.alertdialogpro.demo;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -8,13 +10,14 @@ import android.view.View;
 
 import com.alertdialogpro.AlertDialogPro;
 
-public class MyActivity extends ActionBarActivity implements View.OnClickListener {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         findViewById(R.id.showDialog).setOnClickListener(this);
+        findViewById(R.id.showNativeDialog).setOnClickListener(this);
     }
 
     @Override
@@ -40,18 +43,30 @@ public class MyActivity extends ActionBarActivity implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.showDialog:
-                showAlertDialog();
+                showAlertDialog(new AlertDialogPro.Builder(this));
+                break;
+            case R.id.showNativeDialog:
+                showAlertDialog(new AlertDialog.Builder(this));
                 break;
         }
     }
 
-    private void showAlertDialog() {
-        AlertDialogPro.Builder builder = new AlertDialogPro.Builder(this);
-        builder.setTitle("Titleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee").//
-                setMessage("Message").//
+    private void showAlertDialog(AlertDialog.Builder builder) {
+        builder.setTitle("Title").//
+                setIcon(R.drawable.ic_launcher).//
+                //setMessage("Message").//
+                setMultiChoiceItems(new String[]{"A", "B", "C"}, //
+                new boolean[]{true, false, true}, //
+                new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                    }
+                }).
                 setNeutralButton("Neutral", null).//
                 setPositiveButton("OK", null).//
                 setNegativeButton("Cancel", null).//
                 show();
     }
+
+
 }

@@ -2,8 +2,9 @@
 <resources>
 
     <string name="app_name">Alertdialogpro Demo</string>
-    <string name="title_activity_my">MyActivity</string>
+    <string name="title_activity_my">Alertdialogpro Demo</string>
     <string name="show_dialog">Show Dialog</string>
+    <string name="show_native_dialog">Show Native Dialog</string>
     <string name="action_settings">Settings</string>
 
 </resources>

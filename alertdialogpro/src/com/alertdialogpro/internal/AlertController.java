@@ -173,18 +173,17 @@ public class AlertController {
 
         mAlertDialogLayout = a.getResourceId(R.styleable.StyledAlertDialog_layout,
                 R.layout.alert_dialog_holo);
+        mListLayout = a.getResourceId(
+                R.styleable.StyledAlertDialog_listLayout,
+                R.layout.select_dialog_holo);
+        mMultiChoiceItemLayout = a.getResourceId(
+                R.styleable.StyledAlertDialog_multiChoiceItemLayout,
+                android.R.layout.select_dialog_multichoice);
+        mSingleChoiceItemLayout = a.getResourceId(
+                R.styleable.StyledAlertDialog_singleChoiceItemLayout,
+                android.R.layout.select_dialog_singlechoice);
         mListItemLayout = a.getResourceId(R.styleable.StyledAlertDialog_listItemLayout,
                 android.R.layout.select_dialog_item);
-
-        //        mListLayout = a.getResourceId(
-        //                com.android.internal.R.styleable.AlertDialog_listLayout,
-        //                com.android.internal.R.layout.select_dialog);
-        //        mMultiChoiceItemLayout = a.getResourceId(
-        //                com.android.internal.R.styleable.AlertDialog_multiChoiceItemLayout,
-        //                com.android.internal.R.layout.select_dialog_multichoice);
-        //        mSingleChoiceItemLayout = a.getResourceId(
-        //                com.android.internal.R.styleable.AlertDialog_singleChoiceItemLayout,
-        //                com.android.internal.R.layout.select_dialog_singlechoice);
 
         a.recycle();
     }
