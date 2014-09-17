@@ -7,7 +7,7 @@
     </style>
 
     <style name="AlertDialogTheme.Base.StyledAlertDialog">
-        <item name="alertDialogTitleDividerBackground">@color/holo_blue_light</item>
+        <item name="alertDialogTitleDividerBackground">@android:color/holo_blue_light</item>
         <item name="buttonBarStyle">@style/ButtonBar</item>
     </style>
 
