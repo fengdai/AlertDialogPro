@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:ellipsize="marquee"
     android:gravity="center_vertical"
-    android:minHeight="?attr/listPreferredItemHeightSmall"
+    android:minHeight="?attr/alertDialogListItemHeight"
     android:paddingLeft="16dip"
     android:paddingRight="16dip"
-    android:textAppearance="?attr/textAppearanceListItemSmall" />
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:textColor="?attr/alertDialogListItemTextColor" />

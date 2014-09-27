@@ -6,11 +6,4 @@
         <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
     </style>
 
-    <style name="AlertDialogTheme.Base.StyledAlertDialog">
-        <item name="android:listPreferredItemHeight">23dp</item>
-        <item name="android:textColorAlertDialogListItem">@android:color/black</item>
-        <item name="alertDialogTitleDividerBackground">@color/holo_blue_light</item>
-        <item name="buttonBarStyle">@style/ButtonBar</item>
-    </style>
-
 </resources>

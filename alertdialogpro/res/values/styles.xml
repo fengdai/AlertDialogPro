@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonBar" parent="android:ButtonBar">
+        <!-- Use own attrs -->
+        <item name="linearLayoutDivider">?buttonBarDividerVertical</item>
+        <item name="showDividers">middle</item>
+        <item name="dividerPadding">0dip</item>
+        <item name="android:paddingTop">0dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+        <item name="android:paddingBottom">0dip</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="Button" parent="android:Widget.Button">
+        <item name="android:background">@drawable/item_background_holo_dark</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+        <item name="android:textColor">@color/primary_text_holo_dark</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
+    </style>
+
+    <style name="ListView" parent="android:Widget.ListView">
+        <item name="android:listSelector">?alertDialogListItemBackground</item>
+    </style>
+
+    <style name="DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/DialogWindowTitleText</item>
+    </style>
+
+    <style name="DialogWindowTitleText" parent="android:TextAppearance">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/holo_blue_light</item>
+    </style>
+
+</resources>

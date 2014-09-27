@@ -7,6 +7,6 @@
         <item name="styledAlertDialogTheme">@style/AppTheme.StyledAlertDialog</item>
     </style>
 
-    <style name="AppTheme.StyledAlertDialog" parent="AlertDialogTheme.Base.StyledAlertDialog"></style>
+    <style name="AppTheme.StyledAlertDialog" parent="AlertDialogTheme.Base"></style>
 
 </resources>

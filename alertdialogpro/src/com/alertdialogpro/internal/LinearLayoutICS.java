@@ -27,7 +27,7 @@ public class LinearLayoutICS extends LinearLayout {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.LinearLayoutICS);
 
-        mDivider = a.getDrawable(R.styleable.LinearLayoutICS_divider);
+        mDivider = a.getDrawable(R.styleable.LinearLayoutICS_linearLayoutDivider);
         if (mDivider != null) {
             mDividerWidth = mDivider.getIntrinsicWidth();
             mDividerHeight = mDivider.getIntrinsicHeight();

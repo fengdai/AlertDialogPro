@@ -5,7 +5,16 @@
     <attr name="alertDialogTitleDividerHeight" format="dimension" />
     <attr name="alertDialogTitleHeight" format="dimension" />
     <attr name="alertDialogButtonBarHeight" format="dimension" />
+    <attr name="alertDialogListItemHeight" format="dimension" />
+    <attr name="alertDialogListItemTextColor" format="dimension" />
+    <attr name="alertDialogListDivider" format="dimension" />
+    <attr name="alertDialogListItemBackground" format="reference" />
+
     <attr name="styledAlertDialogStyle" format="reference" />
+    <attr name="buttonBarStyle" format="reference" />
+    <attr name="buttonBarButtonStyle" format="reference" />
+    <attr name="buttonBarDividerHorizontal" format="reference" />
+    <attr name="buttonBarDividerVertical" format="reference" />
 
     <declare-styleable name="StyledAlertDialog">
         <attr name="layout" format="reference" />
@@ -17,7 +26,7 @@
 
     <declare-styleable name="LinearLayoutICS">
         <!-- Drawable to use as a vertical divider between buttons. -->
-        <attr name="divider" />
+        <attr name="linearLayoutDivider" format="reference" />
         <!-- Setting for which dividers to show. -->
         <attr name="showDividers">
             <flag name="none" value="0" />

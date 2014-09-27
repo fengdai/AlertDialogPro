@@ -6,7 +6,8 @@
     android:checkMark="?android:attr/listChoiceIndicatorMultiple"
     android:ellipsize="marquee"
     android:gravity="center_vertical"
-    android:minHeight="?attr/listPreferredItemHeightSmall"
+    android:minHeight="?attr/alertDialogListItemHeight"
     android:paddingLeft="16dip"
     android:paddingRight="16dip"
-    android:textAppearance="?android:attr/textAppearanceMedium" />
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:textColor="?attr/alertDialogListItemTextColor" />

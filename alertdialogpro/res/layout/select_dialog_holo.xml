@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:cacheColorHint="@null"
+    android:divider="?attr/alertDialogListDivider"
     android:overScrollMode="ifContentScrolls"
     android:scrollbars="vertical"
     android:textAlignment="viewStart" />

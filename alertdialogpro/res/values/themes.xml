@@ -4,18 +4,25 @@
     <style name="AlertDialogTheme" parent="android:Theme.Dialog"></style>
 
     <style name="AlertDialogTheme.Base" parent="AlertDialogTheme">
-        <item name="alertDialogTitleDividerBackground">?android:attr/horizontalDivider</item>
+        <!-- Window -->
+        <item name="android:windowBackground">@drawable/dialog_full_holo_dark</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle</item>
+        <!-- ListView -->
+        <item name="android:listViewStyle">@style/ListView</item>
+        <item name="alertDialogListItemHeight">48dip</item>
+        <item name="alertDialogListItemTextColor">@color/primary_text_holo_dark</item>
+        <item name="alertDialogListItemBackground">@drawable/item_background_holo_dark</item>
+        <item name="alertDialogListDivider">@drawable/list_divider_holo_dark</item>
+        <!-- Title -->
+        <item name="alertDialogTitleDividerBackground">@color/holo_blue_light</item>
         <item name="alertDialogTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
         <item name="alertDialogTitleHeight">@dimen/alert_dialog_title_height</item>
-        <item name="buttonBarButtonStyle">?android:attr/borderlessButtonStyle</item>
-    </style>
-
-    <style name="AlertDialogTheme.Base.StyledAlertDialog">
-        <!--<item name="android:horizontalDivider">@android:color/darker_gray</item>-->
-        <!--<item name="android:windowBackground">@drawable/dialog_bg_rounded</item>-->
-        <item name="android:listViewStyle">?android:attr/listViewStyle</item>
-        <item name="android:horizontalDivider">@android:color/darker_gray</item>
-        <item name="android:windowContentOverlay">@null</item>
+        <!-- ButtonBar-->
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarDividerHorizontal">@drawable/list_divider_holo_dark</item>
+        <item name="buttonBarDividerVertical">@drawable/list_divider_holo_dark</item>
+        <item name="buttonBarButtonStyle">@style/Button</item>
     </style>
 
 </resources>
