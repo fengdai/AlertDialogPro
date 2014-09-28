@@ -1,6 +1,5 @@
 package com.alertdialogpro.internal;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.TypedArray;
@@ -230,7 +229,7 @@ public class AlertController {
     }
 
     /**
-     * @see AlertDialog.Builder#setCustomTitle(View)
+     * @see com.alertdialogpro.AlertDialogPro.Builder#setCustomTitle(View)
      */
     public void setCustomTitle(View customTitleView) {
         mCustomTitleView = customTitleView;

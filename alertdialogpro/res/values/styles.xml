@@ -3,9 +3,9 @@
 
     <style name="ButtonBar" parent="android:ButtonBar">
         <!-- Use own attrs -->
-        <item name="linearLayoutDivider">?attr/adpButtonBarDividerVertical</item>
-        <item name="showDividers">middle</item>
-        <item name="dividerPadding">0dip</item>
+        <item name="llDivider">?attr/adpButtonBarDividerVertical</item>
+        <item name="llShowDividers">middle</item>
+        <item name="llDividerPadding">0dip</item>
         <item name="android:paddingTop">0dip</item>
         <item name="android:paddingLeft">0dip</item>
         <item name="android:paddingRight">0dip</item>

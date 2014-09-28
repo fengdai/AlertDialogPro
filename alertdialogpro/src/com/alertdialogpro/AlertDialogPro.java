@@ -29,22 +29,7 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
         super(context, theme);
     }
 
-    private void invokePrivateConstructor() {
-
-    }
-
     static int resolveDialogTheme(Context context, int resid) {
-        //        if (resid == THEME_TRADITIONAL) {
-        //            return com.android.internal.R.style.Theme_Dialog_Alert;
-        //        } else if (resid == THEME_HOLO_DARK) {
-        //            return com.android.internal.R.style.Theme_Holo_Dialog_Alert;
-        //        } else if (resid == THEME_HOLO_LIGHT) {
-        //            return com.android.internal.R.style.Theme_Holo_Light_Dialog_Alert;
-        //        } else if (resid == THEME_DEVICE_DEFAULT_DARK) {
-        //            return com.android.internal.R.style.Theme_DeviceDefault_Dialog_Alert;
-        //        } else if (resid == THEME_DEVICE_DEFAULT_LIGHT) {
-        //            return com.android.internal.R.style.Theme_DeviceDefault_Light_Dialog_Alert;
-        //        } else
         if (resid >= 0x01000000) { // start of real resource IDs.
             return resid;
         } else {
@@ -205,7 +190,7 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
         private int mTheme;
 
         /**
-         * Constructor using a context for this builder and the {@link AlertDialog} it creates.
+         * Constructor using a context for this builder and the {@link AlertDialogPro} it creates.
          */
         public Builder(Context context) {
             this(context, 0);
@@ -213,7 +198,7 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
 
         /**
          * Constructor using a context and theme for this builder and
-         * the {@link AlertDialog} it creates.
+         * the {@link AlertDialogPro} it creates.
          */
         public Builder(Context context, int theme) {
             super(context);
@@ -766,7 +751,7 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
         }
 
         /**
-         * Creates a {@link AlertDialog} with the arguments supplied to this builder. It does not
+         * Creates a {@link AlertDialogPro} with the arguments supplied to this builder. It does not
          * {@link android.app.Dialog#show()} the dialog. This allows the user to do any extra processing
          * before displaying the dialog. Use {@link #show()} if you don't have any other processing
          * to do and want this to be created and displayed.
@@ -788,7 +773,7 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
         }
 
         /**
-         * Creates a {@link AlertDialog} with the arguments supplied to this builder and
+         * Creates a {@link AlertDialogPro} with the arguments supplied to this builder and
          * {@link android.app.Dialog#show()}'s the dialog.
          */
         public AlertDialogPro show() {

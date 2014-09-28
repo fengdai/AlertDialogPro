@@ -97,8 +97,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        alertdialogpro:linearLayoutDivider="?attr/adpButtonBarDividerHorizontal"
-        alertdialogpro:showDividers="beginning">
+        alertdialogpro:llDivider="?attr/adpButtonBarDividerHorizontal"
+        alertdialogpro:llShowDividers="beginning">
 
         <com.alertdialogpro.internal.LinearLayoutICS
             style="?attr/adpButtonBarStyle"
