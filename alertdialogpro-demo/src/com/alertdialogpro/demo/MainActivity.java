@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 showAlertDialog(new AlertDialogPro.Builder(this));
                 break;
             case R.id.showLightDialog:
-                showAlertDialog(new AlertDialogPro.Builder(this, R.style.AlertDialogTheme_Holo_Light));
+                showAlertDialog(new AlertDialogPro.Builder(this, R.style.AlertDialogProTheme_Holo_Light));
                 break;
             case R.id.showNativeDialog:
                 showAlertDialog(new AlertDialog.Builder(this));

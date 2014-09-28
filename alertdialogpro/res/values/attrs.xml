@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="styledAlertDialogTheme" format="reference" />
-    <attr name="alertDialogTitleDividerBackground" format="reference|color" />
-    <attr name="alertDialogTitleDividerHeight" format="dimension" />
-    <attr name="alertDialogTitleHeight" format="dimension" />
-    <attr name="alertDialogButtonBarHeight" format="dimension" />
-    <attr name="alertDialogListItemHeight" format="dimension" />
-    <attr name="alertDialogListItemTextColor" format="dimension" />
-    <attr name="alertDialogListDivider" format="dimension" />
-    <attr name="alertDialogListItemBackground" format="reference" />
+    <attr name="alertDialogProTheme" format="reference" />
 
-    <attr name="styledAlertDialogStyle" format="reference" />
-    <attr name="buttonBarStyle" format="reference" />
-    <attr name="buttonBarButtonStyle" format="reference" />
-    <attr name="buttonBarDividerHorizontal" format="reference" />
-    <attr name="buttonBarDividerVertical" format="reference" />
+    <declare-styleable name="AlertDialogProStyle">
+        <attr name="adpTitleDividerBackground" format="reference|color" />
+        <attr name="adpTitleDividerHeight" format="dimension" />
+        <attr name="adpTitleHeight" format="dimension" />
+        <attr name="adpListItemHeight" format="dimension" />
+        <attr name="adpListItemTextColor" format="dimension" />
+        <attr name="adpListDivider" format="dimension" />
+        <attr name="adpListItemBackground" format="reference" />
+        <attr name="adpButtonBarHeight" format="dimension" />
+        <attr name="adpButtonBarDividerHorizontal" format="reference" />
+        <attr name="adpButtonBarDividerVertical" format="reference" />
+        <attr name="adpButtonBarStyle" format="reference" />
+        <attr name="adpButtonBarButtonStyle" format="reference" />
 
-    <declare-styleable name="StyledAlertDialog">
-        <attr name="layout" format="reference" />
-        <attr name="listLayout" format="reference" />
-        <attr name="listItemLayout" format="reference" />
-        <attr name="multiChoiceItemLayout" format="reference" />
-        <attr name="singleChoiceItemLayout" format="reference" />
+        <attr name="adpLayout" format="reference" />
+        <attr name="adpListLayout" format="reference" />
+        <attr name="adpListItemLayout" format="reference" />
+        <attr name="adpMultiChoiceItemLayout" format="reference" />
+        <attr name="adpSingleChoiceItemLayout" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="LinearLayoutICS">

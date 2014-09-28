@@ -3,7 +3,7 @@
 
     <style name="ButtonBar" parent="android:ButtonBar">
         <!-- Use own attrs -->
-        <item name="linearLayoutDivider">?buttonBarDividerVertical</item>
+        <item name="linearLayoutDivider">?attr/adpButtonBarDividerVertical</item>
         <item name="showDividers">middle</item>
         <item name="dividerPadding">0dip</item>
         <item name="android:paddingTop">0dip</item>
@@ -31,7 +31,7 @@
     </style>
 
     <style name="ListView" parent="android:Widget.ListView">
-        <item name="android:listSelector">?alertDialogListItemBackground</item>
+        <item name="android:listSelector">?attr/adpListItemBackground</item>
     </style>
 
     <style name="DialogWindowTitle"></style>

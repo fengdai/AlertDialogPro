@@ -4,9 +4,9 @@
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
-        <item name="styledAlertDialogTheme">@style/AppTheme.StyledAlertDialog</item>
+        <item name="alertDialogProTheme">@style/AppTheme.AlertDialogProTheme</item>
     </style>
 
-    <style name="AppTheme.StyledAlertDialog" parent="AlertDialogTheme.Base"></style>
+    <style name="AppTheme.AlertDialogProTheme" parent="AlertDialogProTheme.Holo"></style>
 
 </resources>

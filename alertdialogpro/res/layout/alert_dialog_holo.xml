@@ -15,8 +15,8 @@
         <View
             android:id="@+id/titleDividerTop"
             android:layout_width="match_parent"
-            android:layout_height="?attr/alertDialogTitleDividerHeight"
-            android:background="?attr/alertDialogTitleDividerBackground"
+            android:layout_height="?attr/adpTitleDividerHeight"
+            android:background="?attr/adpTitleDividerBackground"
             android:visibility="gone" />
 
         <LinearLayout
@@ -26,7 +26,7 @@
             android:layout_marginLeft="16dip"
             android:layout_marginRight="16dip"
             android:gravity="center_vertical|start"
-            android:minHeight="?attr/alertDialogTitleHeight"
+            android:minHeight="?attr/adpTitleHeight"
             android:orientation="horizontal">
 
             <ImageView
@@ -50,8 +50,8 @@
         <View
             android:id="@+id/titleDivider"
             android:layout_width="match_parent"
-            android:layout_height="?attr/alertDialogTitleDividerHeight"
-            android:background="?attr/alertDialogTitleDividerBackground"
+            android:layout_height="?attr/adpTitleDividerHeight"
+            android:background="?attr/adpTitleDividerBackground"
             android:visibility="gone" />
     </LinearLayout>
 
@@ -97,11 +97,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        alertdialogpro:linearLayoutDivider="?attr/buttonBarDividerHorizontal"
+        alertdialogpro:linearLayoutDivider="?attr/adpButtonBarDividerHorizontal"
         alertdialogpro:showDividers="beginning">
 
         <com.alertdialogpro.internal.LinearLayoutICS
-            style="?buttonBarStyle"
+            style="?attr/adpButtonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layoutDirection="locale"
@@ -110,7 +110,7 @@
 
             <Button
                 android:id="@+id/button2"
-                style="?buttonBarButtonStyle"
+                style="?attr/adpButtonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
@@ -119,7 +119,7 @@
 
             <Button
                 android:id="@+id/button3"
-                style="?buttonBarButtonStyle"
+                style="?attr/adpButtonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -128,7 +128,7 @@
 
             <Button
                 android:id="@+id/button1"
-                style="?buttonBarButtonStyle"
+                style="?attr/adpButtonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"

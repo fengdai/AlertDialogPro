@@ -49,7 +49,7 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
             return resid;
         } else {
             TypedValue outValue = new TypedValue();
-            context.getTheme().resolveAttribute(R.attr.styledAlertDialogTheme,
+            context.getTheme().resolveAttribute(R.attr.alertDialogProTheme,
                     outValue,
                     true);
             return outValue.resourceId;
