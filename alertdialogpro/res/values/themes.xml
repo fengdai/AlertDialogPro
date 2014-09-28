@@ -3,11 +3,13 @@
 
     <style name="AlertDialogTheme" parent="android:Theme.Dialog"></style>
 
+    <style name="AlertDialogTheme.Light" parent="android:Theme.Dialog"></style>
+
     <style name="AlertDialogTheme.Base" parent="AlertDialogTheme">
         <!-- Window -->
         <item name="android:windowBackground">@drawable/dialog_full_holo_dark</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowTitleStyle">@style/DialogWindowTitle</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Holo</item>
         <!-- ListView -->
         <item name="android:listViewStyle">@style/ListView</item>
         <item name="alertDialogListItemHeight">48dip</item>
@@ -22,7 +24,33 @@
         <item name="buttonBarStyle">@style/ButtonBar</item>
         <item name="buttonBarDividerHorizontal">@drawable/list_divider_holo_dark</item>
         <item name="buttonBarDividerVertical">@drawable/list_divider_holo_dark</item>
-        <item name="buttonBarButtonStyle">@style/Button</item>
+        <item name="buttonBarButtonStyle">@style/Holo.Button</item>
     </style>
+
+    <style name="AlertDialogTheme.Base.Light" parent="AlertDialogTheme.Light">
+        <!-- Window -->
+        <item name="android:windowBackground">@drawable/dialog_full_holo_light</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Holo.Light</item>
+        <!-- ListView -->
+        <item name="android:listViewStyle">@style/ListView</item>
+        <item name="alertDialogListItemHeight">48dip</item>
+        <item name="alertDialogListItemTextColor">@color/primary_text_holo_light</item>
+        <item name="alertDialogListItemBackground">@drawable/item_background_holo_light</item>
+        <item name="alertDialogListDivider">@drawable/list_divider_holo_light</item>
+        <!-- Title -->
+        <item name="alertDialogTitleDividerBackground">@color/holo_blue_light</item>
+        <item name="alertDialogTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
+        <item name="alertDialogTitleHeight">@dimen/alert_dialog_title_height</item>
+        <!-- ButtonBar-->
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarDividerHorizontal">@drawable/list_divider_holo_light</item>
+        <item name="buttonBarDividerVertical">@drawable/list_divider_holo_light</item>
+        <item name="buttonBarButtonStyle">@style/Holo.Button.Light</item>
+    </style>
+
+    <style name="AlertDialogTheme.Holo" parent="AlertDialogTheme.Base"></style>
+
+    <style name="AlertDialogTheme.Holo.Light" parent="AlertDialogTheme.Base.Light"></style>
 
 </resources>

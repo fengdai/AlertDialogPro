@@ -17,6 +17,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         findViewById(R.id.showDialog).setOnClickListener(this);
+        findViewById(R.id.showLightDialog).setOnClickListener(this);
         findViewById(R.id.showNativeDialog).setOnClickListener(this);
     }
 
@@ -44,6 +45,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.showDialog:
                 showAlertDialog(new AlertDialogPro.Builder(this));
+                break;
+            case R.id.showLightDialog:
+                showAlertDialog(new AlertDialogPro.Builder(this, R.style.AlertDialogTheme_Holo_Light));
                 break;
             case R.id.showNativeDialog:
                 showAlertDialog(new AlertDialog.Builder(this));

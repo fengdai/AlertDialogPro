@@ -23,19 +23,42 @@
         <item name="android:minWidth">64dip</item>
     </style>
 
+    <style name="Holo.Button" parent="Button"></style>
+
+    <style name="Holo.Button.Light">
+        <item name="android:background">@drawable/item_background_holo_light</item>
+        <item name="android:textColor">@color/primary_text_holo_light</item>
+    </style>
+
     <style name="ListView" parent="android:Widget.ListView">
         <item name="android:listSelector">?alertDialogListItemBackground</item>
     </style>
 
-    <style name="DialogWindowTitle">
+    <style name="DialogWindowTitle"></style>
+
+    <style name="DialogWindowTitle.Holo">
         <item name="android:maxLines">1</item>
         <item name="android:scrollHorizontally">true</item>
-        <item name="android:textAppearance">@style/DialogWindowTitleText</item>
+        <item name="android:textAppearance">@style/DialogWindowTitleText.Holo</item>
     </style>
 
-    <style name="DialogWindowTitleText" parent="android:TextAppearance">
+    <style name="DialogWindowTitle.Holo.Light">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/DialogWindowTitleText.Holo.Light</item>
+    </style>
+
+    <style name="DialogWindowTitleText" parent="android:TextAppearance"></style>
+
+    <style name="DialogWindowTitleText.Holo">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/holo_blue_light</item>
     </style>
+
+    <style name="DialogWindowTitleText.Holo.Light">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/holo_blue_light</item>
+    </style>
+
 
 </resources>

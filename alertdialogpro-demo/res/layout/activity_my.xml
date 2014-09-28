@@ -15,10 +15,17 @@
         android:text="@string/show_dialog" />
 
     <Button
-        android:id="@+id/showNativeDialog"
+        android:id="@+id/showLightDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/showDialog"
+        android:text="@string/show_light_dialog" />
+
+    <Button
+        android:id="@+id/showNativeDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showLightDialog"
         android:text="@string/show_native_dialog" />
 
 </RelativeLayout>

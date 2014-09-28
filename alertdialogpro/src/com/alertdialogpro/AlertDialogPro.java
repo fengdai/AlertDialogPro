@@ -208,22 +208,19 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
          * Constructor using a context for this builder and the {@link AlertDialog} it creates.
          */
         public Builder(Context context) {
+            this(context, 0);
+        }
+
+        /**
+         * Constructor using a context and theme for this builder and
+         * the {@link AlertDialog} it creates.
+         */
+        public Builder(Context context, int theme) {
             super(context);
-            mTheme = resolveDialogTheme(context, 0);
+            mTheme = resolveDialogTheme(context, theme);
             P = new AlertController.AlertParams(new ContextThemeWrapper(
                     context, mTheme));
         }
-
-        //        public Builder(Context context) {
-//            this(context, resolveDialogTheme(context, 0));
-//        }
-//
-//        public Builder(Context context, int theme) {
-//            super(context, theme);
-//            P = new AlertController.AlertParams(new ContextThemeWrapper(
-//                    context, resolveDialogTheme(context, theme)));
-//            mTheme = theme;
-//        }
 
         /**
          * Returns a {@link Context} with the appropriate theme for dialogs created by this Builder.
