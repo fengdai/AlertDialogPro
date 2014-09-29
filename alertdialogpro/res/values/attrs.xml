@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="alertDialogProTheme" format="reference" />
+    <attr name="alertDialogProStyle" format="reference" />
 
     <declare-styleable name="AlertDialogProStyle">
+        <attr name="adpBackground" format="reference" />
         <attr name="adpTitleDividerBackground" format="reference|color" />
         <attr name="adpTitleDividerHeight" format="dimension" />
         <attr name="adpTitleHeight" format="dimension" />
@@ -10,7 +12,6 @@
         <attr name="adpListItemTextColor" format="dimension" />
         <attr name="adpListDivider" format="dimension" />
         <attr name="adpListItemBackground" format="reference" />
-        <attr name="adpButtonBarHeight" format="dimension" />
         <attr name="adpButtonBarDividerHorizontal" format="reference" />
         <attr name="adpButtonBarDividerVertical" format="reference" />
         <attr name="adpButtonBarStyle" format="reference" />

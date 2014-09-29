@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:alertdialogpro="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parentPanel"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/floating_window_margin_bottom"
+    android:layout_marginLeft="@dimen/floating_window_margin_left"
+    android:layout_marginRight="@dimen/floating_window_margin_right"
+    android:layout_marginTop="@dimen/floating_window_margin_top"
     android:background="?adpBackground"
     android:orientation="vertical">
 
@@ -13,53 +16,40 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <View
-            android:id="@+id/titleDividerTop"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/adpTitleDividerHeight"
-            android:background="?attr/adpTitleDividerBackground"
-            android:visibility="gone" />
-
         <LinearLayout
             android:id="@+id/title_template"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dip"
-            android:layout_marginRight="16dip"
             android:gravity="center_vertical|start"
-            android:minHeight="?attr/adpTitleHeight"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:paddingTop="16dip">
 
             <ImageView
                 android:id="@+id/icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="8dp"
+                android:layout_width="32dip"
+                android:layout_height="32dip"
+                android:layout_marginRight="8dip"
+                android:scaleType="fitCenter"
                 android:src="@null" />
 
-            <com.alertdialogpro.internal.DialogTitle
+            <TextView
                 android:id="@+id/alertTitle"
                 style="?android:attr/windowTitleStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:gravity="start"
-                android:singleLine="true"
-                android:textAlignment="viewStart" />
+                android:singleLine="true" />
         </LinearLayout>
-
-        <View
-            android:id="@+id/titleDivider"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/adpTitleDividerHeight"
-            android:background="?attr/adpTitleDividerBackground"
-            android:visibility="gone" />
+        <!-- If the client uses a customTitle, it will be added here. -->
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/contentPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:minHeight="64dp"
         android:orientation="vertical">
 
@@ -74,10 +64,9 @@
                 style="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="8dip"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip"
-                android:paddingTop="8dip" />
+                android:paddingTop="16dip" />
         </ScrollView>
     </LinearLayout>
 
@@ -85,46 +74,41 @@
         android:id="@+id/customPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:minHeight="64dp">
 
         <FrameLayout
-            android:id="@+id/custom"
+            android:id="@+android:id/custom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </FrameLayout>
 
-    <com.alertdialogpro.internal.LinearLayoutICS
+    <LinearLayout
         android:id="@+id/buttonPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="end"
         android:orientation="vertical"
-        alertdialogpro:llDivider="?attr/adpButtonBarDividerHorizontal"
-        alertdialogpro:llShowDividers="beginning">
+        android:padding="16dip">
 
-        <com.alertdialogpro.internal.LinearLayoutICS
+        <LinearLayout
             style="?attr/adpButtonBarStyle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layoutDirection="locale"
-            android:measureWithLargestChild="true"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button2"
-                style="?attr/adpButtonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_weight="1"
-                android:maxLines="2" />
+            android:layoutDirection="locale">
 
             <Button
                 android:id="@+id/button3"
                 style="?attr/adpButtonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
+                android:maxLines="2" />
+
+            <Button
+                android:id="@+id/button2"
+                style="?attr/adpButtonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:maxLines="2" />
 
             <Button
@@ -132,10 +116,7 @@
                 style="?attr/adpButtonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_weight="1"
                 android:maxLines="2" />
-        </com.alertdialogpro.internal.LinearLayoutICS>
-    </com.alertdialogpro.internal.LinearLayoutICS>
-
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

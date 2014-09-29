@@ -9,23 +9,37 @@
     tools:context="com.alertdialogpro.demo.MainActivity">
 
     <Button
-        android:id="@+id/showDialog"
+        android:id="@+id/showHoloDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/show_dialog" />
+        android:text="@string/show_holo_dialog" />
 
     <Button
-        android:id="@+id/showLightDialog"
+        android:id="@+id/showHoloLightDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/showDialog"
-        android:text="@string/show_light_dialog" />
+        android:layout_below="@id/showHoloDialog"
+        android:text="@string/show_holo_light_dialog" />
+
+    <Button
+        android:id="@+id/showMaterialDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showHoloLightDialog"
+        android:text="@string/show_material_dialog" />
+
+    <Button
+        android:id="@+id/showMaterialLightDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showMaterialDialog"
+        android:text="@string/show_material_light_dialog" />
 
     <Button
         android:id="@+id/showNativeDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/showLightDialog"
+        android:layout_below="@id/showMaterialLightDialog"
         android:text="@string/show_native_dialog" />
 
 </RelativeLayout>

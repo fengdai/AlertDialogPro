@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AlertDialogProTheme.Material" parent="AlertDialogProTheme.Base">
+        <!-- Background -->
+        <item name="adpBackground">@drawable/dialog_background_material_dark</item>
+        <item name="android:textColorPrimary">@color/primary_text_material_dark</item>
+        <!-- Title -->
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Material</item>
+        <item name="adpListItemHeight">48dip</item>
+        <item name="adpListItemTextColor">@color/primary_text_material_dark</item>
+        <item name="adpListItemBackground">@drawable/item_background_material_dark</item>
+        <item name="adpListDivider">@drawable/list_divider_material_dark</item>
+        <!-- ListView -->
+        <item name="android:listViewStyle">@style/Widget.Material.ListView</item>
+        <!-- ButtonBar-->
+        <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
+        <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button</item>
+        <item name="alertDialogProStyle">@style/AlertDialogPro.Material</item>
+    </style>
+
+    <style name="AlertDialogProTheme.Material.Light" parent="AlertDialogProTheme.Base.Light">
+        <!-- Background -->
+        <item name="adpBackground">@drawable/dialog_background_material_light</item>
+        <item name="android:textColorPrimary">@color/primary_text_material_light</item>
+        <!-- Title -->
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Material.Light</item>
+        <item name="adpListItemHeight">48dip</item>
+        <item name="adpListItemTextColor">@color/primary_text_material_light</item>
+        <item name="adpListItemBackground">@drawable/item_background_material_light</item>
+        <item name="adpListDivider">@drawable/list_divider_material_light</item>
+        <!-- ListView -->
+        <item name="android:listViewStyle">@style/Widget.Material.ListView</item>
+        <!-- ButtonBar-->
+        <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
+        <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button.Light</item>
+        <item name="alertDialogProStyle">@style/AlertDialogPro.Material.Light</item>
+    </style>
+
+</resources>

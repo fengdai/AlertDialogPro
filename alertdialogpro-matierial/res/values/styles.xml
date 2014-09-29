@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Material" parent="android:Widget" />
+
+    <style name="Widget.Material.ButtonBar">
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="Widget.Material.Button">
+        <item name="android:background">@drawable/item_background_material_dark</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">88dip</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Widget.Material.Button.Light">
+        <item name="android:background">@drawable/item_background_material_light</item>
+    </style>
+
+    <style name="Widget.Material.ListView" parent="android:Widget.ListView">
+        <item name="android:listSelector">?attr/adpListItemBackground</item>
+    </style>
+
+    <style name="DialogWindowTitle.Material">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/DialogWindowTitleText.Material</item>
+    </style>
+
+    <style name="DialogWindowTitle.Material.Light">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/DialogWindowTitleText.Material.Light</item>
+    </style>
+
+    <style name="DialogWindowTitleText.Material">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="DialogWindowTitleText.Material.Light">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="AlertDialogPro.Material">
+        <item name="adpLayout">@layout/alert_dialog_material</item>
+        <item name="adpListLayout">@layout/select_dialog_material</item>
+        <item name="adpListItemLayout">@layout/select_dialog_item_material</item>
+        <item name="adpMultiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
+        <item name="adpSingleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
+    </style>
+
+    <style name="AlertDialogPro.Material.Light" />
+</resources>

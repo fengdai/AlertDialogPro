@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="floating_window_z">16dp</dimen>
+    <dimen name="floating_window_margin_left">16dp</dimen>
+    <dimen name="floating_window_margin_top">8dp</dimen>
+    <dimen name="floating_window_margin_right">16dp</dimen>
+    <dimen name="floating_window_margin_bottom">32dp</dimen>
+</resources>

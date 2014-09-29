@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ButtonBar" parent="android:ButtonBar">
+    <style name="Widget.Holo" parent="android:Widget" />
+
+    <style name="Widget.Holo.ButtonBar">
         <!-- Use own attrs -->
         <item name="llDivider">?attr/adpButtonBarDividerVertical</item>
         <item name="llShowDividers">middle</item>
         <item name="llDividerPadding">0dip</item>
-        <item name="android:paddingTop">0dip</item>
-        <item name="android:paddingLeft">0dip</item>
-        <item name="android:paddingRight">0dip</item>
-        <item name="android:paddingBottom">0dip</item>
         <item name="android:background">@null</item>
     </style>
 
-    <style name="Button" parent="android:Widget.Button">
+    <style name="Widget.Holo.Button">
         <item name="android:background">@drawable/item_background_holo_dark</item>
         <item name="android:paddingLeft">4dip</item>
         <item name="android:paddingRight">4dip</item>
-        <item name="android:textColor">@color/primary_text_holo_dark</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:textSize">14sp</item>
         <item name="android:minHeight">48dip</item>
         <item name="android:minWidth">64dip</item>
     </style>
 
-    <style name="Holo.Button" parent="Button"></style>
-
-    <style name="Holo.Button.Light">
+    <style name="Widget.Holo.Button.Light">
         <item name="android:background">@drawable/item_background_holo_light</item>
-        <item name="android:textColor">@color/primary_text_holo_light</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
-    <style name="ListView" parent="android:Widget.ListView">
+    <style name="Widget.Holo.ListView" parent="android:Widget.ListView">
         <item name="android:listSelector">?attr/adpListItemBackground</item>
     </style>
 
@@ -55,10 +51,17 @@
         <item name="android:textColor">@color/holo_blue_light</item>
     </style>
 
-    <style name="DialogWindowTitleText.Holo.Light">
-        <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/holo_blue_light</item>
+    <style name="DialogWindowTitleText.Holo.Light"></style>
+
+    <style name="AlertDialogPro" />
+
+    <style name="AlertDialogPro.Holo">
+        <item name="adpLayout">@layout/alert_dialog_holo</item>
+        <item name="adpListLayout">@layout/select_dialog_holo</item>
+        <item name="adpListItemLayout">@layout/select_dialog_item_holo</item>
+        <item name="adpMultiChoiceItemLayout">@layout/select_dialog_multichoice_holo</item>
+        <item name="adpSingleChoiceItemLayout">@layout/select_dialog_singlechoice_holo</item>
     </style>
 
-
+    <style name="AlertDialogPro.Holo.Light" />
 </resources>
