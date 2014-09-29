@@ -5,6 +5,8 @@
         <!-- Background -->
         <item name="adpBackground">@drawable/dialog_background_material_dark</item>
         <item name="android:textColorPrimary">@color/primary_text_material_dark</item>
+        <item name="android:textColorSecondary">@color/secondary_text_material_dark</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearanceMaterialMedium</item>
         <!-- Title -->
         <item name="android:windowTitleStyle">@style/DialogWindowTitle.Material</item>
         <item name="adpListItemHeight">48dip</item>
@@ -23,6 +25,8 @@
         <!-- Background -->
         <item name="adpBackground">@drawable/dialog_background_material_light</item>
         <item name="android:textColorPrimary">@color/primary_text_material_light</item>
+        <item name="android:textColorSecondary">@color/secondary_text_material_light</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearanceMaterialMedium</item>
         <!-- Title -->
         <item name="android:windowTitleStyle">@style/DialogWindowTitle.Material.Light</item>
         <item name="adpListItemHeight">48dip</item>

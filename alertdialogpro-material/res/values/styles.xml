@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="TextAppearanceMaterialMedium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
     <style name="Widget.Material" parent="android:Widget" />
 
     <style name="Widget.Material.ButtonBar">
@@ -13,6 +18,7 @@
         <item name="android:textSize">14sp</item>
         <item name="android:minHeight">48dip</item>
         <item name="android:minWidth">88dip</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
@@ -37,14 +43,12 @@
     </style>
 
     <style name="DialogWindowTitleText.Material">
+        <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
-    <style name="DialogWindowTitleText.Material.Light">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
-    </style>
+    <style name="DialogWindowTitleText.Material.Light"></style>
 
     <style name="AlertDialogPro.Material">
         <item name="adpLayout">@layout/alert_dialog_material</item>
