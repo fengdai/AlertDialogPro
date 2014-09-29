@@ -1,6 +1,7 @@
 package com.alertdialogpro.demo;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -64,6 +65,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     private void showAlertDialog(AlertDialog.Builder builder) {
         builder.setTitle(R.string.app_name).
+                setItems(new String[]{"Holo theme", "Material theme", "Custom theme"}, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).
 //                setMessage("Message").
 //                setMultiChoiceItems(new String[]{"A", "B", "C"},
 //                new boolean[]{true, false, true},
@@ -72,10 +79,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 //                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
 //                    }
 //                }).
-        setItems(new String[]{"Holo theme", "Material theme", "Custom theme"}, null).
-                setPositiveButton("OK", null).
-                setNegativeButton("Cancel", null).
-                show();
+//                setPositiveButton("OK", null).
+//                setNegativeButton("Cancel", null).
+        show();
     }
 
 
