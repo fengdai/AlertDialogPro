@@ -96,8 +96,6 @@ public class AlertController {
 
     private View mCustomTitleView;
 
-    private boolean mForceInverseBackground;
-
     private ListAdapter mAdapter;
 
     private int mCheckedItem = -1;
@@ -337,10 +335,6 @@ public class AlertController {
         TypedValue out = new TypedValue();
         mContext.getTheme().resolveAttribute(attrId, out, true);
         return out.resourceId;
-    }
-
-    public void setInverseBackgroundForced(boolean forceInverseBackground) {
-        mForceInverseBackground = forceInverseBackground;
     }
 
     public ListView getListView() {
@@ -710,9 +704,6 @@ public class AlertController {
                         mNeutralButtonText,
                         mNeutralButtonListener,
                         null);
-            }
-            if (mForceInverseBackground) {
-                dialog.setInverseBackgroundForced(true);
             }
             // For a list, the client can either supply an array of items or an
             // adapter or a cursor

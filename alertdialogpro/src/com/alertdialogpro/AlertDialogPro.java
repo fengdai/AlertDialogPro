@@ -161,10 +161,6 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
         mAlert.setIcon(out.resourceId);
     }
 
-    public void setInverseBackgroundForced(boolean forceInverseBackground) {
-        mAlert.setInverseBackgroundForced(forceInverseBackground);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mAlert.installContent();
