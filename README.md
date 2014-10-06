@@ -13,7 +13,7 @@ Usage
    Add **[alertdialogpro](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro)** to your project.
 AlertDialogPro's API is similar to native AlertDialog's. It also provides a **AlertDialogPro.Builder** for building itself.
    ```java
-   AlertDialogPro builder = new AlertDialogPro.Builder(getContext());
+   AlertDialogPro.Builder builder = new AlertDialogPro.Builder(getContext());
    builder.setTitle("Title").
            setIcon(R.drawable.ic_launcher).
            setMessage("Message").
