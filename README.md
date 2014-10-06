@@ -44,7 +44,7 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
 
 3. Material theme
 
-   **[alertdialogpro-theme-material](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro-theme-material)** is a project to make a **Material** theme **AlertDialogPro**. If you want a **Material** design dialog UI, you can simplily add it to your project as an addition of **[alertdialogpro](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro)**. Then you can use it's two themes: ```AlertDialogProTheme.Material``` and ```AlertDialogProTheme.Material.Light``` in your application's theme resource or code.
+   **[alertdialogpro-theme-material](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro-theme-material)** is a project to make a **Material** theme **AlertDialogPro**. If you want a **Material** design dialog UI, you can simply add it to your project as an addition of **[alertdialogpro](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro)**. Then you can use it's two themes: ```AlertDialogProTheme.Material``` and ```AlertDialogProTheme.Material.Light``` in your application's theme resource or code.
 
 4. Theme customization
 
