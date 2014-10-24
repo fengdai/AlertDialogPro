@@ -3,6 +3,8 @@ AlertDialogPro
 
 When you are developing against Android SDK which is lower than 11(**HoneyComb**), it is not an easy thing to custom the theme of Android's **AlertDialog**. **AlertDialogPro** can make this thing easy.
 
+   ![holo](https://github.com/fengdai/AlertDialogPro/blob/master/image/holo_light_dialog_only.png)
+   ![mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_light_dialog_only.png)
 
 
 Usage
@@ -42,14 +44,10 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
       AlertDialogPro builder = new AlertDialogPro.Builder(getContext(), R.style.AlertDialogProTheme_Holo_Light);
       ```
    
-   ![holo](https://github.com/fengdai/AlertDialogPro/blob/master/image/holo_light_dialog_only.png)
-
 3. Material theme
 
    **[alertdialogpro-theme-material](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro-theme-material)** is a project to make a **Material** theme **AlertDialogPro**. If you want a **Material** design dialog UI, you can simply add it to your project as an addition of **[alertdialogpro](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro)**. Then you can use it's two themes: ```AlertDialogProTheme.Material``` and ```AlertDialogProTheme.Material.Light``` in your application's theme resource or code.
    
-   ![mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_light_dialog_only.png)
-
 4. Theme customization
 
    If the default themes do not meet your requirements. **AlertDialogPro** also gives you a chance to custom it to match your design pattern.
