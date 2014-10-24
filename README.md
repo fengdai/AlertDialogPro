@@ -10,7 +10,7 @@ Since some attributes like ```android:layout```(which can be used to specify you
 Usage
 =====
 
-1. Build an AlertDialogPro
+1. **Build an AlertDialogPro**
 
    Add **[alertdialogpro](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro)** to your project.
 AlertDialogPro's API is similar to native AlertDialog's. It also provides a **AlertDialogPro.Builder** for building itself.
@@ -25,7 +25,7 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
            show();
    ```
 
-2. Default Theme
+2. **Default Theme**
    
    The **AlertDialogPro**'s default theme is **Holo**. There are two default **Holo** themes, ```AlertDialogProTheme.Holo``` and ```AlertDialogProTheme.Holo.Light```. If your app needs a **Holo** theme dialog, you don't need to do any customization. The only thing you need to do is choose a theme from the two default themes, and add it to your app theme. Your dialog will looks the same **"Holo"** across all versions of Android.
    1. Specify **AlertDialogPro**'s theme with attribute ```alertDialogProTheme```:
@@ -44,11 +44,11 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
       AlertDialogPro builder = new AlertDialogPro.Builder(getContext(), R.style.AlertDialogProTheme_Holo_Light);
       ```
    
-3. Material theme
+3. **Material theme**
 
    **[alertdialogpro-theme-material](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro-theme-material)** is a project to make a **Material** theme **AlertDialogPro**. If you want a **Material** design dialog UI, you can simply add it to your project as an addition of **[alertdialogpro](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro)**. Then you can use it's two themes: ```AlertDialogProTheme.Material``` and ```AlertDialogProTheme.Material.Light``` in your application's theme resource or code.
    
-4. Theme customization
+4. **Theme customization**
 
    If the default themes do not meet your requirements. **AlertDialogPro** also gives you a chance to custom it to match your design pattern.
 
