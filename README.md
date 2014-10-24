@@ -24,7 +24,7 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
    ```
 
 2. Default Theme
-
+   
    The **AlertDialogPro**'s default theme is **Holo**. There are two default **Holo** themes, ```AlertDialogProTheme.Holo``` and ```AlertDialogProTheme.Holo.Light```. If your app needs a **Holo** theme dialog, you don't need to do any customization. The only thing you need to do is choose a theme from the two default themes, and add it to your app theme. Your dialog will looks the same **"Holo"** across all versions of Android.
    1. Specify **AlertDialogPro**'s theme with attribute ```alertDialogProTheme```:
 
@@ -41,10 +41,14 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
       // Build a AlertDialogPro with Holo light theme.
       AlertDialogPro builder = new AlertDialogPro.Builder(getContext(), R.style.AlertDialogProTheme_Holo_Light);
       ```
+   
+   ![holo](https://github.com/fengdai/AlertDialogPro/blob/master/image/holo_light_dialog_only.png)
 
 3. Material theme
 
    **[alertdialogpro-theme-material](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro-theme-material)** is a project to make a **Material** theme **AlertDialogPro**. If you want a **Material** design dialog UI, you can simply add it to your project as an addition of **[alertdialogpro](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro)**. Then you can use it's two themes: ```AlertDialogProTheme.Material``` and ```AlertDialogProTheme.Material.Light``` in your application's theme resource or code.
+   
+   ![mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_light_dialog_only.png)
 
 4. Theme customization
 
