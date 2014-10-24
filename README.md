@@ -1,7 +1,7 @@
 AlertDialogPro
 ==============
 
-When you are developing against Android SDK which is lower than 11(**HoneyComb**), it is not an easy thing to custom the theme of Android's **AlertDialog**. **AlertDialogPro** can make this thing easy.
+Since some attributes like ```android:layout```(which can be used to specify your own layout for AlertDialog) are introduced in HoneyComb. It is not an easy thing to custom the theme of Android's **AlertDialog** when you are developing against Pre-HoneyComb platform. **AlertDialogPro** can make this thing easy. You can use it the same as using HoneyComb's AlertDialog.
 
    ![holo](https://github.com/fengdai/AlertDialogPro/blob/master/image/holo_light_dialog_only.png)
    ![mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_light_dialog_only.png)
@@ -54,15 +54,15 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
 
    ```xml
    <style name="AlertDialogPro.Material">
-     <!-- Specify your AlertDialogPro's layout -->
+     <!-- As HoneyComb's android:layout. Specify your AlertDialogPro's layout -->
      <item name="adpLayout">@layout/alert_dialog_material</item>
-     <!-- Specify your AlertDialogPro's ListView layout -->
+     <!-- As HoneyComb's android:listLayout. Specify your AlertDialogPro's ListView layout. -->
      <item name="adpListLayout">@layout/select_dialog_material</item>
-     <!-- Specify your AlertDialogPro's list item layout -->
+     <!-- As HoneyComb's android:listItemLayout. Specify your AlertDialogPro's list item layout. -->
      <item name="adpListItemLayout">@layout/select_dialog_item_material</item>
-     <!-- Specify your AlertDialogPro's multi choice list item layout -->
+     <!-- As HoneyComb's android:multiChoiceItemLayout. Specify your AlertDialogPro's multi choice list item layout. -->
      <item name="adpMultiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
-     <!-- Specify your AlertDialogPro's single choice list item layout -->
+     <!-- As HoneyComb's android:singleChoiceItemLayout. Specify your AlertDialogPro's single choice list item layout. -->
      <item name="adpSingleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
    </style>
    ```
