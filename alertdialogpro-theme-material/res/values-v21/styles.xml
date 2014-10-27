@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Material.Button" parent="android:Widget.Material.Button.Borderless.Colored">
+        <item name="android:minHeight">@dimen/alert_dialog_button_bar_height</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="Widget.Material.Button.Light" parent="android:Widget.Material.Button.Borderless.Colored">
+        <item name="android:minHeight">@dimen/alert_dialog_button_bar_height</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+</resources>

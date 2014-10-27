@@ -7,8 +7,7 @@
 
     <style name="AlertDialogProTheme.Base" parent="AlertDialogProTheme">
         <!-- Background -->
-        <item name="adpBackground">@drawable/dialog_full_holo_dark</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/dialog_full_holo_dark</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:textColorPrimary">@color/primary_text_holo_dark</item>
         <!-- Title -->
@@ -28,12 +27,14 @@
         <item name="adpButtonBarDividerHorizontal">@drawable/list_divider_holo_dark</item>
         <item name="adpButtonBarDividerVertical">@drawable/list_divider_holo_dark</item>
         <item name="adpButtonBarButtonStyle">@style/Widget.Holo.Button</item>
+        <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
+        <item name="adpButtonBarNegativeButtonStyle">?attr/adpButtonBarButtonStyle</item>
+        <item name="adpButtonBarNeutralButtonStyle">?attr/adpButtonBarButtonStyle</item>
     </style>
 
     <style name="AlertDialogProTheme.Base.Light" parent="AlertDialogProTheme.Light">
         <!-- Background -->
-        <item name="adpBackground">@drawable/dialog_full_holo_light</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/dialog_full_holo_light</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:textColorPrimary">@color/primary_text_holo_light</item>
         <!-- Title -->
@@ -53,6 +54,9 @@
         <item name="adpButtonBarDividerHorizontal">@drawable/list_divider_holo_light</item>
         <item name="adpButtonBarDividerVertical">@drawable/list_divider_holo_light</item>
         <item name="adpButtonBarButtonStyle">@style/Widget.Holo.Button.Light</item>
+        <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
+        <item name="adpButtonBarNegativeButtonStyle">?attr/adpButtonBarButtonStyle</item>
+        <item name="adpButtonBarNeutralButtonStyle">?attr/adpButtonBarButtonStyle</item>
     </style>
 
     <style name="AlertDialogProTheme.Holo" parent="AlertDialogProTheme.Base"></style>

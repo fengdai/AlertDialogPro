@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:cacheColorHint="@null"
     android:divider="?attr/adpListDivider"
+    android:gravity="start"
     android:overScrollMode="ifContentScrolls"
     android:scrollbars="vertical"
     android:textAlignment="viewStart" />

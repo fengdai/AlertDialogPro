@@ -3,11 +3,6 @@
     android:id="@+id/parentPanel"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/floating_window_margin_bottom"
-    android:layout_marginLeft="@dimen/floating_window_margin_left"
-    android:layout_marginRight="@dimen/floating_window_margin_right"
-    android:layout_marginTop="@dimen/floating_window_margin_top"
-    android:background="?adpBackground"
     android:orientation="vertical">
 
     <LinearLayout
@@ -22,9 +17,11 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical|start"
             android:orientation="horizontal"
-            android:paddingLeft="16dip"
-            android:paddingRight="16dip"
-            android:paddingTop="16dip">
+            android:paddingEnd="@dimen/alert_dialog_padding_material"
+            android:paddingLeft="@dimen/alert_dialog_padding_material"
+            android:paddingRight="@dimen/alert_dialog_padding_material"
+            android:paddingStart="@dimen/alert_dialog_padding_material"
+            android:paddingTop="@dimen/alert_dialog_padding_top_material">
 
             <ImageView
                 android:id="@+id/icon"
@@ -40,7 +37,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:singleLine="true" />
+                android:gravity="start"
+                android:singleLine="true"
+                android:textAlignment="viewStart" />
         </LinearLayout>
         <!-- If the client uses a customTitle, it will be added here. -->
     </LinearLayout>
@@ -50,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:minHeight="64dp"
+        android:minHeight="48dp"
         android:orientation="vertical">
 
         <ScrollView
@@ -64,9 +63,11 @@
                 style="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="16dip"
-                android:paddingRight="16dip"
-                android:paddingTop="16dip" />
+                android:paddingEnd="@dimen/alert_dialog_padding_material"
+                android:paddingLeft="@dimen/alert_dialog_padding_material"
+                android:paddingRight="@dimen/alert_dialog_padding_material"
+                android:paddingStart="@dimen/alert_dialog_padding_material"
+                android:paddingTop="@dimen/alert_dialog_padding_top_material" />
         </ScrollView>
     </LinearLayout>
 
@@ -75,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:minHeight="64dp">
+        android:minHeight="48dp">
 
         <FrameLayout
             android:id="@+id/custom"
@@ -85,38 +86,41 @@
 
     <LinearLayout
         android:id="@+id/buttonPanel"
+        style="?attr/adpButtonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="end"
-        android:orientation="vertical"
-        android:padding="16dip">
+        android:layoutDirection="locale"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingEnd="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp">
 
-        <LinearLayout
-            style="?attr/adpButtonBarStyle"
+        <Button
+            android:id="@+id/button3"
+            style="?attr/adpButtonBarNeutralButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layoutDirection="locale">
+            android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/button3"
-                style="?attr/adpButtonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="2" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
 
-            <Button
-                android:id="@+id/button2"
-                style="?attr/adpButtonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="2" />
+        <Button
+            android:id="@+id/button2"
+            style="?attr/adpButtonBarNegativeButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/button1"
-                style="?attr/adpButtonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="2" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/button1"
+            style="?attr/adpButtonBarPositiveButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
+
 </LinearLayout>
