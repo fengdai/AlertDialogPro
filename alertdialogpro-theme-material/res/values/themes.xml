@@ -2,6 +2,7 @@
 <resources>
 
     <style name="AlertDialogProTheme.Material" parent="AlertDialogProTheme.Base">
+        <item name="android:windowAnimationStyle">@style/Animation.Material.Dialog</item>
         <!-- Background -->
         <item name="android:windowBackground">@drawable/dialog_background_material_dark</item>
         <item name="android:textColorPrimary">@color/primary_text_material_dark</item>
@@ -22,6 +23,7 @@
     </style>
 
     <style name="AlertDialogProTheme.Material.Light" parent="AlertDialogProTheme.Base.Light">
+        <item name="android:windowAnimationStyle">@style/Animation.Material.Dialog</item>
         <!-- Background -->
         <item name="android:windowBackground">@drawable/dialog_background_material_light</item>
         <item name="android:textColorPrimary">@color/primary_text_material_light</item>
@@ -34,7 +36,7 @@
         <item name="adpListItemBackground">@drawable/item_background_material_light</item>
         <item name="adpListDivider">@null</item>
         <!-- ListView -->
-        <item name="android:listViewStyle">@style/Widget.Material.ListView</item>
+        <item name="android:listViewStyle">@style/Widget.Material.ListView.Light</item>
         <!-- ButtonBar-->
         <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
         <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button.Light</item>

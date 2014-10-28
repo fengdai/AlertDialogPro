@@ -29,6 +29,10 @@
         <item name="android:listSelector">?attr/adpListItemBackground</item>
     </style>
 
+    <style name="Widget.Material.ListView.Light" parent="android:Widget.ListView">
+        <item name="android:listSelector">?attr/adpListItemBackground</item>
+    </style>
+
     <style name="DialogWindowTitle.Material">
         <item name="android:maxLines">1</item>
         <item name="android:scrollHorizontally">true</item>
@@ -58,4 +62,14 @@
     </style>
 
     <style name="AlertDialogPro.Material.Light" />
+
+    <!-- Animation Styles -->
+
+    <style name="Animation.Material" parent="android:Animation" />
+
+    <style name="Animation.Material.Dialog">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_material</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit_material</item>
+    </style>
+
 </resources>

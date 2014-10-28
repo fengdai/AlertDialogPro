@@ -7,7 +7,9 @@
     android:ellipsize="marquee"
     android:gravity="center_vertical"
     android:minHeight="?adpListItemHeight"
+    android:paddingEnd="16dip"
     android:paddingLeft="16dip"
     android:paddingRight="16dip"
+    android:paddingStart="16dip"
     android:textAppearance="?android:attr/textAppearanceMedium"
     android:textColor="?attr/adpListItemTextColor" />

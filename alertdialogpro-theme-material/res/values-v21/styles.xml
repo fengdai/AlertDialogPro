@@ -7,10 +7,14 @@
         <item name="android:maxLines">2</item>
     </style>
 
-    <style name="Widget.Material.Button.Light" parent="android:Widget.Material.Button.Borderless.Colored">
+    <style name="Widget.Material.Button.Light" parent="android:Widget.Material.Light.Button.Borderless.Colored">
         <item name="android:minHeight">@dimen/alert_dialog_button_bar_height</item>
         <item name="android:minWidth">64dip</item>
         <item name="android:maxLines">2</item>
     </style>
+
+    <style name="Widget.Material.ListView" parent="android:Widget.Material.ListView"></style>
+
+    <style name="Widget.Material.ListView.Light" parent="android:Widget.Material.Light.ListView"></style>
 
 </resources>

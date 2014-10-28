@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <style name="AlertDialogProTheme" parent="android:Theme.Material.Dialog.Alert"></style>
-
-    <style name="AlertDialogProTheme.Light" parent="android:Theme.Material.Dialog.Alert"></style>
-
-</resources>

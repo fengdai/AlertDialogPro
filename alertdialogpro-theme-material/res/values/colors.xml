@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ripple_material_light">#20444444</color>
+    <color name="background_floating_material_dark">#ff424242</color>
+    <color name="background_floating_material_light">#ffeeeeee</color>
+
     <color name="ripple_material_dark">#20ffffff</color>
+    <color name="ripple_material_light">#20444444</color>
 
-    <color name="background_material_dark">#ff212121</color>
-    <color name="background_material_light">#fffafafa</color>
-
-    <!-- Black 87% -->
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_default_disabled_material_light">#6f000000</color>
-    <!-- Black 54% -->
+
     <color name="secondary_text_material_light">#8a000000</color>
 
-    <!-- White 87% -->
-    <color name="primary_text_default_material_dark">#deffffff</color>
+    <color name="primary_text_default_material_dark">#ffffffff</color>
     <color name="primary_text_default_disabled_material_dark">#6fffffff</color>
-    <!-- White 38% -->
-    <color name="secondary_text_material_dark">#61ffffff</color>
+
+    <color name="secondary_text_material_dark">#b3ffffff</color>
 </resources>
