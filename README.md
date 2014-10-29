@@ -52,21 +52,55 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
 
    If the default themes do not meet your requirements. **AlertDialogPro** also gives you a chance to custom it to match your design pattern.
 
-   ```xml
-   <style name="AlertDialogPro.Material">
-     <!-- As HoneyComb's android:layout. Specify your AlertDialogPro's layout -->
-     <item name="adpLayout">@layout/alert_dialog_material</item>
-     <!-- As HoneyComb's android:listLayout. Specify your AlertDialogPro's ListView layout. -->
-     <item name="adpListLayout">@layout/select_dialog_material</item>
-     <!-- As HoneyComb's android:listItemLayout. Specify your AlertDialogPro's list item layout. -->
-     <item name="adpListItemLayout">@layout/select_dialog_item_material</item>
-     <!-- As HoneyComb's android:multiChoiceItemLayout. Specify your AlertDialogPro's multi choice list item layout. -->
-     <item name="adpMultiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
-     <!-- As HoneyComb's android:singleChoiceItemLayout. Specify your AlertDialogPro's single choice list item layout. -->
-     <item name="adpSingleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
-   </style>
-   ```
+   1. Do slight changes with following attributes:
+   
 
+      ```xml
+      <!-- Specify the dialog's background -->
+      <item name="android:windowBackground">@drawable/dialog_background_material_dark</item>
+      <!-- Style the dialog's title -->
+      <item name="android:windowTitleStyle">@style/DialogWindowTitle.Material</item>
+      <!-- Specify the item's height -->
+      <item name="adpListItemHeight">48dip</item>
+      <!-- Specify the item's text color -->
+      <item name="adpListItemTextColor">@color/primary_text_material_dark</item>
+      <!-- Specify the list selector -->
+      <item name="adpListItemBackground">@drawable/item_background_material_dark</item>
+      <!-- Specify the list divider -->
+      <item name="adpListDivider">@null</item>
+      <!-- Style the dialog's listView -->
+      <item name="android:listViewStyle">@style/Widget.Material.ListView</item>
+      <!-- Style the ButtonBar -->
+      <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
+      <!-- Style the Button -->
+      <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button</item>
+      <!-- Style the Button respectively -->
+      <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
+      <item name="adpButtonBarNegativeButtonStyle">?attr/adpButtonBarButtonStyle</item>
+      <item name="adpButtonBarNeutralButtonStyle">?attr/adpButtonBarButtonStyle</item>
+      ```
+   
+   2. You can also specify your own widget layout to the AlertDialogPro:
+
+      ```xml
+      <style name="AlertDialogPro.Material">
+        <!-- As HoneyComb's android:layout. Specify your AlertDialogPro's layout -->
+        <item name="adpLayout">@layout/alert_dialog_material</item>
+        <!-- As HoneyComb's android:listLayout. Specify your AlertDialogPro's ListView layout. -->
+        <item name="adpListLayout">@layout/select_dialog_material</item>
+        <!-- As HoneyComb's android:listItemLayout. Specify your AlertDialogPro's list item layout. -->
+        <item name="adpListItemLayout">@layout/select_dialog_item_material</item>
+        <!-- As HoneyComb's android:multiChoiceItemLayout. Specify your AlertDialogPro's multi choice list item layout. -->
+        <item name="adpMultiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
+        <!-- As HoneyComb's android:singleChoiceItemLayout. Specify your AlertDialogPro's single choice list item layout. -->
+        <item name="adpSingleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
+      </style>
+      ```
+      And add it to your theme:
+   
+      ```xml
+      <item name="alertDialogProStyle">@style/AlertDialogPro.Material</item>
+      ```
 
 
 License
