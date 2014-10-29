@@ -72,9 +72,9 @@ AlertDialogPro's API is similar to native AlertDialog's. It also provides a **Al
       <item name="android:listViewStyle">@style/Widget.Material.ListView</item>
       <!-- Style the ButtonBar -->
       <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
-      <!-- Style the Button -->
+      <!-- Style the Buttons -->
       <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button</item>
-      <!-- Style the Button respectively -->
+      <!-- Style the Buttons respectively -->
       <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
       <item name="adpButtonBarNegativeButtonStyle">?attr/adpButtonBarButtonStyle</item>
       <item name="adpButtonBarNeutralButtonStyle">?attr/adpButtonBarButtonStyle</item>
