@@ -1,7 +1,7 @@
 AlertDialogPro
 ==============
 
-Since some attributes like ```android:layout```(which can be used to specify your own layout for AlertDialog) are introduced in HoneyComb. It is not an easy thing to custom the theme of Android's **AlertDialog** when you are developing against Pre-HoneyComb platform. **AlertDialogPro** can make this thing easy. You can use it the same as using HoneyComb's AlertDialog.
+It's not an easy thing to theme the Android's **AlertDialog**, even though you are developing against HoneyComb (which introduced some new APIs like ```android:singleChoiceItemLayout``` -- allows you specify your own single－choice item layout in theme. But **not** enough). **AlertDialogPro** can make this thing easy. It includes (but is not limited to) all AlertDialog‘s APIs. You can use it the same as using the platform's AlertDialog and benefit from some of the other sweet features.
 
    ![holo](https://github.com/fengdai/AlertDialogPro/blob/master/image/holo_light_dialog_only.png)
    ![mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_light_dialog_only.png)
