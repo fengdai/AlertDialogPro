@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- ids of parent panel -->
+    <item name="parentPanel" type="id" />
+
+    <!-- ids of top panel -->
+    <item name="topPanel" type="id" />
+    <item name="titleDividerTop" type="id" />
+    <item name="title_template" type="id" />
+    <item name="icon" type="id" />
+    <item name="alertTitle" type="id" />
+    <item name="titleDivider" type="id" />
+
+    <!-- ids of content panel and its children -->
+    <item name="contentPanel" type="id" />
+    <item name="scrollView" type="id" />
+    <item name="message" type="id" />
+
+    <!-- ids of custom panel and its children -->
+    <item name="customPanel" type="id" />
+    <item name="custom" type="id" />
+
+    <!-- ids of button panel and its children -->
+    <item name="buttonPanel" type="id" />
+    <item name="button1" type="id" />
+    <item name="button2" type="id" />
+    <item name="button3" type="id" />
+
+    <!-- id of dialog's listview -->
+    <item name="select_dialog_listview" type="id" />
+</resources>

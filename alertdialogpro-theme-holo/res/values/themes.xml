@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AlertDialogProTheme.Holo" parent="AlertDialogProTheme.Base">
+        <!-- Background -->
+        <item name="android:windowBackground">@drawable/dialog_full_holo_dark</item>
+        <item name="android:textColorPrimary">@color/primary_text_holo_dark</item>
+        <!-- Title -->
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Holo</item>
+        <!-- ListView -->
+        <item name="adpListItemHeight">48dip</item>
+        <item name="adpListItemTextColor">@color/primary_text_holo_dark</item>
+        <item name="adpListItemBackground">@drawable/item_background_holo_dark</item>
+        <item name="adpListDivider">@drawable/list_divider_holo_dark</item>
+        <item name="android:listViewStyle">@style/Widget.Holo.ListView</item>
+        <!-- Title -->
+        <item name="adpTitleDividerBackground">@color/holo_blue_light</item>
+        <item name="adpTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
+        <item name="adpTitleHeight">@dimen/alert_dialog_title_height</item>
+        <!-- ButtonBar-->
+        <item name="adpButtonBarStyle">@style/Widget.Holo.ButtonBar</item>
+        <item name="adpButtonBarDividerHorizontal">@drawable/list_divider_holo_dark</item>
+        <item name="adpButtonBarDividerVertical">@drawable/list_divider_holo_dark</item>
+        <item name="adpButtonBarButtonStyle">@style/Widget.Holo.Button</item>
+        <item name="alertDialogProStyle">@style/AlertDialogPro.Holo</item>
+    </style>
+
+    <style name="AlertDialogProTheme.Holo.Light" parent="AlertDialogProTheme.Base.Light">
+        <!-- Background -->
+        <item name="android:windowBackground">@drawable/dialog_full_holo_light</item>
+        <item name="android:textColorPrimary">@color/primary_text_holo_light</item>
+        <!-- Title -->
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Holo.Light</item>
+        <!-- ListView -->
+        <item name="adpListItemHeight">48dip</item>
+        <item name="adpListItemTextColor">@color/primary_text_holo_light</item>
+        <item name="adpListItemBackground">@drawable/item_background_holo_light</item>
+        <item name="adpListDivider">@drawable/list_divider_holo_light</item>
+        <item name="android:listViewStyle">@style/Widget.Holo.ListView</item>
+        <!-- Title -->
+        <item name="adpTitleDividerBackground">@color/holo_blue_light</item>
+        <item name="adpTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
+        <item name="adpTitleHeight">@dimen/alert_dialog_title_height</item>
+        <!-- ButtonBar-->
+        <item name="adpButtonBarStyle">@style/Widget.Holo.ButtonBar</item>
+        <item name="adpButtonBarDividerHorizontal">@drawable/list_divider_holo_light</item>
+        <item name="adpButtonBarDividerVertical">@drawable/list_divider_holo_light</item>
+        <item name="adpButtonBarButtonStyle">@style/Widget.Holo.Button.Light</item>
+        <item name="alertDialogProStyle">@style/AlertDialogPro.Holo.Light</item>
+    </style>
+
+</resources>

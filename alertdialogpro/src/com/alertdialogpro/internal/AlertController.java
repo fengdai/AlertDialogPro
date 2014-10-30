@@ -169,18 +169,18 @@ public class AlertController {
                 R.styleable.AlertDialogProStyle, R.attr.alertDialogProStyle, 0);
 
         mAlertDialogLayout = a.getResourceId(R.styleable.AlertDialogProStyle_adpLayout,
-                R.layout.alert_dialog_holo);
+                0);
         mListLayout = a.getResourceId(
                 R.styleable.AlertDialogProStyle_adpListLayout,
-                R.layout.select_dialog_holo);
+                0);
         mMultiChoiceItemLayout = a.getResourceId(
                 R.styleable.AlertDialogProStyle_adpMultiChoiceItemLayout,
-                R.layout.select_dialog_multichoice_holo);
+                0);
         mSingleChoiceItemLayout = a.getResourceId(
                 R.styleable.AlertDialogProStyle_adpSingleChoiceItemLayout,
-                R.layout.select_dialog_singlechoice_holo);
+                0);
         mListItemLayout = a.getResourceId(R.styleable.AlertDialogProStyle_adpListItemLayout,
-                R.layout.select_dialog_item_holo);
+                0);
 
         a.recycle();
     }

@@ -1,4 +1,4 @@
-package com.alertdialogpro.internal;
+package com.alertdialogpro.holo.internal;
 
 import android.content.Context;
 import android.content.res.TypedArray;

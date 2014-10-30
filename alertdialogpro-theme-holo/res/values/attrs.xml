@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LinearLayoutIcs">
+        <!-- Drawable to use as a vertical divider between buttons. -->
+        <attr name="llDivider" format="reference" />
+        <!-- Setting for which dividers to show. -->
+        <attr name="llShowDividers">
+            <flag name="none" value="0" />
+            <flag name="beginning" value="1" />
+            <flag name="middle" value="2" />
+            <flag name="end" value="4" />
+        </attr>
+        <!-- Size of padding on either end of a divider. -->
+        <attr name="llDividerPadding" format="dimension" />
+    </declare-styleable>
+</resources>

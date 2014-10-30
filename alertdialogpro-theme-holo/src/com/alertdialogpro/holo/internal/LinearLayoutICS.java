@@ -1,4 +1,4 @@
-package com.alertdialogpro.internal;
+package com.alertdialogpro.holo.internal;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.alertdialogpro.R;
+import com.alertdialogpro.holo.R;
 
 public class LinearLayoutICS extends LinearLayout {
 

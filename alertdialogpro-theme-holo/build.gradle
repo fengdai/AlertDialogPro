@@ -1,10 +1,8 @@
-apply plugin: 'android'
+apply plugin: 'android-library'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    compile project(':alertdialogpro-theme-holo')
-    compile project(':alertdialogpro-theme-material')
-    compile 'com.android.support:appcompat-v7:21.0.0'
+    compile project(':alertdialogpro')
 }
 
 android {
