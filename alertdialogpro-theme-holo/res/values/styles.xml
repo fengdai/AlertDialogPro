@@ -30,24 +30,25 @@
         <item name="android:listSelector">?attr/adpListItemBackground</item>
     </style>
 
-    <style name="DialogWindowTitle.Holo">
+    <style name="DialogWindowTitle">
         <item name="android:maxLines">1</item>
         <item name="android:scrollHorizontally">true</item>
-        <item name="android:textAppearance">@style/DialogWindowTitleText.Holo</item>
+    </style>
+
+    <style name="DialogWindowTitle.Holo">
+        <item name="android:textAppearance">@style/TextAppearanceTitle.Holo</item>
     </style>
 
     <style name="DialogWindowTitle.Holo.Light">
-        <item name="android:maxLines">1</item>
-        <item name="android:scrollHorizontally">true</item>
-        <item name="android:textAppearance">@style/DialogWindowTitleText.Holo.Light</item>
+        <item name="android:textAppearance">@style/TextAppearanceTitle.Holo</item>
     </style>
 
-    <style name="DialogWindowTitleText.Holo">
+    <style name="TextAppearanceTitle.Holo" parent="android:TextAppearance">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/holo_blue_light</item>
     </style>
 
-    <style name="DialogWindowTitleText.Holo.Light"></style>
+    <style name="AlertDialogPro" />
 
     <style name="AlertDialogPro.Holo">
         <item name="adpLayout">@layout/alert_dialog_holo</item>

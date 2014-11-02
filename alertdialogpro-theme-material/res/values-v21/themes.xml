@@ -6,7 +6,7 @@
         <item name="adpMessageTextAppearance">@style/TextAppearance.Material.Subhead</item>
         <!-- ListView -->
         <item name="adpListItemHeight">48dip</item>
-        <item name="adpListItemTextColor">@color/primary_text_material_light</item>
+        <item name="adpListItemTextColor">@color/primary_text_material_dark</item>
         <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
         <item name="adpListItemBackground">@drawable/item_background_material_dark</item>
         <item name="adpListDivider">@null</item>

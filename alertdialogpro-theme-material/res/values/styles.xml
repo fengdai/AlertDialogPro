@@ -33,25 +33,26 @@
         <item name="android:listSelector">?attr/adpListItemBackground</item>
     </style>
 
-    <style name="DialogWindowTitle.Material">
+    <style name="DialogWindowTitle">
         <item name="android:maxLines">1</item>
         <item name="android:scrollHorizontally">true</item>
-        <item name="android:textAppearance">@style/DialogWindowTitleText.Material</item>
+    </style>
+
+    <style name="DialogWindowTitle.Material">
+        <item name="android:textAppearance">@style/TextAppearanceTitle.Material</item>
     </style>
 
     <style name="DialogWindowTitle.Material.Light">
-        <item name="android:maxLines">1</item>
-        <item name="android:scrollHorizontally">true</item>
-        <item name="android:textAppearance">@style/DialogWindowTitleText.Material.Light</item>
+        <item name="android:textAppearance">@style/TextAppearanceTitle.Material</item>
     </style>
 
-    <style name="DialogWindowTitleText.Material">
+    <style name="TextAppearanceTitle.Material" parent="android:TextAppearance">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
-    <style name="DialogWindowTitleText.Material.Light"></style>
+    <style name="AlertDialogPro" />
 
     <style name="AlertDialogPro.Material">
         <item name="adpLayout">@layout/alert_dialog_material</item>
