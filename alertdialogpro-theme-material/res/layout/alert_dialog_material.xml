@@ -63,10 +63,8 @@
                 style="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/alert_dialog_padding_material"
                 android:paddingLeft="@dimen/alert_dialog_padding_material"
                 android:paddingRight="@dimen/alert_dialog_padding_material"
-                android:paddingStart="@dimen/alert_dialog_padding_material"
                 android:paddingTop="@dimen/alert_dialog_padding_top_material" />
         </ScrollView>
     </LinearLayout>
