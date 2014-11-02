@@ -13,6 +13,8 @@
         <item name="adpListItemBackground">@drawable/item_background_holo_dark</item>
         <item name="adpListDivider">@drawable/list_divider_holo_dark</item>
         <item name="android:listViewStyle">@style/Widget.Holo.ListView</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_dark</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_holo_dark</item>
         <!-- Title -->
         <item name="adpTitleDividerBackground">@color/holo_blue_light</item>
         <item name="adpTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
@@ -37,6 +39,8 @@
         <item name="adpListItemBackground">@drawable/item_background_holo_light</item>
         <item name="adpListDivider">@drawable/list_divider_holo_light</item>
         <item name="android:listViewStyle">@style/Widget.Holo.ListView</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_light</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_holo_light</item>
         <!-- Title -->
         <item name="adpTitleDividerBackground">@color/holo_blue_light</item>
         <item name="adpTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
