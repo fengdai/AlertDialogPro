@@ -70,7 +70,7 @@
 
             <TextView
                 android:id="@id/message"
-                style="?android:attr/textAppearanceMedium"
+                style="?attr/adpMessageTextAppearance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dip"

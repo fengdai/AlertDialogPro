@@ -2,10 +2,15 @@
 <resources>
 
     <style name="AlertDialogProTheme.Material" parent="android:Theme.Material.Dialog.Alert">
+        <!-- Message -->
+        <item name="adpMessageTextAppearance">@style/TextAppearance.Material.Subhead</item>
+        <!-- ListView -->
         <item name="adpListItemHeight">48dip</item>
-        <item name="adpListItemTextColor">@color/primary_text_material_dark</item>
+        <item name="adpListItemTextColor">@color/primary_text_material_light</item>
+        <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
         <item name="adpListItemBackground">@drawable/item_background_material_dark</item>
         <item name="adpListDivider">@null</item>
+        <!-- ButtonBar-->
         <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
         <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button</item>
         <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
@@ -15,10 +20,15 @@
     </style>
 
     <style name="AlertDialogProTheme.Material.Light" parent="android:Theme.Material.Light.Dialog.Alert">
+        <!-- Message -->
+        <item name="adpMessageTextAppearance">@style/TextAppearance.Material.Subhead</item>
+        <!-- ListView -->
         <item name="adpListItemHeight">48dip</item>
         <item name="adpListItemTextColor">@color/primary_text_material_light</item>
+        <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
         <item name="adpListItemBackground">@drawable/item_background_material_light</item>
         <item name="adpListDivider">@null</item>
+        <!-- ButtonBar-->
         <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
         <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button.Light</item>
         <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>

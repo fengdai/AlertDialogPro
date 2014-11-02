@@ -7,9 +7,11 @@
         <attr name="adpTitleDividerBackground" format="reference|color" />
         <attr name="adpTitleDividerHeight" format="dimension" />
         <attr name="adpTitleHeight" format="dimension" />
+        <attr name="adpMessageTextAppearance" format="reference" />
         <attr name="adpListItemHeight" format="dimension" />
-        <attr name="adpListItemTextColor" format="dimension" />
-        <attr name="adpListDivider" format="dimension" />
+        <attr name="adpListItemTextColor" format="reference|color" />
+        <attr name="adpListItemTextAppearance" format="reference" />
+        <attr name="adpListDivider" format="reference" />
         <attr name="adpListItemBackground" format="reference" />
         <attr name="adpButtonBarDividerHorizontal" format="reference" />
         <attr name="adpButtonBarDividerVertical" format="reference" />
