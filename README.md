@@ -58,10 +58,14 @@ Usage
       <item name="android:windowBackground">@drawable/dialog_background_material_dark</item>
       <!-- Style the dialog's title -->
       <item name="android:windowTitleStyle">@style/DialogWindowTitle.Material</item>
+      <!-- Style the dialog's message text -->
+      <item name="adpMessageTextAppearance">@style/TextAppearance.Material.Subhead</item>
       <!-- Specify the item's height -->
       <item name="adpListItemHeight">48dip</item>
       <!-- Specify the item's text color -->
       <item name="adpListItemTextColor">@color/primary_text_material_dark</item>
+      <!-- Specify the item's text appearance -->
+      <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
       <!-- Specify the list selector -->
       <item name="adpListItemBackground">@drawable/item_background_material_dark</item>
       <!-- Specify the list divider -->
