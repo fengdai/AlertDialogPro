@@ -1,3 +1,4 @@
-include ':alertdialogpro', ':alertdialogpro-theme-holo'
+include ':alertdialogpro-core'
+include ':alertdialogpro-theme-holo'
 include ':alertdialogpro-theme-material'
 include ':alertdialogpro-demo'

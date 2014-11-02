@@ -2,7 +2,7 @@ apply plugin: 'android-library'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    compile project(':alertdialogpro')
+    compile project(':alertdialogpro-core')
 }
 
 android {
