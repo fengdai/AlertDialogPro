@@ -58,14 +58,26 @@
             android:layout_height="wrap_content"
             android:clipToPadding="false">
 
-            <TextView
-                android:id="@id/message"
-                style="?android:attr/textAppearanceMedium"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/alert_dialog_padding_material"
-                android:paddingRight="@dimen/alert_dialog_padding_material"
-                android:paddingTop="@dimen/alert_dialog_padding_top_material" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/message"
+                    style="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/alert_dialog_padding_material"
+                    android:paddingRight="@dimen/alert_dialog_padding_material"
+                    android:paddingTop="@dimen/alert_dialog_padding_top_material" />
+
+                <View
+                    android:id="@id/textSpacerNoButtons"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/alert_dialog_padding_top_material"
+                    android:visibility="gone" />
+            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 

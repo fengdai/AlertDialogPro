@@ -16,6 +16,7 @@
     <item name="contentPanel" type="id" />
     <item name="scrollView" type="id" />
     <item name="message" type="id" />
+    <item name="textSpacerNoButtons" type="id" />
 
     <!-- ids of custom panel and its children -->
     <item name="customPanel" type="id" />
