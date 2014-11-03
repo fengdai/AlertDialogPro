@@ -21,6 +21,8 @@
         <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
         <item name="adpListItemBackground">@drawable/item_background_material_dark</item>
         <item name="adpListDivider">@null</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
         <item name="android:listViewStyle">@style/Widget.Material.ListView</item>
         <!-- ButtonBar-->
         <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
@@ -44,6 +46,8 @@
         <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
         <item name="adpListItemBackground">@drawable/item_background_material_light</item>
         <item name="adpListDivider">@null</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
         <item name="android:listViewStyle">@style/Widget.Material.ListView.Light</item>
         <!-- ButtonBar-->
         <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
