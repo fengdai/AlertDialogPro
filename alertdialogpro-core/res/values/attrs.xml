@@ -11,6 +11,8 @@
         <attr name="adpListItemHeight" format="dimension" />
         <attr name="adpListItemTextColor" format="reference|color" />
         <attr name="adpListItemTextAppearance" format="reference" />
+        <attr name="adpListSingleChoiceTextAppearance" format="reference" />
+        <attr name="adpListMultiChoiceTextAppearance" format="reference" />
         <attr name="adpListDivider" format="reference" />
         <attr name="adpListItemBackground" format="reference" />
         <attr name="adpButtonBarDividerHorizontal" format="reference" />

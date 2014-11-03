@@ -9,5 +9,5 @@
     android:minHeight="?attr/adpListItemHeight"
     android:paddingLeft="16dip"
     android:paddingRight="16dip"
-    android:textAppearance="?attr/adpListItemTextAppearance"
+    android:textAppearance="?attr/adpListSingleChoiceTextAppearance"
     android:textColor="?attr/adpListItemTextColor" />

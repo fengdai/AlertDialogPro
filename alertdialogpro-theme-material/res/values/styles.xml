@@ -6,6 +6,11 @@
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
+    <style name="TextAppearance.Material.ListChoice" parent="android:TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
     <style name="Widget.Material" parent="android:Widget" />
 
     <style name="Widget.Material.ButtonBar">

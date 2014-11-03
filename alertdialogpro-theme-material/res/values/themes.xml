@@ -19,6 +19,10 @@
         <item name="adpListItemHeight">48dip</item>
         <item name="adpListItemTextColor">@color/primary_text_material_dark</item>
         <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
+        <item name="adpListSingleChoiceTextAppearance">@style/TextAppearance.Material.ListChoice
+        </item>
+        <item name="adpListMultiChoiceTextAppearance">@style/TextAppearance.Material.ListChoice
+        </item>
         <item name="adpListItemBackground">@drawable/item_background_material_dark</item>
         <item name="adpListDivider">@null</item>
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
@@ -44,6 +48,10 @@
         <item name="adpListItemHeight">48dip</item>
         <item name="adpListItemTextColor">@color/primary_text_material_light</item>
         <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
+        <item name="adpListSingleChoiceTextAppearance">@style/TextAppearance.Material.ListChoice
+        </item>
+        <item name="adpListMultiChoiceTextAppearance">@style/TextAppearance.Material.ListChoice
+        </item>
         <item name="adpListItemBackground">@drawable/item_background_material_light</item>
         <item name="adpListDivider">@null</item>
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
