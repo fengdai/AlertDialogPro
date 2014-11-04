@@ -26,7 +26,7 @@ Usage
 
 2. **alertdialogpro-theme-holo**
    
-   This a project which contains Holo resources for **AlertDialogPro**. Anyone who wants a Holo theme can include this project as an addition of alertdialogpro-core. It has two default Holo themes, ```AlertDialogProTheme.Holo``` and ```AlertDialogProTheme.Holo.Light```. The only thing you need to do is choose a theme from the two, and add it to your application's theme XML file. Your dialog will looks the same "Holo" across almost versions of Android backward to 3.0.
+   This a project which contains Holo resources for **AlertDialogPro**. Anyone who wants a Holo theme can include this project as an addition of alertdialogpro-core. It has two default Holo themes, ```AlertDialogProTheme.Holo``` and ```AlertDialogProTheme.Holo.Light```. The only thing you need to do is choose a theme from the two, and add it to your application's theme XML file. Your dialog will looks the same "Holo" across almost versions of Android backward to API level 3.
    1. Specify **AlertDialogPro**'s theme with attribute ```alertDialogProTheme```:
 
       ```xml
