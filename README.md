@@ -45,7 +45,7 @@ Usage
    
 3. **alertdialogpro-theme-material**
 
-   Similar to **alertdialogpro-theme-holo**, **alertdialogpro-theme-material** is a project to make material style **AlertDialogPro**. If you want a **material design** dialog UI, you can simply include it to your project as an addition of **alertdialogpro-core**. Then you can use it's two themes: ```AlertDialogProTheme.Material``` and ```AlertDialogProTheme.Material.Light``` in your application's theme resource or code. Since it depends on AppCompat-v21, it only support minSdkVersion 7+ now.
+   Similar to **alertdialogpro-theme-holo**, **alertdialogpro-theme-material** is a project to make material style **AlertDialogPro**. If you want a material dialog, you can simply include it to your project as an addition of **alertdialogpro-core**. Then you can use it's two themes: ```AlertDialogProTheme.Material``` and ```AlertDialogProTheme.Material.Light``` in your application's theme resource or code. Since it depends on AppCompat-v21, it only support minSdkVersion 7+ now.
    
 4. **Theme customization**
 
