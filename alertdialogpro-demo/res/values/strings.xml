@@ -3,11 +3,6 @@
 
     <string name="app_name">AlertDialogPro Demo</string>
     <string name="title_activity_my">AlertDialogPro Demo</string>
-    <string name="show_holo_dialog">Show Holo Dialog</string>
-    <string name="show_holo_light_dialog">Show Holo Light Dialog</string>
-    <string name="show_material_dialog">Show Material Dialog</string>
-    <string name="show_material_light_dialog">Show Material Light Dialog</string>
-    <string name="show_native_dialog">Show Native Dialog</string>
     <string name="action_settings">Settings</string>
 
 </resources>
