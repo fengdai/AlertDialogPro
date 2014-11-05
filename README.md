@@ -7,6 +7,7 @@ There are two theme projects you can use directly: [alertdialogpro-theme-holo](h
 
    ![holo](https://github.com/fengdai/AlertDialogPro/blob/master/image/holo_light_dialog_only.png)
    ![mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_light_dialog_only.png)
+   ![flavored-mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/flavored_material_light.png)
 
 
 Usage
