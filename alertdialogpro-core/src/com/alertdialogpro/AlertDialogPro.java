@@ -681,6 +681,21 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
         }
 
         /**
+         * Set a custom view resource to be the contents of the Dialog. The
+         * resource will be inflated, adding all top-level views to the screen.
+         *
+         * @param layoutResId Resource ID to be inflated.
+         * @return This Builder object to allow for chaining of calls to set
+         * methods
+         */
+        public Builder setView(int layoutResId) {
+            P.mView = null;
+            P.mViewLayoutResId = layoutResId;
+            P.mViewSpacingSpecified = false;
+            return this;
+        }
+
+        /**
          * Set a custom view to be the contents of the Dialog. If the supplied view is an instance
          * of a {@link ListView} the light background will be used.
          *
@@ -689,6 +704,7 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
          */
         public Builder setView(View view) {
             P.mView = view;
+            P.mViewLayoutResId = 0;
             P.mViewSpacingSpecified = false;
             return this;
         }
@@ -718,6 +734,7 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
         public Builder setView(View view, int viewSpacingLeft,
                                int viewSpacingTop, int viewSpacingRight, int viewSpacingBottom) {
             P.mView = view;
+            P.mViewLayoutResId = 0;
             P.mViewSpacingSpecified = true;
             P.mViewSpacingLeft = viewSpacingLeft;
             P.mViewSpacingTop = viewSpacingTop;
