@@ -41,61 +41,42 @@ import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 public class AlertController {
 
     private final Context mContext;
-
     private final DialogInterface mDialogInterface;
-
     private final Window mWindow;
 
     private CharSequence mTitle;
-
     private CharSequence mMessage;
-
     private ListView mListView;
-
     private View mView;
 
     private int mViewLayoutResId;
 
     private int mViewSpacingLeft;
-
     private int mViewSpacingTop;
-
     private int mViewSpacingRight;
-
     private int mViewSpacingBottom;
-
     private boolean mViewSpacingSpecified = false;
 
     private Button mButtonPositive;
-
     private CharSequence mButtonPositiveText;
-
     private Message mButtonPositiveMessage;
 
     private Button mButtonNegative;
-
     private CharSequence mButtonNegativeText;
-
     private Message mButtonNegativeMessage;
 
     private Button mButtonNeutral;
-
     private CharSequence mButtonNeutralText;
-
     private Message mButtonNeutralMessage;
 
     private ScrollView mScrollView;
 
     private int mIconId = -1;
-
     private Drawable mIcon;
 
     private ImageView mIconView;
-
     private TextView mTitleView;
-
     private TextView mMessageView;
-
     private View mCustomTitleView;
 
     private ListAdapter mAdapter;
@@ -103,13 +84,9 @@ public class AlertController {
     private int mCheckedItem = -1;
 
     private int mAlertDialogLayout;
-
     private int mListLayout;
-
     private int mMultiChoiceItemLayout;
-
     private int mSingleChoiceItemLayout;
-
     private int mListItemLayout;
 
     private Handler mHandler;
@@ -172,6 +149,7 @@ public class AlertController {
 
         mAlertDialogLayout = a.getResourceId(R.styleable.AlertDialogProStyle_adpLayout,
                 0);
+
         mListLayout = a.getResourceId(
                 R.styleable.AlertDialogProStyle_adpListLayout,
                 0);
@@ -605,83 +583,45 @@ public class AlertController {
 
     public static class AlertParams {
         public final Context mContext;
-
         public final LayoutInflater mInflater;
 
         public int mIconId = 0;
-
         public Drawable mIcon;
-
         public int mIconAttrId = 0;
-
         public CharSequence mTitle;
-
         public View mCustomTitleView;
-
         public CharSequence mMessage;
-
         public CharSequence mPositiveButtonText;
-
         public DialogInterface.OnClickListener mPositiveButtonListener;
-
         public CharSequence mNegativeButtonText;
-
         public DialogInterface.OnClickListener mNegativeButtonListener;
-
         public CharSequence mNeutralButtonText;
-
         public DialogInterface.OnClickListener mNeutralButtonListener;
-
         public boolean mCancelable;
-
         public DialogInterface.OnCancelListener mOnCancelListener;
-
         public DialogInterface.OnDismissListener mOnDismissListener;
-
         public DialogInterface.OnKeyListener mOnKeyListener;
-
         public CharSequence[] mItems;
-
         public ListAdapter mAdapter;
-
         public DialogInterface.OnClickListener mOnClickListener;
-
         public int mViewLayoutResId;
-
         public View mView;
-
         public int mViewSpacingLeft;
-
         public int mViewSpacingTop;
-
         public int mViewSpacingRight;
-
         public int mViewSpacingBottom;
-
         public boolean mViewSpacingSpecified = false;
-
         public boolean[] mCheckedItems;
-
         public boolean mIsMultiChoice;
-
         public boolean mIsSingleChoice;
-
         public int mCheckedItem = -1;
-
         public DialogInterface.OnMultiChoiceClickListener mOnCheckboxClickListener;
-
         public Cursor mCursor;
-
         public String mLabelColumn;
-
         public String mIsCheckedColumn;
-
         public boolean mForceInverseBackground;
-
         public AdapterView.OnItemSelectedListener mOnItemSelectedListener;
-
         public OnPrepareListViewListener mOnPrepareListViewListener;
-
         public boolean mRecycleOnMeasure = true;
 
         /**
