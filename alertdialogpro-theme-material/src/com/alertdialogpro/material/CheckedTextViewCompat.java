@@ -9,6 +9,9 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.Checkable;
 import android.widget.TextView;
 
+/**
+ * Compatible CheckedTextView for Pre-Lollipop devices. Draw checkMark on its left side.
+ */
 public class CheckedTextViewCompat extends TextView implements Checkable {
     private static final int[] CHECKED_TEXT_VIEW_ATTRS = new int[]{
             android.R.attr.checkMark, android.R.attr.checked
