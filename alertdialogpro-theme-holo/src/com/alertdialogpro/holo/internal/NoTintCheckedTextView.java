@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.CheckedTextView;
 
 /**
- * This class is used to avoid the appcompat-v7:20 to replace CheckedTextView with TintCheckedTextView.
+ * This class is used to avoid the appcompat-v7:r21 to replace CheckedTextView with TintCheckedTextView.
  */
 public class NoTintCheckedTextView extends CheckedTextView {
     public NoTintCheckedTextView(Context context) {

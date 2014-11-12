@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AlertDialogProTheme" parent="android:Theme.Dialog"></style>
+    <style name="AlertDialogProTheme" parent="Theme.AppCompat.Dialog"></style>
 
-    <style name="AlertDialogProTheme.Light" parent="android:Theme.Dialog"></style>
+    <style name="AlertDialogProTheme.Light" parent="Theme.AppCompat.Light.Dialog"></style>
 
     <style name="AlertDialogProTheme.Material" parent="AlertDialogProTheme.Base">
         <item name="android:windowAnimationStyle">@style/Animation.Material.Dialog</item>

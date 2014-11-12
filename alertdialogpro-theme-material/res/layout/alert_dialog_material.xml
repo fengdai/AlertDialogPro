@@ -31,8 +31,8 @@
                 android:scaleType="fitCenter"
                 android:src="@null" />
 
-            <TextView
-                android:id="@id/alertTitle"
+            <com.alertdialogpro.internal.DialogTitle
+                android:id="@+id/alertTitle"
                 style="?android:attr/windowTitleStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

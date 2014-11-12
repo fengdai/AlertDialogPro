@@ -36,7 +36,7 @@
                 android:paddingRight="8dp"
                 android:src="@null" />
 
-            <com.alertdialogpro.holo.internal.DialogTitle
+            <com.alertdialogpro.internal.DialogTitle
                 android:id="@id/alertTitle"
                 style="?android:attr/windowTitleStyle"
                 android:layout_width="match_parent"
