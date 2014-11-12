@@ -356,14 +356,14 @@ public class AlertController {
     }
 
     private void setupView() {
-        LinearLayout contentPanel = (LinearLayout) mWindow.findViewById(R.id.contentPanel);
+        final LinearLayout contentPanel = (LinearLayout) mWindow.findViewById(R.id.contentPanel);
         setupContent(contentPanel);
-        boolean hasButtons = setupButtons();
+        final boolean hasButtons = setupButtons();
 
-        LinearLayout topPanel = (LinearLayout) mWindow.findViewById(R.id.topPanel);
-        boolean hasTitle = setupTitle(topPanel);
+        final LinearLayout topPanel = (LinearLayout) mWindow.findViewById(R.id.topPanel);
+        final boolean hasTitle = setupTitle(topPanel);
 
-        View buttonPanel = mWindow.findViewById(R.id.buttonPanel);
+        final View buttonPanel = mWindow.findViewById(R.id.buttonPanel);
         if (!hasButtons) {
             buttonPanel.setVisibility(View.GONE);
             if (!hasButtons) {
@@ -771,7 +771,7 @@ public class AlertController {
                         : dialog.mListItemLayout;
                 if (mCursor == null) {
                     adapter = (mAdapter != null) ? mAdapter
-                            : new ArrayAdapter<CharSequence>(mContext, layout,
+                            : new CheckedItemAdapter(mContext, layout,
                             android.R.id.text1, mItems);
                 } else {
                     adapter = new SimpleCursorAdapter(mContext, layout,
@@ -830,4 +830,20 @@ public class AlertController {
         }
     }
 
+    private static class CheckedItemAdapter extends ArrayAdapter<CharSequence> {
+        public CheckedItemAdapter(Context context, int resource, int textViewResourceId,
+                                  CharSequence[] objects) {
+            super(context, resource, textViewResourceId, objects);
+        }
+
+        @Override
+        public boolean hasStableIds() {
+            return true;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+    }
 }
