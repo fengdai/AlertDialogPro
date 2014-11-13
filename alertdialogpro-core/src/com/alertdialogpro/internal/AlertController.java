@@ -190,11 +190,6 @@ public class AlertController {
     public void installContent() {
         /* We use a custom title so never request a window title */
         mWindow.requestFeature(Window.FEATURE_NO_TITLE);
-
-        if (mView == null || !canTextInput(mView)) {
-            mWindow.setFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM,
-                    WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
-        }
         mWindow.setContentView(mAlertDialogLayout);
         setupView();
     }
