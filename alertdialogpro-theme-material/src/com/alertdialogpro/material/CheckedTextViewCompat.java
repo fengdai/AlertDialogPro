@@ -14,7 +14,7 @@ import android.widget.TextView;
  */
 public class CheckedTextViewCompat extends TextView implements Checkable {
     private static final int[] CHECKED_TEXT_VIEW_ATTRS = new int[]{
-            android.R.attr.checkMark, android.R.attr.checked
+            android.R.attr.checked, android.R.attr.checkMark
     };
     private boolean mChecked;
     private int mCheckMarkResource;
@@ -39,16 +39,16 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     public CheckedTextViewCompat(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-        TintTypedArray a = TintTypedArray.obtainStyledAttributes(context, attrs, CHECKED_TEXT_VIEW_ATTRS,
+        final TintTypedArray a = TintTypedArray.obtainStyledAttributes(context, attrs, CHECKED_TEXT_VIEW_ATTRS,
                 defStyle, 0);
 
-        Drawable d = a.getDrawable(0);
+        final boolean checked = a.getBoolean(0, false);
+        setChecked(checked);
+
+        final Drawable d = a.getDrawable(1);
         if (d != null) {
             setCheckMarkDrawable(d);
         }
-
-        boolean checked = a.getBoolean(1, false);
-        setChecked(checked);
 
         a.recycle();
 
