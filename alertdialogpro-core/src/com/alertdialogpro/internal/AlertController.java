@@ -145,21 +145,21 @@ public class AlertController {
         mHandler = new ButtonHandler(di);
 
         TypedArray a = context.obtainStyledAttributes(null,
-                R.styleable.AlertDialogProStyle, R.attr.alertDialogProStyle, 0);
+                R.styleable.AlertDialogPro, R.attr.alertDialogProStyle, 0);
 
-        mAlertDialogLayout = a.getResourceId(R.styleable.AlertDialogProStyle_adpLayout,
+        mAlertDialogLayout = a.getResourceId(R.styleable.AlertDialogPro_adpLayout,
                 0);
 
         mListLayout = a.getResourceId(
-                R.styleable.AlertDialogProStyle_adpListLayout,
+                R.styleable.AlertDialogPro_adpListLayout,
                 0);
         mMultiChoiceItemLayout = a.getResourceId(
-                R.styleable.AlertDialogProStyle_adpMultiChoiceItemLayout,
+                R.styleable.AlertDialogPro_adpMultiChoiceItemLayout,
                 0);
         mSingleChoiceItemLayout = a.getResourceId(
-                R.styleable.AlertDialogProStyle_adpSingleChoiceItemLayout,
+                R.styleable.AlertDialogPro_adpSingleChoiceItemLayout,
                 0);
-        mListItemLayout = a.getResourceId(R.styleable.AlertDialogProStyle_adpListItemLayout,
+        mListItemLayout = a.getResourceId(R.styleable.AlertDialogPro_adpListItemLayout,
                 0);
 
         a.recycle();

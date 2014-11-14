@@ -3,7 +3,7 @@
     <attr name="alertDialogProTheme" format="reference" />
     <attr name="alertDialogProStyle" format="reference" />
 
-    <declare-styleable name="AlertDialogProStyle">
+    <declare-styleable name="AlertDialogPro">
         <attr name="adpTitleDividerBackground" format="reference|color" />
         <attr name="adpTitleDividerHeight" format="dimension" />
         <attr name="adpTitleHeight" format="dimension" />
