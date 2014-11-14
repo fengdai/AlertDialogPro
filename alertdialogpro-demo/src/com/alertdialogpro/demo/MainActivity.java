@@ -146,8 +146,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
 
     private void showCustomViewDialog() {
-        new AlertDialogPro.Builder(this, mTheme).setTitle(R.string.app_name).setView(null).setNegativeButton("Cancel", new ButtonClickedListener("Cancel")).
-                setPositiveButton("OK", null).show();
+        AlertDialogPro.Builder builder = new AlertDialogPro.Builder(this, mTheme);
+        builder.setTitle("Edit your name").setView(R.layout.input_view).setNegativeButton("Cancel", new ButtonClickedListener("Cancel")).
+                setPositiveButton("Save", null).show();
     }
 
 
