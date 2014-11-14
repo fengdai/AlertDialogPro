@@ -4,21 +4,26 @@
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#FF4081</item>
         <item name="alertDialogProTheme">@style/AppTheme.FlavoredMaterialLight</item>
     </style>
 
     <style name="AppTheme.FlavoredMaterialLight" parent="AlertDialogProTheme.Material.Light">
-        <item name="android:windowTitleStyle">@style/TitleStyle</item>
-        <item name="colorAccent">#E91E63</item>
-        <item name="adpButtonBarNegativeButtonStyle">@style/NormalButtonStyle</item>
-        <item name="adpButtonBarNeutralButtonStyle">@style/NormalButtonStyle</item>
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowTitleStyle">@style/AdpTitleStyle</item>
+        <item name="adpButtonBarNegativeButtonStyle">@style/AdpNormalButtonStyle</item>
+        <item name="adpButtonBarNeutralButtonStyle">@style/AdpNormalButtonStyle</item>
     </style>
 
-    <style name="TitleStyle" parent="DialogWindowTitle.Material.Light">
-        <item name="android:textColor">#3F51B5</item>
+    <style name="AdpTitleStyle" parent="DialogWindowTitle.Material.Light">
+        <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 
-    <style name="NormalButtonStyle" parent="Widget.Material.Button.Light">
+    <style name="AdpNormalButtonStyle" parent="Widget.Material.Button.Light">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
