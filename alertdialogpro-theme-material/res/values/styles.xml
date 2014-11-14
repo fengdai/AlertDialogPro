@@ -18,7 +18,7 @@
     </style>
 
     <style name="Widget.Material.Button">
-        <item name="android:background">@drawable/btn_mtrl_dark</item>
+        <item name="android:background">@drawable/adp_btn_mtrl_dark</item>
         <item name="android:textColor">?attr/colorAccent</item>
         <item name="android:textSize">14sp</item>
         <item name="android:minHeight">@dimen/alert_dialog_button_bar_height</item>
@@ -27,7 +27,7 @@
     </style>
 
     <style name="Widget.Material.Button.Light">
-        <item name="android:background">@drawable/btn_mtrl_light</item>
+        <item name="android:background">@drawable/adp_btn_mtrl_light</item>
     </style>
 
     <style name="Widget.Material.ListView" parent="android:Widget.ListView">
@@ -60,11 +60,11 @@
     <style name="AlertDialogPro" />
 
     <style name="AlertDialogPro.Material">
-        <item name="adpLayout">@layout/alert_dialog_material</item>
-        <item name="adpListLayout">@layout/select_dialog_material</item>
-        <item name="adpListItemLayout">@layout/select_dialog_item_material</item>
-        <item name="adpMultiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
-        <item name="adpSingleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
+        <item name="adpLayout">@layout/adp_alert_dialog_material</item>
+        <item name="adpListLayout">@layout/adp_select_dialog_material</item>
+        <item name="adpListItemLayout">@layout/adp_select_dialog_item_material</item>
+        <item name="adpMultiChoiceItemLayout">@layout/adp_select_dialog_multichoice_material</item>
+        <item name="adpSingleChoiceItemLayout">@layout/adp_select_dialog_singlechoice_material</item>
     </style>
 
     <style name="AlertDialogPro.Material.Light" />
@@ -74,8 +74,8 @@
     <style name="Animation.Material" parent="android:Animation" />
 
     <style name="Animation.Material.Dialog">
-        <item name="android:windowEnterAnimation">@anim/popup_enter_material</item>
-        <item name="android:windowExitAnimation">@anim/popup_exit_material</item>
+        <item name="android:windowEnterAnimation">@anim/adp_popup_enter_material</item>
+        <item name="android:windowExitAnimation">@anim/adp_popup_exit_material</item>
     </style>
 
 </resources>

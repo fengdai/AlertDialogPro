@@ -4,7 +4,7 @@
     android:shareInterpolator="false">
     <alpha
         android:duration="150"
-        android:fromAlpha="0.0"
-        android:interpolator="@interpolator/decelerate_cubic"
-        android:toAlpha="1.0" />
+        android:fromAlpha="1.0"
+        android:interpolator="@interpolator/adp_decelerate_cubic"
+        android:toAlpha="0.0" />
 </set>

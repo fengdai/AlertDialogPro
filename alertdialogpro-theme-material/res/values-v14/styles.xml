@@ -2,7 +2,7 @@
 <resources>
 
     <style name="Widget.Material.Button">
-        <item name="android:background">@drawable/btn_mtrl_dark</item>
+        <item name="android:background">@drawable/adp_btn_mtrl_dark</item>
         <item name="android:textColor">?attr/colorAccent</item>
         <item name="android:textSize">14sp</item>
         <item name="android:minHeight">@dimen/alert_dialog_button_bar_height</item>

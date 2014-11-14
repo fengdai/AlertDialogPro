@@ -12,7 +12,7 @@
     </style>
 
     <style name="Widget.Holo.Button">
-        <item name="android:background">@drawable/item_background_holo_dark</item>
+        <item name="android:background">@drawable/adp_item_background_holo_dark</item>
         <item name="android:paddingLeft">4dip</item>
         <item name="android:paddingRight">4dip</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
@@ -22,7 +22,7 @@
     </style>
 
     <style name="Widget.Holo.Button.Light">
-        <item name="android:background">@drawable/item_background_holo_light</item>
+        <item name="android:background">@drawable/adp_item_background_holo_light</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
@@ -51,11 +51,11 @@
     <style name="AlertDialogPro" />
 
     <style name="AlertDialogPro.Holo">
-        <item name="adpLayout">@layout/alert_dialog_holo</item>
-        <item name="adpListLayout">@layout/select_dialog_holo</item>
-        <item name="adpListItemLayout">@layout/select_dialog_item_holo</item>
-        <item name="adpMultiChoiceItemLayout">@layout/select_dialog_multichoice_holo</item>
-        <item name="adpSingleChoiceItemLayout">@layout/select_dialog_singlechoice_holo</item>
+        <item name="adpLayout">@layout/adp_alert_dialog_holo</item>
+        <item name="adpListLayout">@layout/adp_select_dialog_holo</item>
+        <item name="adpListItemLayout">@layout/adp_select_dialog_item_holo</item>
+        <item name="adpMultiChoiceItemLayout">@layout/adp_select_dialog_multichoice_holo</item>
+        <item name="adpSingleChoiceItemLayout">@layout/adp_select_dialog_singlechoice_holo</item>
     </style>
 
     <style name="AlertDialogPro.Holo.Light" />

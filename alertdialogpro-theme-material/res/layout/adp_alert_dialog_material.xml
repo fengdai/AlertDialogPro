@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@id/parentPanel"
+    android:id="@id/adp_parentPanel"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@id/topPanel"
+        android:id="@id/adp_topPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@id/title_template"
+            android:id="@id/adp_title_template"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|start"
@@ -24,7 +24,7 @@
             android:paddingTop="@dimen/alert_dialog_padding_top_material">
 
             <ImageView
-                android:id="@id/icon"
+                android:id="@id/adp_icon"
                 android:layout_width="32dip"
                 android:layout_height="32dip"
                 android:layout_marginRight="8dip"
@@ -32,7 +32,7 @@
                 android:src="@null" />
 
             <com.alertdialogpro.internal.DialogTitle
-                android:id="@+id/alertTitle"
+                android:id="@id/adp_alertTitle"
                 style="?android:attr/windowTitleStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@id/contentPanel"
+        android:id="@id/adp_contentPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -53,7 +53,7 @@
         android:orientation="vertical">
 
         <ScrollView
-            android:id="@id/scrollView"
+            android:id="@id/adp_scrollView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false">
@@ -64,7 +64,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@id/message"
+                    android:id="@id/adp_message"
                     style="?attr/adpMessageTextAppearance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                     android:paddingTop="@dimen/alert_dialog_padding_top_material" />
 
                 <View
-                    android:id="@id/textSpacerNoButtons"
+                    android:id="@id/adp_textSpacerNoButtons"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/alert_dialog_padding_top_material"
                     android:visibility="gone" />
@@ -82,20 +82,20 @@
     </LinearLayout>
 
     <FrameLayout
-        android:id="@id/customPanel"
+        android:id="@id/adp_customPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:minHeight="48dp">
 
         <FrameLayout
-            android:id="@id/custom"
+            android:id="@id/adp_custom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </FrameLayout>
 
     <LinearLayout
-        android:id="@id/buttonPanel"
+        android:id="@id/adp_buttonPanel"
         style="?attr/adpButtonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
         android:paddingTop="8dp">
 
         <Button
-            android:id="@id/button3"
+            android:id="@id/adp_button3"
             style="?attr/adpButtonBarNeutralButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -121,13 +121,13 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@id/button2"
+            android:id="@id/adp_button2"
             style="?attr/adpButtonBarNegativeButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@id/button1"
+            android:id="@id/adp_button1"
             style="?attr/adpButtonBarPositiveButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

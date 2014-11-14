@@ -351,19 +351,19 @@ public class AlertController {
     }
 
     private void setupView() {
-        final LinearLayout contentPanel = (LinearLayout) mWindow.findViewById(R.id.contentPanel);
+        final LinearLayout contentPanel = (LinearLayout) mWindow.findViewById(R.id.adp_contentPanel);
         setupContent(contentPanel);
         final boolean hasButtons = setupButtons();
 
-        final LinearLayout topPanel = (LinearLayout) mWindow.findViewById(R.id.topPanel);
+        final LinearLayout topPanel = (LinearLayout) mWindow.findViewById(R.id.adp_topPanel);
         final boolean hasTitle = setupTitle(topPanel);
 
-        final View buttonPanel = mWindow.findViewById(R.id.buttonPanel);
+        final View buttonPanel = mWindow.findViewById(R.id.adp_buttonPanel);
         if (!hasButtons) {
             buttonPanel.setVisibility(View.GONE);
             if (!hasButtons) {
                 buttonPanel.setVisibility(View.GONE);
-                final View spacer = mWindow.findViewById(R.id.textSpacerNoButtons);
+                final View spacer = mWindow.findViewById(R.id.adp_textSpacerNoButtons);
                 if (spacer != null) {
                     spacer.setVisibility(View.VISIBLE);
                 }
@@ -371,7 +371,7 @@ public class AlertController {
         }
 
 
-        final FrameLayout customPanel = (FrameLayout) mWindow.findViewById(R.id.customPanel);
+        final FrameLayout customPanel = (FrameLayout) mWindow.findViewById(R.id.adp_customPanel);
         final View customView;
         if (mView != null) {
             customView = mView;
@@ -389,7 +389,7 @@ public class AlertController {
         }
 
         if (hasCustomView) {
-            final FrameLayout custom = (FrameLayout) mWindow.findViewById(R.id.custom);
+            final FrameLayout custom = (FrameLayout) mWindow.findViewById(R.id.adp_custom);
             custom.addView(customView, new LayoutParams(MATCH_PARENT, MATCH_PARENT));
 
             if (mViewSpacingSpecified) {
@@ -409,9 +409,9 @@ public class AlertController {
         if (hasTitle) {
             View divider = null;
             if (mMessage != null || mView != null || mListView != null) {
-                divider = mWindow.findViewById(R.id.titleDivider);
+                divider = mWindow.findViewById(R.id.adp_titleDivider);
             } else {
-                divider = mWindow.findViewById(R.id.titleDividerTop);
+                divider = mWindow.findViewById(R.id.adp_titleDividerTop);
             }
 
             if (divider != null) {
@@ -441,15 +441,15 @@ public class AlertController {
             topPanel.addView(mCustomTitleView, 0, lp);
 
             // Hide the title template
-            View titleTemplate = mWindow.findViewById(R.id.title_template);
+            View titleTemplate = mWindow.findViewById(R.id.adp_title_template);
             titleTemplate.setVisibility(View.GONE);
         } else {
             final boolean hasTextTitle = !TextUtils.isEmpty(mTitle);
 
-            mIconView = (ImageView) mWindow.findViewById(R.id.icon);
+            mIconView = (ImageView) mWindow.findViewById(R.id.adp_icon);
             if (hasTextTitle) {
                 /* Display the title if a title is supplied, else hide it */
-                mTitleView = (TextView) mWindow.findViewById(R.id.alertTitle);
+                mTitleView = (TextView) mWindow.findViewById(R.id.adp_alertTitle);
 
                 mTitleView.setText(mTitle);
                 
@@ -475,7 +475,7 @@ public class AlertController {
             } else {
 
                 // Hide the title template
-                View titleTemplate = mWindow.findViewById(R.id.title_template);
+                View titleTemplate = mWindow.findViewById(R.id.adp_title_template);
                 titleTemplate.setVisibility(View.GONE);
                 mIconView.setVisibility(View.GONE);
                 topPanel.setVisibility(View.GONE);
@@ -486,11 +486,11 @@ public class AlertController {
     }
 
     private void setupContent(LinearLayout contentPanel) {
-        mScrollView = (ScrollView) mWindow.findViewById(R.id.scrollView);
+        mScrollView = (ScrollView) mWindow.findViewById(R.id.adp_scrollView);
         mScrollView.setFocusable(false);
 
         // Special case for users that only want to display a String
-        mMessageView = (TextView) mWindow.findViewById(R.id.message);
+        mMessageView = (TextView) mWindow.findViewById(R.id.adp_message);
         if (mMessageView == null) {
             return;
         }
@@ -502,7 +502,7 @@ public class AlertController {
             mScrollView.removeView(mMessageView);
 
             if (mListView != null) {
-                contentPanel.removeView(mWindow.findViewById(R.id.scrollView));
+                contentPanel.removeView(mWindow.findViewById(R.id.adp_scrollView));
                 contentPanel.addView(mListView, new LinearLayout.LayoutParams(
                         MATCH_PARENT, MATCH_PARENT));
                 contentPanel.setLayoutParams(new LinearLayout.LayoutParams(
@@ -518,7 +518,7 @@ public class AlertController {
         int BIT_BUTTON_NEGATIVE = 2;
         int BIT_BUTTON_NEUTRAL = 4;
         int whichButtons = 0;
-        mButtonPositive = (Button) mWindow.findViewById(R.id.button1);
+        mButtonPositive = (Button) mWindow.findViewById(R.id.adp_button1);
         mButtonPositive.setOnClickListener(mButtonHandler);
 
         if (TextUtils.isEmpty(mButtonPositiveText)) {
@@ -529,7 +529,7 @@ public class AlertController {
             whichButtons = whichButtons | BIT_BUTTON_POSITIVE;
         }
 
-        mButtonNegative = (Button) mWindow.findViewById(R.id.button2);
+        mButtonNegative = (Button) mWindow.findViewById(R.id.adp_button2);
         mButtonNegative.setOnClickListener(mButtonHandler);
 
         if (TextUtils.isEmpty(mButtonNegativeText)) {
@@ -541,7 +541,7 @@ public class AlertController {
             whichButtons = whichButtons | BIT_BUTTON_NEGATIVE;
         }
 
-        mButtonNeutral = (Button) mWindow.findViewById(R.id.button3);
+        mButtonNeutral = (Button) mWindow.findViewById(R.id.adp_button3);
         mButtonNeutral.setOnClickListener(mButtonHandler);
 
         if (TextUtils.isEmpty(mButtonNeutralText)) {
