@@ -2,5 +2,5 @@
 
 <resources>
     <!-- Dialog button bar height -->
-    <dimen name="alert_dialog_button_bar_height">54dip</dimen>
+    <dimen name="adp_mtrl_alert_dialog_button_bar_height">54dip</dimen>
 </resources>

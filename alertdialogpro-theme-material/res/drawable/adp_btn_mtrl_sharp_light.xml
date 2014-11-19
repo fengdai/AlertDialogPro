@@ -3,17 +3,17 @@
 <!-- Used as the canonical button shape. -->
 
 <inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:insetBottom="@dimen/button_inset_vertical_material"
-    android:insetLeft="@dimen/button_inset_horizontal_material"
-    android:insetRight="@dimen/button_inset_horizontal_material"
-    android:insetTop="@dimen/button_inset_vertical_material">
+    android:insetBottom="@dimen/adp_mtrl_button_inset_vertical"
+    android:insetLeft="@dimen/adp_mtrl_button_inset_horizontal"
+    android:insetRight="@dimen/adp_mtrl_button_inset_horizontal"
+    android:insetTop="@dimen/adp_mtrl_button_inset_vertical">
     <shape android:shape="rectangle">
-        <corners android:radius="@dimen/control_corner_material" />
-        <solid android:color="@color/ripple_material_light" />
+        <corners android:radius="@dimen/adp_mtrl_control_corner" />
+        <solid android:color="@color/adp_mtrl_ripple_light" />
         <padding
-            android:bottom="@dimen/button_padding_vertical_material"
-            android:left="@dimen/button_padding_horizontal_material"
-            android:right="@dimen/button_padding_horizontal_material"
-            android:top="@dimen/button_padding_vertical_material" />
+            android:bottom="@dimen/adp_mtrl_button_padding_vertical"
+            android:left="@dimen/adp_mtrl_button_padding_horizontal"
+            android:right="@dimen/adp_mtrl_button_padding_horizontal"
+            android:top="@dimen/adp_mtrl_button_padding_vertical" />
     </shape>
 </inset>

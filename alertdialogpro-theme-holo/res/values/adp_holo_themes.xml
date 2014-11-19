@@ -21,9 +21,9 @@
         <item name="android:listChoiceIndicatorSingle">@drawable/adp_btn_radio_holo_dark</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/adp_btn_check_holo_dark</item>
         <!-- Title -->
-        <item name="adpTitleDividerBackground">@color/holo_blue_light</item>
-        <item name="adpTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
-        <item name="adpTitleHeight">@dimen/alert_dialog_title_height</item>
+        <item name="adpTitleDividerBackground">@color/adp_holo_blue_light</item>
+        <item name="adpTitleDividerHeight">@dimen/adp_holo_title_divider_height</item>
+        <item name="adpTitleHeight">@dimen/adp_holo_title_height</item>
         <!-- ButtonBar-->
         <item name="adpButtonBarStyle">@style/Widget.Holo.ButtonBar</item>
         <item name="adpButtonBarDividerHorizontal">@drawable/adp_list_divider_holo_dark</item>
@@ -52,9 +52,9 @@
         <item name="android:listChoiceIndicatorSingle">@drawable/adp_btn_radio_holo_light</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/adp_btn_check_holo_light</item>
         <!-- Title -->
-        <item name="adpTitleDividerBackground">@color/holo_blue_light</item>
-        <item name="adpTitleDividerHeight">@dimen/alert_dialog_title_divider_height</item>
-        <item name="adpTitleHeight">@dimen/alert_dialog_title_height</item>
+        <item name="adpTitleDividerBackground">@color/adp_holo_blue_light</item>
+        <item name="adpTitleDividerHeight">@dimen/adp_holo_title_divider_height</item>
+        <item name="adpTitleHeight">@dimen/adp_holo_title_height</item>
         <!-- ButtonBar-->
         <item name="adpButtonBarStyle">@style/Widget.Holo.ButtonBar</item>
         <item name="adpButtonBarDividerHorizontal">@drawable/adp_list_divider_holo_light</item>

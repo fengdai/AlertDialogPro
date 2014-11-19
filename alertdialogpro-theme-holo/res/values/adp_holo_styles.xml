@@ -45,7 +45,7 @@
 
     <style name="TextAppearanceTitle.Holo" parent="android:TextAppearance">
         <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/holo_blue_light</item>
+        <item name="android:textColor">@color/adp_holo_blue_light</item>
     </style>
 
     <style name="AlertDialogPro" />
