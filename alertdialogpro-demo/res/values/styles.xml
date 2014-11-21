@@ -10,7 +10,7 @@
         <item name="alertDialogProTheme">@style/AppTheme.FlavoredMaterialLight</item>
     </style>
 
-    <style name="AppTheme.FlavoredMaterialLight" parent="AlertDialogProTheme.Material.Light">
+    <style name="AppTheme.FlavoredMaterialLight" parent="Theme.AlertDialogPro.Material.Light">
         <item name="colorPrimary">#3F51B5</item>
         <item name="colorPrimaryDark">#303F9F</item>
         <item name="colorAccent">#FF4081</item>
@@ -19,11 +19,11 @@
         <item name="adpButtonBarNeutralButtonStyle">@style/AdpNormalButtonStyle</item>
     </style>
 
-    <style name="AdpTitleStyle" parent="DialogWindowTitle.Material.Light">
+    <style name="AdpTitleStyle" parent="DialogWindowTitle.AlertDialogPro.Material.Light">
         <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 
-    <style name="AdpNormalButtonStyle" parent="Widget.Material.Button.Light">
+    <style name="AdpNormalButtonStyle" parent="Widget.AlertDialogPro.Material.Light.Button">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 

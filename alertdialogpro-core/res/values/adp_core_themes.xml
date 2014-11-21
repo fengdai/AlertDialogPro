@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AlertDialogProTheme" parent="android:Theme.Dialog"></style>
+    <style name="BaseAdp" parent="Theme.AppCompat.Dialog"></style>
 
-    <style name="AlertDialogProTheme.Light" parent="android:Theme.Dialog"></style>
+    <style name="BaseAdp.Light" parent="Theme.AppCompat.Light.Dialog"></style>
 
-    <style name="AlertDialogProTheme.Base" parent="AlertDialogProTheme">
-        <item name="android:windowContentOverlay">@null</item>
+    <style name="Theme.AlertDialogPro" parent="BaseAdp">
         <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
         <item name="adpButtonBarNegativeButtonStyle">?attr/adpButtonBarButtonStyle</item>
         <item name="adpButtonBarNeutralButtonStyle">?attr/adpButtonBarButtonStyle</item>
     </style>
 
-    <style name="AlertDialogProTheme.Base.Light" parent="AlertDialogProTheme.Light">
-        <item name="android:windowContentOverlay">@null</item>
+    <style name="Theme.AlertDialogPro.Light" parent="BaseAdp.Light">
         <item name="adpButtonBarPositiveButtonStyle">?attr/adpButtonBarButtonStyle</item>
         <item name="adpButtonBarNegativeButtonStyle">?attr/adpButtonBarButtonStyle</item>
         <item name="adpButtonBarNeutralButtonStyle">?attr/adpButtonBarButtonStyle</item>

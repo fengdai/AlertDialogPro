@@ -1,61 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AlertDialogProTheme" parent="Theme.AppCompat.Dialog"></style>
-
-    <style name="AlertDialogProTheme.Light" parent="Theme.AppCompat.Light.Dialog"></style>
-
-    <style name="AlertDialogProTheme.Material" parent="AlertDialogProTheme.Base">
+    <style name="Theme.AlertDialogPro.Material" parent="Theme.AlertDialogPro">
         <item name="android:windowAnimationStyle">@style/Animation.Material.Dialog</item>
         <!-- Background -->
         <item name="android:windowBackground">@drawable/adp_dialog_background_material_dark</item>
         <!-- Title -->
-        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Material</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.AlertDialogPro.Material</item>
+        <item name="adpTitleMinHeight">0dp</item>
         <!-- Message -->
-        <item name="adpMessageTextAppearance">@style/TextAppearance.Material.Subhead</item>
+        <item name="adpMessageTextAppearance">@style/TextAppearance.AlertDialogPro.Material.Subhead</item>
         <!-- ListView -->
-        <item name="adpListItemHeight">48dip</item>
+        <item name="adpListItemMinHeight">48dip</item>
         <item name="adpListItemTextColor">?android:attr/textColorPrimary</item>
-        <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
-        <item name="adpListSingleChoiceTextAppearance">@style/TextAppearance.Material.ListChoice
-        </item>
-        <item name="adpListMultiChoiceTextAppearance">@style/TextAppearance.Material.ListChoice
-        </item>
+        <item name="adpListItemTextAppearance">@style/TextAppearance.AlertDialogPro.Material.Subhead</item>
+        <item name="adpListSingleChoiceTextAppearance">@style/TextAppearance.AlertDialogPro.Material.ListChoice</item>
+        <item name="adpListMultiChoiceTextAppearance">@style/TextAppearance.AlertDialogPro.Material.ListChoice</item>
         <item name="adpListItemBackground">@drawable/adp_item_background_material_dark</item>
         <item name="adpListDivider">@null</item>
+        <item name="android:listViewStyle">@style/Widget.AlertDialogPro.Material.ListView</item>
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
-        <item name="android:listViewStyle">@style/Widget.Material.ListView</item>
         <!-- ButtonBar-->
-        <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
-        <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button</item>
+        <item name="adpButtonBarStyle">@style/Widget.AlertDialogPro.Material.ButtonBar</item>
+        <item name="adpButtonBarButtonStyle">@style/Widget.AlertDialogPro.Material.Button</item>
         <item name="alertDialogProStyle">@style/AlertDialogPro.Material</item>
     </style>
 
-    <style name="AlertDialogProTheme.Material.Light" parent="AlertDialogProTheme.Base.Light">
+    <style name="Theme.AlertDialogPro.Material.Light" parent="Theme.AlertDialogPro.Light">
         <item name="android:windowAnimationStyle">@style/Animation.Material.Dialog</item>
         <!-- Background -->
         <item name="android:windowBackground">@drawable/adp_dialog_background_material_light</item>
         <!-- Title -->
-        <item name="android:windowTitleStyle">@style/DialogWindowTitle.Material.Light</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle.AlertDialogPro.Material.Light</item>
+        <item name="adpTitleMinHeight">0dp</item>
         <!-- Message -->
-        <item name="adpMessageTextAppearance">@style/TextAppearance.Material.Subhead</item>
+        <item name="adpMessageTextAppearance">@style/TextAppearance.AlertDialogPro.Material.Subhead</item>
         <!-- ListView -->
-        <item name="adpListItemHeight">48dip</item>
+        <item name="adpListItemMinHeight">48dip</item>
         <item name="adpListItemTextColor">?android:attr/textColorPrimary</item>
-        <item name="adpListItemTextAppearance">@style/TextAppearance.Material.Subhead</item>
-        <item name="adpListSingleChoiceTextAppearance">@style/TextAppearance.Material.ListChoice
-        </item>
-        <item name="adpListMultiChoiceTextAppearance">@style/TextAppearance.Material.ListChoice
-        </item>
+        <item name="adpListItemTextAppearance">@style/TextAppearance.AlertDialogPro.Material.Subhead</item>
+        <item name="adpListSingleChoiceTextAppearance">@style/TextAppearance.AlertDialogPro.Material.ListChoice</item>
+        <item name="adpListMultiChoiceTextAppearance">@style/TextAppearance.AlertDialogPro.Material.ListChoice</item>
         <item name="adpListItemBackground">@drawable/adp_item_background_material_light</item>
         <item name="adpListDivider">@null</item>
+        <item name="android:listViewStyle">@style/Widget.AlertDialogPro.Material.Light.ListView</item>
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
-        <item name="android:listViewStyle">@style/Widget.Material.ListView.Light</item>
         <!-- ButtonBar-->
-        <item name="adpButtonBarStyle">@style/Widget.Material.ButtonBar</item>
-        <item name="adpButtonBarButtonStyle">@style/Widget.Material.Button.Light</item>
+        <item name="adpButtonBarStyle">@style/Widget.AlertDialogPro.Material.ButtonBar</item>
+        <item name="adpButtonBarButtonStyle">@style/Widget.AlertDialogPro.Material.Light.Button</item>
         <item name="alertDialogProStyle">@style/AlertDialogPro.Material.Light</item>
     </style>
 

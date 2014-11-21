@@ -90,5 +90,11 @@
             android:layout_below="@id/showSingleChoiceList"
             android:text="Show Custom View" />
 
+        <Button
+            android:id="@+id/showNativeAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/showCustomView"
+            android:text="Show Native Alert" />
     </RelativeLayout>
 </ScrollView>

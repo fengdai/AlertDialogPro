@@ -1,5 +1,6 @@
 package com.alertdialogpro.demo;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -32,16 +33,16 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         mTheme = -1;
                         break;
                     case R.id.theme_material:
-                        mTheme = R.style.AlertDialogProTheme_Material;
+                        mTheme = R.style.Theme_AlertDialogPro_Material;
                         break;
                     case R.id.theme_material_light:
-                        mTheme = R.style.AlertDialogProTheme_Material_Light;
+                        mTheme = R.style.Theme_AlertDialogPro_Material_Light;
                         break;
                     case R.id.theme_holo:
-                        mTheme = R.style.AlertDialogProTheme_Holo;
+                        mTheme = R.style.Theme_AlertDialogPro_Holo;
                         break;
                     case R.id.theme_holo_light:
-                        mTheme = R.style.AlertDialogProTheme_Holo_Light;
+                        mTheme = R.style.Theme_AlertDialogPro_Holo_Light;
                         break;
                     default:
                         break;
@@ -54,6 +55,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         findViewById(R.id.showMultiChoiceList).setOnClickListener(this);
         findViewById(R.id.showSingleChoiceList).setOnClickListener(this);
         findViewById(R.id.showCustomView).setOnClickListener(this);
+        findViewById(R.id.showNativeAlert).setOnClickListener(this);
     }
 
     @Override
@@ -74,7 +76,32 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.showCustomView:
                 showCustomViewDialog();
                 break;
+            case R.id.showNativeAlert:
+                showNativeAlert();
+                break;
         }
+    }
+
+    private void showNativeAlert() {
+        final String[] list = new String[]{"Holo theme", "Material theme", "Custom theme"};
+        new AlertDialog.Builder(this).setTitle(R.string.app_name).
+                setMultiChoiceItems(list,
+                        new boolean[]{false, false, false},
+                        new DialogInterface.OnMultiChoiceClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                                if (isChecked) {
+                                    mCheckedItems.add(list[which]);
+                                } else {
+                                    mCheckedItems.remove(list[which]);
+                                }
+                                showToast(list[which] + " is " + (isChecked ? "checked" : "unchecked" + "."));
+                            }
+                        }).
+                setNeutralButton("More info", new ButtonClickedListener("More info")).
+                setNegativeButton("Cancel", new ButtonClickedListener("Cancel")).
+                setPositiveButton("Choose", new ButtonClickedListener("Chose " + mCheckedItems.toString())).show();
+
     }
 
     // Show a message dialog

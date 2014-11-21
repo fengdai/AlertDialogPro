@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Widget.Material.Button" parent="android:Widget.Material.Button.Borderless.Colored">
+    <style name="Base.Widget.AlertDialogPro.Material.Button" parent="android:Widget.Material.Button.Borderless.Colored">
         <item name="android:minHeight">@dimen/adp_mtrl_alert_dialog_button_bar_height</item>
         <item name="android:minWidth">64dip</item>
         <item name="android:maxLines">2</item>
     </style>
 
-    <style name="Widget.Material.Button.Light" parent="android:Widget.Material.Light.Button.Borderless.Colored">
+    <style name="Base.Widget.AlertDialogPro.ListView" parent="android:Widget.Material.ListView"></style>
+
+    <style name="Base.Widget.AlertDialogPro.Material.Light.Button" parent="android:Widget.Material.Light.Button.Borderless.Colored">
         <item name="android:minHeight">@dimen/adp_mtrl_alert_dialog_button_bar_height</item>
         <item name="android:minWidth">64dip</item>
         <item name="android:maxLines">2</item>
     </style>
 
-    <style name="Widget.Material.ListView" parent="android:Widget.Material.ListView"></style>
-
-    <style name="Widget.Material.ListView.Light" parent="android:Widget.Material.Light.ListView"></style>
+    <style name="Base.Widget.AlertDialogPro.Light.ListView" parent="android:Widget.Material.Light.ListView"></style>
 
 </resources>

@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Widget.Holo" parent="android:Widget" />
+    <!-- Text styles -->
 
-    <style name="Widget.Holo.ButtonBar">
+    <style name="TextAppearance.AlertDialogPro.Holo" />
+
+    <style name="TextAppearance.AlertDialogPro.Holo.DialogWindowTitle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/adp_holo_blue_light</item>
+    </style>
+
+    <!-- Widget Styles -->
+
+    <style name="Widget.AlertDialogPro.Holo" />
+
+    <style name="Widget.AlertDialogPro.Holo.ButtonBar">
         <!-- Use own attrs -->
         <item name="llDivider">?attr/adpButtonBarDividerVertical</item>
         <item name="llShowDividers">middle</item>
@@ -11,7 +22,7 @@
         <item name="android:background">@null</item>
     </style>
 
-    <style name="Widget.Holo.Button">
+    <style name="Widget.AlertDialogPro.Holo.Button">
         <item name="android:background">@drawable/adp_item_background_holo_dark</item>
         <item name="android:paddingLeft">4dip</item>
         <item name="android:paddingRight">4dip</item>
@@ -21,34 +32,27 @@
         <item name="android:minWidth">64dip</item>
     </style>
 
-    <style name="Widget.Holo.Button.Light">
-        <item name="android:background">@drawable/adp_item_background_holo_light</item>
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
-    </style>
-
-    <style name="Widget.Holo.ListView" parent="android:Widget.ListView">
+    <style name="Widget.AlertDialogPro.Holo.ListView" parent="android:Widget.ListView">
         <item name="android:listSelector">?attr/adpListItemBackground</item>
     </style>
 
-    <style name="DialogWindowTitle">
-        <item name="android:maxLines">1</item>
-        <item name="android:scrollHorizontally">true</item>
+    <style name="Widget.AlertDialogPro.Holo.Light" />
+
+    <style name="Widget.AlertDialogPro.Holo.Light.Button">
+        <item name="android:background">@drawable/adp_item_background_holo_light</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
     </style>
 
-    <style name="DialogWindowTitle.Holo">
-        <item name="android:textAppearance">@style/TextAppearanceTitle.Holo</item>
+    <style name="Widget.AlertDialogPro.Holo.Light.ListView" parent="android:Widget.ListView">
+        <item name="android:listSelector">?attr/adpListItemBackground</item>
     </style>
 
-    <style name="DialogWindowTitle.Holo.Light">
-        <item name="android:textAppearance">@style/TextAppearanceTitle.Holo</item>
-    </style>
-
-    <style name="TextAppearanceTitle.Holo" parent="android:TextAppearance">
-        <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/adp_holo_blue_light</item>
-    </style>
-
-    <style name="AlertDialogPro" />
+    <!-- Dialog styles -->
 
     <style name="AlertDialogPro.Holo">
         <item name="adpLayout">@layout/adp_alert_dialog_holo</item>
@@ -59,4 +63,19 @@
     </style>
 
     <style name="AlertDialogPro.Holo.Light" />
+
+    <!-- Window title -->
+
+    <style name="DialogWindowTitle.AlertDialogPro.Holo">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.AlertDialogPro.Holo.DialogWindowTitle</item>
+    </style>
+
+    <style name="DialogWindowTitle.AlertDialogPro.Holo.Light">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.AlertDialogPro.Holo.DialogWindowTitle</item>
+    </style>
+
 </resources>

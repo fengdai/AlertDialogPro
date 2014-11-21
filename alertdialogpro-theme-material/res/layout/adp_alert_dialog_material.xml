@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|start"
+            android:minHeight="?attr/adpTitleMinHeight"
             android:orientation="horizontal"
             android:paddingEnd="@dimen/adp_mtrl_alert_dialog_padding"
             android:paddingLeft="@dimen/adp_mtrl_alert_dialog_padding"

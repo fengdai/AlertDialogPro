@@ -1,32 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Specify AlertDialogPro's theme -->
     <attr name="alertDialogProTheme" format="reference" />
+
+    <!-- Specify AlertDialogPro's style -->
     <attr name="alertDialogProStyle" format="reference" />
 
-    <declare-styleable name="AlertDialogPro">
-        <attr name="adpTitleDividerBackground" format="reference|color" />
-        <attr name="adpTitleDividerHeight" format="dimension" />
-        <attr name="adpTitleHeight" format="dimension" />
-        <attr name="adpMessageTextAppearance" format="reference" />
-        <attr name="adpListItemHeight" format="dimension" />
-        <attr name="adpListItemTextColor" format="reference|color" />
-        <attr name="adpListItemTextAppearance" format="reference" />
-        <attr name="adpListSingleChoiceTextAppearance" format="reference" />
-        <attr name="adpListMultiChoiceTextAppearance" format="reference" />
-        <attr name="adpListDivider" format="reference" />
-        <attr name="adpListItemBackground" format="reference" />
-        <attr name="adpButtonBarDividerHorizontal" format="reference" />
-        <attr name="adpButtonBarDividerVertical" format="reference" />
-        <attr name="adpButtonBarStyle" format="reference" />
-        <attr name="adpButtonBarPositiveButtonStyle" format="reference" />
-        <attr name="adpButtonBarNegativeButtonStyle" format="reference" />
-        <attr name="adpButtonBarNeutralButtonStyle" format="reference" />
-        <attr name="adpButtonBarButtonStyle" format="reference" />
+    <!-- Minimum height of title panel-->
+    <attr name="adpTitleMinHeight" format="dimension" />
 
+    <!-- The text appearance for the dialog's message text -->
+    <attr name="adpMessageTextAppearance" format="reference" />
+
+    <!-- Minimum height of ListView's items -->
+    <attr name="adpListItemMinHeight" format="dimension" />
+
+    <!-- The text color for ListView's items -->
+    <attr name="adpListItemTextColor" format="reference|color" />
+
+    <!-- The text appearance for normal ListView's items -->
+    <attr name="adpListItemTextAppearance" format="reference" />
+
+    <!-- The text appearance for "multi-choice" ListView's items -->
+    <attr name="adpListMultiChoiceTextAppearance" format="reference" />
+
+    <!-- The text appearance for "single-choice" ListView's items -->
+    <attr name="adpListSingleChoiceTextAppearance" format="reference" />
+
+    <!-- Divider for the ListView -->
+    <attr name="adpListDivider" format="reference" />
+
+    <!-- Selector in a ListView -->
+    <attr name="adpListItemBackground" format="reference" />
+
+    <!-- Style for button bars -->
+    <attr name="adpButtonBarStyle" format="reference" />
+
+    <!-- Style for buttons within button bars -->
+    <attr name="adpButtonBarButtonStyle" format="reference" />
+
+    <!-- Style for the "positive" buttons within button bars -->
+    <attr name="adpButtonBarPositiveButtonStyle" format="reference" />
+
+    <!-- Style for the "negative" buttons within button bars -->
+    <attr name="adpButtonBarNegativeButtonStyle" format="reference" />
+
+    <!-- Style for the "neutral" buttons within button bars -->
+    <attr name="adpButtonBarNeutralButtonStyle" format="reference" />
+
+    <!-- AlertDialogPro Styles -->
+    <declare-styleable name="AlertDialogPro">
+        <!-- As HoneyComb's android:layout.
+             Specify your AlertDialogPro's layout -->
         <attr name="adpLayout" format="reference" />
+        <!-- As HoneyComb's android:listLayout.
+             Specify your AlertDialogPro's ListView layout. -->
         <attr name="adpListLayout" format="reference" />
+        <!-- As HoneyComb's android:listItemLayout.
+             Specify your AlertDialogPro's list item layout. -->
         <attr name="adpListItemLayout" format="reference" />
+        <!-- As HoneyComb's android:multiChoiceItemLayout.
+             Specify your AlertDialogPro's multi choice list item layout. -->
         <attr name="adpMultiChoiceItemLayout" format="reference" />
+        <!-- As HoneyComb's android:singleChoiceItemLayout.
+             Specify your AlertDialogPro's single choice list item layout. -->
         <attr name="adpSingleChoiceItemLayout" format="reference" />
     </declare-styleable>
 

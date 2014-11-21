@@ -13,4 +13,9 @@
         <!-- Size of padding on either end of a divider. -->
         <attr name="llDividerPadding" format="dimension" />
     </declare-styleable>
+
+    <attr name="adpTitleDividerBackground" format="reference|color" />
+    <attr name="adpTitleDividerHeight" format="dimension" />
+    <attr name="adpButtonBarDividerHorizontal" format="reference" />
+    <attr name="adpButtonBarDividerVertical" format="reference" />
 </resources>

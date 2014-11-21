@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base text appearance for AlertDialogPro -->
+    <style name="TextAppearance.AlertDialogPro" parent="android:TextAppearance" />
+
+    <!-- Base text appearance for title of AlertDialogPro -->
+    <style name="TextAppearance.AlertDialogPro.DialogWindowTitle">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Base style for widget of AlertDialogPro -->
+    <style name="Widget.AlertDialogPro" parent="android:Widget" />
+
+    <!-- Base style for AlertDialogPro -->
+    <style name="AlertDialogPro">
+        <!-- The core library has no default style -->
+        <item name="adpLayout">@null</item>
+        <item name="adpListLayout">@null</item>
+        <item name="adpListItemLayout">@null</item>
+        <item name="adpMultiChoiceItemLayout">@null</item>
+        <item name="adpSingleChoiceItemLayout">@null</item>
+    </style>
+
+    <!-- Base style for title of AlertDialogPro -->
+    <style name="DialogWindowTitle.AlertDialogPro" parent="">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.AlertDialogPro.DialogWindowTitle
+        </item>
+    </style>
+
+</resources>

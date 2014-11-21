@@ -1,13 +1,11 @@
 <resources>
 
-    <style name="AlertDialogProTheme" parent="android:Theme.Holo.Dialog">
-        <item name="android:windowContentOverlay">@null</item>
+    <style name="BaseAdp" parent="Theme.AppCompat.Dialog">
         <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
         <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
     </style>
 
-    <style name="AlertDialogProTheme.Light" parent="android:Theme.Holo.Light.Dialog">
-        <item name="android:windowContentOverlay">@null</item>
+    <style name="BaseAdp.Light" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
         <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
     </style>
