@@ -16,9 +16,9 @@
 
     <style name="Widget.AlertDialogPro.Holo.ButtonBar">
         <!-- Use own attrs -->
-        <item name="llDivider">?attr/adpButtonBarDividerVertical</item>
-        <item name="llShowDividers">middle</item>
-        <item name="llDividerPadding">0dip</item>
+        <item name="divider">?attr/adpButtonBarDividerVertical</item>
+        <item name="showDividers">middle</item>
+        <item name="dividerPadding">0dip</item>
         <item name="android:background">@null</item>
     </style>
 

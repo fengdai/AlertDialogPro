@@ -92,15 +92,15 @@
             android:layout_height="wrap_content" />
     </FrameLayout>
 
-    <com.alertdialogpro.holo.internal.LinearLayoutICS
+    <android.support.v7.widget.LinearLayoutCompat
         android:id="@id/adp_buttonPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        alertdialogpro:llDivider="?attr/adpButtonBarDividerHorizontal"
-        alertdialogpro:llShowDividers="beginning">
+        alertdialogpro:divider="?attr/adpButtonBarDividerHorizontal"
+        alertdialogpro:showDividers="beginning">
 
-        <com.alertdialogpro.holo.internal.LinearLayoutICS
+        <android.support.v7.widget.LinearLayoutCompat
             style="?attr/adpButtonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
                 android:layout_gravity="end"
                 android:layout_weight="1"
                 android:maxLines="2" />
-        </com.alertdialogpro.holo.internal.LinearLayoutICS>
-    </com.alertdialogpro.holo.internal.LinearLayoutICS>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.LinearLayoutCompat>
 
 </LinearLayout>
