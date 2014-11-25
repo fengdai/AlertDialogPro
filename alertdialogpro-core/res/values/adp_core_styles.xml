@@ -12,6 +12,9 @@
     <!-- Base style for widget of AlertDialogPro -->
     <style name="Widget.AlertDialogPro" parent="android:Widget" />
 
+    <!-- Base Animation Styles -->
+    <style name="Animation.AlertDialogPro" parent="android:Animation" />
+
     <!-- Base style for AlertDialogPro -->
     <style name="AlertDialogPro">
         <!-- The core library has no default style -->

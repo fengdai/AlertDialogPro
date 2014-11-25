@@ -51,9 +51,9 @@
 
     <!-- Animation Styles -->
 
-    <style name="Animation.Material" parent="android:Animation" />
+    <style name="Animation.AlertDialogPro.Material" />
 
-    <style name="Animation.Material.Dialog">
+    <style name="Animation.AlertDialogPro.Material.Dialog">
         <item name="android:windowEnterAnimation">@anim/adp_popup_enter_material</item>
         <item name="android:windowExitAnimation">@anim/adp_popup_exit_material</item>
     </style>

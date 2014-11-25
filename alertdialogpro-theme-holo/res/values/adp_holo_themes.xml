@@ -2,9 +2,11 @@
 <resources>
 
     <style name="Theme.AlertDialogPro.Holo" parent="Theme.AlertDialogPro">
+        <item name="android:textColorPrimary">@color/adp_primary_text_holo_dark</item>
+        <!-- Animation -->
+        <item name="android:windowAnimationStyle">@style/Animation.AlertDialogPro.Holo.Dialog</item>
         <!-- Background -->
         <item name="android:windowBackground">@drawable/adp_dialog_full_holo_dark</item>
-        <item name="android:textColorPrimary">@color/adp_primary_text_holo_dark</item>
         <!-- Title -->
         <item name="android:windowTitleStyle">@style/DialogWindowTitle.AlertDialogPro.Holo</item>
         <item name="adpTitleDividerBackground">@color/adp_holo_blue_light</item>
@@ -32,9 +34,11 @@
     </style>
 
     <style name="Theme.AlertDialogPro.Holo.Light" parent="Theme.AlertDialogPro.Light">
+        <item name="android:textColorPrimary">@color/adp_primary_text_holo_light</item>
+        <!-- Animation -->
+        <item name="android:windowAnimationStyle">@style/Animation.AlertDialogPro.Holo.Dialog</item>
         <!-- Background -->
         <item name="android:windowBackground">@drawable/adp_dialog_full_holo_light</item>
-        <item name="android:textColorPrimary">@color/adp_primary_text_holo_light</item>
         <!-- Title -->
         <item name="android:windowTitleStyle">@style/DialogWindowTitle.AlertDialogPro.Holo.Light</item>
         <item name="adpTitleDividerBackground">@color/adp_holo_blue_light</item>

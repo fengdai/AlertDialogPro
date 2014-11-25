@@ -2,7 +2,8 @@
 <resources>
 
     <style name="Theme.AlertDialogPro.Material" parent="Theme.AlertDialogPro">
-        <item name="android:windowAnimationStyle">@style/Animation.Material.Dialog</item>
+        <!-- Animation -->
+        <item name="android:windowAnimationStyle">@style/Animation.AlertDialogPro.Material.Dialog</item>
         <!-- Background -->
         <item name="android:windowBackground">@drawable/adp_dialog_background_material_dark</item>
         <!-- Title -->
@@ -28,7 +29,8 @@
     </style>
 
     <style name="Theme.AlertDialogPro.Material.Light" parent="Theme.AlertDialogPro.Light">
-        <item name="android:windowAnimationStyle">@style/Animation.Material.Dialog</item>
+        <!-- Animation -->
+        <item name="android:windowAnimationStyle">@style/Animation.AlertDialogPro.Material.Dialog</item>
         <!-- Background -->
         <item name="android:windowBackground">@drawable/adp_dialog_background_material_light</item>
         <!-- Title -->
