@@ -8,7 +8,7 @@ There are two theme projects you can use directly: [alertdialogpro-theme-holo](h
    ![holo](https://github.com/fengdai/AlertDialogPro/blob/master/image/holo_light_dialog_only.png)
    ![mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_light_dialog_only.png)
    ![flavored-mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/flavored_material_light.png)
-   ![flavored-mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/flavored_material_light_single_choice.png)
+   ![flavored-mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_dark_dialog_only.png)
 
 
 Usage
@@ -30,26 +30,26 @@ Usage
 
 2. **alertdialogpro-theme-holo**
    
-   This a project which contains Holo resources for **AlertDialogPro**. Anyone who wants a Holo theme can include this project as an addition of alertdialogpro-core. It has two default Holo themes, ```AlertDialogProTheme.Holo``` and ```AlertDialogProTheme.Holo.Light```. The only thing you need to do is choose a theme from the two, and add it to your application's theme XML file. Your dialog will looks the same "Holo" across almost versions of Android backward to API level 3.
+   This a project which contains Holo resources for **AlertDialogPro**. Anyone who wants a Holo theme can include this project as an addition of alertdialogpro-core. It has two default Holo themes, ```Theme.AlertDialogPro.Holo``` and ```Theme.AlertDialogPro.Holo.Light```. The only thing you need to do is choose a theme from the two, and add it to your application's theme XML file. Your dialog will looks the same "Holo" across almost versions of Android backward to API level 3.
    1. Specify **AlertDialogPro**'s theme with attribute ```alertDialogProTheme```:
 
       ```xml
       <style name="AppTheme" parent="AppBaseTheme">
         ...
         <!-- Use Holo dark theme as global theme of this app -->
-        <item name="alertDialogProTheme">@style/AlertDialogProTheme.Holo</item>
+        <item name="alertDialogProTheme">@style/Theme.AlertDialogPro.Holo</item>
       </style>
       ```
    2. Your can override global theme with another in code when build dialog. Just specify it to the Builder:
 
       ```java
       // Build a AlertDialogPro with Holo light theme.
-      AlertDialogPro builder = new AlertDialogPro.Builder(getContext(), R.style.AlertDialogProTheme_Holo_Light);
+      AlertDialogPro.Builder builder = new AlertDialogPro.Builder(getContext(), R.style.Theme_AlertDialogPro_Holo_Light);
       ```
    
 3. **alertdialogpro-theme-material**
 
-   Similar to **alertdialogpro-theme-holo**, **alertdialogpro-theme-material** is a project to make material style **AlertDialogPro**. If you want a material dialog, you can simply include it to your project as an addition of **alertdialogpro-core**. Then you can use it's two themes: ```AlertDialogProTheme.Material``` and ```AlertDialogProTheme.Material.Light``` in your application's theme resource or code. Since it depends on AppCompat-v21, it only support minSdkVersion 7+ now.
+   Similar to **alertdialogpro-theme-holo**, **alertdialogpro-theme-material** is a project to make material style **AlertDialogPro**. If you want a material dialog, you can simply include it to your project as an addition of **alertdialogpro-core**. Then you can use it's two themes: ```Theme.AlertDialogPro.Material``` and ```Theme.AlertDialogPro.Material.Light``` in your application's theme resource or code. Since it depends on AppCompat-v21, it only support minSdkVersion 7+ now.
    
 4. **Theme customization**
 
@@ -107,19 +107,19 @@ Usage
       <style name="AlertDialogPro.Material">
         <!-- As HoneyComb's android:layout.
              Specify your AlertDialogPro's layout -->
-        <item name="adpLayout">@layout/alert_dialog_material</item>
+        <item name="adpLayout">@layout/adp_alert_dialog_material</item>
         <!-- As HoneyComb's android:listLayout.
              Specify your AlertDialogPro's ListView layout. -->
-        <item name="adpListLayout">@layout/select_dialog_material</item>
+        <item name="adpListLayout">@layout/adp_select_dialog_material</item>
         <!-- As HoneyComb's android:listItemLayout.
              Specify your AlertDialogPro's list item layout. -->
-        <item name="adpListItemLayout">@layout/select_dialog_item_material</item>
+        <item name="adpListItemLayout">@layout/adp_select_dialog_item_material</item>
         <!-- As HoneyComb's android:multiChoiceItemLayout.
              Specify your AlertDialogPro's multi choice list item layout. -->
-        <item name="adpMultiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
+        <item name="adpMultiChoiceItemLayout">@layout/adp_select_dialog_multichoice_material</item>
         <!-- As HoneyComb's android:singleChoiceItemLayout.
              Specify your AlertDialogPro's single choice list item layout. -->
-        <item name="adpSingleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
+        <item name="adpSingleChoiceItemLayout">@layout/adp_select_dialog_singlechoice_material</item>
       </style>
       ```
       And add it to your theme:

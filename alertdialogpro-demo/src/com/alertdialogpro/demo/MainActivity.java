@@ -83,7 +83,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
 
     private void showNativeAlert() {
-        final String[] list = new String[]{"Holo theme", "Material theme", "Custom theme"};
+        final String[] list = new String[]{"Material theme", "Holo theme", "Custom theme"};
         new AlertDialog.Builder(this).setTitle(R.string.app_name).
                 setMultiChoiceItems(list,
                         new boolean[]{false, false, false},
@@ -130,7 +130,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     // Show a multi-choice dialog
     private void showMultiChoiceListAlertDialog() {
-        final String[] list = new String[]{"Holo theme", "Material theme", "Custom theme"};
+        final String[] list = new String[]{"Material theme", "Holo theme", "Custom theme"};
         new AlertDialogPro.Builder(this, mTheme).setTitle(R.string.app_name).
                 setMultiChoiceItems(list,
                         new boolean[]{false, false, false},

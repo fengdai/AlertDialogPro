@@ -1,8 +1,10 @@
 package com.alertdialogpro.material;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.accessibility.AccessibilityEvent;
@@ -114,6 +116,44 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
         }
         mCheckMarkDrawable = d;
         requestLayout();
+    }
+
+    @Override
+    public void setVisibility(int visibility) {
+        super.setVisibility(visibility);
+
+        if (mCheckMarkDrawable != null) {
+            mCheckMarkDrawable.setVisible(visibility == VISIBLE, false);
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    @Override
+    public void jumpDrawablesToCurrentState() {
+        super.jumpDrawablesToCurrentState();
+
+        if (mCheckMarkDrawable != null) {
+            mCheckMarkDrawable.jumpToCurrentState();
+        }
+    }
+
+    @Override
+    protected boolean verifyDrawable(Drawable who) {
+        return who == mCheckMarkDrawable || super.verifyDrawable(who);
+    }
+
+    /**
+     * Gets the checkmark drawable
+     *
+     * @return The drawable use to represent the checkmark, if any.
+     *
+     * @see #setCheckMarkDrawable(Drawable)
+     * @see #setCheckMarkDrawable(int)
+     *
+     * @attr ref android.R.styleable#CheckedTextView_checkMark
+     */
+    public Drawable getCheckMarkDrawable() {
+        return mCheckMarkDrawable;
     }
 
     @Override
