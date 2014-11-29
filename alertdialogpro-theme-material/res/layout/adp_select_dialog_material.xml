@@ -4,9 +4,9 @@
     class="com.alertdialogpro.internal.AlertController$RecycleListView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="start"
     android:cacheColorHint="@null"
     android:divider="?attr/adpListDivider"
-    android:gravity="start"
     android:overScrollMode="ifContentScrolls"
     android:scrollbars="vertical"
     android:textAlignment="viewStart" />
