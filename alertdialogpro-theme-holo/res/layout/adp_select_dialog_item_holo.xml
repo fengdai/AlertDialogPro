@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ellipsize="marquee"
-    android:gravity="center_vertical"
+    android:gravity="center_vertical|start"
     android:minHeight="?attr/adpListItemMinHeight"
     android:paddingLeft="16dip"
     android:paddingRight="16dip"
+    android:textAlignment="viewStart"
     android:textAppearance="?attr/adpListItemTextAppearance"
     android:textColor="?attr/adpListItemTextColor" />

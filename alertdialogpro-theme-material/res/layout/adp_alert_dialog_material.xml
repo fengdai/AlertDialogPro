@@ -18,10 +18,8 @@
             android:gravity="center_vertical|start"
             android:minHeight="?attr/adpTitleMinHeight"
             android:orientation="horizontal"
-            android:paddingEnd="@dimen/adp_mtrl_alert_dialog_padding"
             android:paddingLeft="@dimen/adp_mtrl_alert_dialog_padding"
             android:paddingRight="@dimen/adp_mtrl_alert_dialog_padding"
-            android:paddingStart="@dimen/adp_mtrl_alert_dialog_padding"
             android:paddingTop="@dimen/adp_mtrl_alert_dialog_padding_top">
 
             <ImageView
@@ -69,9 +67,11 @@
                     style="?attr/adpMessageTextAppearance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="start"
                     android:paddingLeft="@dimen/adp_mtrl_alert_dialog_padding"
                     android:paddingRight="@dimen/adp_mtrl_alert_dialog_padding"
-                    android:paddingTop="@dimen/adp_mtrl_alert_dialog_padding_top" />
+                    android:paddingTop="@dimen/adp_mtrl_alert_dialog_padding_top"
+                    android:textAlignment="viewStart" />
 
                 <View
                     android:id="@id/adp_textSpacerNoButtons"
@@ -103,10 +103,8 @@
         android:layoutDirection="locale"
         android:orientation="horizontal"
         android:paddingBottom="8dp"
-        android:paddingEnd="12dp"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
-        android:paddingStart="12dp"
         android:paddingTop="8dp">
 
         <Button

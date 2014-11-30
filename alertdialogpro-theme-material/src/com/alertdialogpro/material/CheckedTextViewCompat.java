@@ -7,9 +7,14 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.Gravity;
+import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.widget.Checkable;
 import android.widget.TextView;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Compatible CheckedTextView for Pre-Lollipop devices. Draw checkMark on its left side.
@@ -21,14 +26,20 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     private boolean mChecked;
     private int mCheckMarkResource;
     private Drawable mCheckMarkDrawable;
+
     private int mBasePadding;
     private int mCheckMarkWidth;
+
+    private boolean mNeedRequestlayout;
 
     private static final int[] CHECKED_STATE_SET = {
             android.R.attr.state_checked
     };
 
     private final TintManager mTintManager;
+
+    private Field mPaddingLeftFeild;
+    private Field mPaddingRightFeild;
 
     public CheckedTextViewCompat(Context context) {
         this(context, null);
@@ -110,8 +121,8 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
             setMinHeight(d.getIntrinsicHeight());
 
             mCheckMarkWidth = d.getIntrinsicWidth();
-            mBasePadding = getPaddingLeft();
-            super.setPadding(mCheckMarkWidth + mBasePadding, getPaddingTop(), getPaddingRight(), getPaddingBottom());
+            mBasePadding = getPaddingLeftField();
+            setPaddingLeftField(mCheckMarkWidth + mBasePadding);
             d.setState(getDrawableState());
         }
         mCheckMarkDrawable = d;
@@ -146,11 +157,9 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
      * Gets the checkmark drawable
      *
      * @return The drawable use to represent the checkmark, if any.
-     *
+     * @attr ref android.R.styleable#CheckedTextView_checkMark
      * @see #setCheckMarkDrawable(Drawable)
      * @see #setCheckMarkDrawable(int)
-     *
-     * @attr ref android.R.styleable#CheckedTextView_checkMark
      */
     public Drawable getCheckMarkDrawable() {
         return mCheckMarkDrawable;
@@ -159,7 +168,40 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     @Override
     public void setPadding(int left, int top, int right, int bottom) {
         super.setPadding(left, top, right, bottom);
-        mBasePadding = getPaddingLeft();
+        mBasePadding = getPaddingLeftField();
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+    @Override
+    public void onRtlPropertiesChanged(int layoutDirection) {
+        super.onRtlPropertiesChanged(layoutDirection);
+        updatePadding();
+    }
+
+    private void updatePadding() {
+        invokeResetPaddingToInitialValues();
+        int newPadding = (mCheckMarkDrawable != null) ?
+                mCheckMarkWidth + mBasePadding : mBasePadding;
+        if (isCheckMarkAtStart()) {
+            mNeedRequestlayout |= (getPaddingLeftField() != newPadding);
+            setPaddingLeftField(newPadding);
+        } else {
+            mNeedRequestlayout |= (getPaddingRightField() != newPadding);
+            setPaddingRightFeild(newPadding);
+        }
+        if (mNeedRequestlayout) {
+            requestLayout();
+            mNeedRequestlayout = false;
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+    private boolean isCheckMarkAtStart() {
+        boolean isCheckMarkAtStart = true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            isCheckMarkAtStart = getLayoutDirection() == LAYOUT_DIRECTION_LTR;
+        }
+        return isCheckMarkAtStart;
     }
 
     @Override
@@ -182,11 +224,21 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
                     break;
             }
 
-            checkMarkDrawable.setBounds(
-                    mBasePadding,
-                    y,
-                    mBasePadding + mCheckMarkWidth,
-                    y + height);
+            final boolean checkMarkAtStart = isCheckMarkAtStart();
+            final int width = getWidth();
+            final int top = y;
+            final int bottom = top + height;
+            final int left;
+            final int right;
+            if (checkMarkAtStart) {
+                left = mBasePadding;
+                right = left + mCheckMarkWidth;
+            } else {
+                right = width - mBasePadding;
+                left = right - mCheckMarkWidth;
+            }
+            checkMarkDrawable.setBounds(getScrollX() + left, top, getScrollX() + right, bottom);
+            checkMarkDrawable.draw(canvas);
             checkMarkDrawable.draw(canvas);
         }
     }
@@ -221,5 +273,79 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
             event.setChecked(mChecked);
         }
         return populated;
+    }
+
+
+    private void invokeResetPaddingToInitialValues() {
+        try {
+            Method resetPaddingToInitialValues = View.class.getDeclaredMethod("resetPaddingToInitialValues");
+            try {
+                resetPaddingToInitialValues.invoke(this);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            }
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void ensurePaddingLeftField() {
+        if (mPaddingLeftFeild == null) {
+            try {
+                mPaddingLeftFeild = View.class.getDeclaredField("mPaddingLeft");
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private int getPaddingLeftField() {
+        ensurePaddingLeftField();
+        try {
+            return mPaddingLeftFeild.getInt(this);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    private void setPaddingLeftField(int paddingLeft) {
+        ensurePaddingLeftField();
+        try {
+            mPaddingLeftFeild.setInt(this, paddingLeft);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void ensurePaddingRightField() {
+        if (mPaddingRightFeild == null) {
+            try {
+                mPaddingRightFeild = View.class.getDeclaredField("mPaddingRight");
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private int getPaddingRightField() {
+        ensurePaddingRightField();
+        try {
+            return mPaddingRightFeild.getInt(this);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    private void setPaddingRightFeild(int paddingRight) {
+        ensurePaddingRightField();
+        try {
+            mPaddingRightFeild.setInt(this, paddingRight);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
