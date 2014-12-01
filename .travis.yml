@@ -8,3 +8,6 @@ android:
 
 notifications:
   email: false
+
+script:
+  ./gradlew assemble
