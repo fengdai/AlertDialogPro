@@ -129,7 +129,14 @@ Usage
       ```
 
    3. If none of the built-in themes can meet your requirements. Full customization is also supported. Do as what the **alertdialogpro-theme-holo** or **alertdialogpro-theme-material** did.
-   
+
+
+Thanks
+======
+
+   * This project contains some code ported from The Android Open Source Project. [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+   * Thanks [vbauer](https://github.com/vbauer) and his awesome site [Android-Arsenal](https://android-arsenal.com/) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AlertDialogPro-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1178)
+
 License
 =======
 

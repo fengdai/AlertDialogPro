@@ -10,4 +10,4 @@ notifications:
   email: false
 
 script:
-  ./gradlew assemble
+  ./gradlew clean build
