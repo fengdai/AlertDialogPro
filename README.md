@@ -2,7 +2,6 @@ AlertDialogPro
 ==============
 
 [![Build Status](https://travis-ci.org/fengdai/AlertDialogPro.svg?branch=master)](https://travis-ci.org/fengdai/AlertDialogPro)
-
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AlertDialogPro-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1178)
 
 It's not an easy thing to theme the Android's **AlertDialog**, even though you are developing against HoneyComb (which introduced some new APIs like ```android:singleChoiceItemLayout``` -- allows you specify your own single－choice item layout in theme. But **not** enough) or above. **AlertDialogPro** can make this thing easy. It includes (but is not limited to) all AlertDialog's APIs. You can use it the same as using the platform's AlertDialog (just replace ```AlertDialog.Builder``` with ```AlertDialogPro.Builder```) and benefit from some of the other sweet features.
@@ -133,6 +132,12 @@ Usage
       ```
 
    3. If none of the built-in themes can meet your requirements. Full customization is also supported. Do as what the **alertdialogpro-theme-holo** or **alertdialogpro-theme-material** did.
+
+
+Gradle Dependence
+=================
+
+   Coming soon...
 
 
 Thanks
