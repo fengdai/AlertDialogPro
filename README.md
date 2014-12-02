@@ -144,7 +144,7 @@ Thanks
 ======
 
    * This project contains some code ported from The Android Open Source Project. [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-   * Thanks [vbauer](https://github.com/vbauer) and his awesome site [Android-Arsenal](https://android-arsenal.com/)
+   * Thank [vbauer](https://github.com/vbauer) and his awesome site [Android-Arsenal](https://android-arsenal.com/)
 
 License
 =======

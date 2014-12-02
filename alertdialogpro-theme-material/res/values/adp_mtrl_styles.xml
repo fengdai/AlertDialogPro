@@ -8,6 +8,7 @@
         <item name="android:minHeight">@dimen/adp_mtrl_alert_dialog_button_bar_height</item>
         <item name="android:minWidth">64dip</item>
         <item name="android:maxLines">2</item>
+        <item name="textAllCaps">true</item>
     </style>
 
     <style name="Base.Widget.AlertDialogPro.ListView" parent="android:Widget.ListView">
@@ -21,6 +22,7 @@
         <item name="android:minHeight">@dimen/adp_mtrl_alert_dialog_button_bar_height</item>
         <item name="android:minWidth">64dip</item>
         <item name="android:maxLines">2</item>
+        <item name="textAllCaps">true</item>
     </style>
 
     <style name="Base.Widget.AlertDialogPro.Light.ListView" parent="android:Widget.ListView">
