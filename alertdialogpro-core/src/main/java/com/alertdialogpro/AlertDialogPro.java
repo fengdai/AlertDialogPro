@@ -725,11 +725,6 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
          *                          and the dialog frame
          * @return This Builder object to allow for chaining of calls to set
          * methods
-         * <p/>
-         * <p/>
-         * This is currently hidden because it seems like people should just
-         * be able to put padding around the view.
-         * @hide
          */
         public Builder setView(View view, int viewSpacingLeft,
                                int viewSpacingTop, int viewSpacingRight, int viewSpacingBottom) {
@@ -743,21 +738,6 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
             return this;
         }
 
-        /**
-         * Sets the Dialog to use the inverse background, regardless of what the
-         * contents is.
-         *
-         * @param useInverseBackground Whether to use the inverse background
-         * @return This Builder object to allow for chaining of calls to set methods
-         */
-        public Builder setInverseBackgroundForced(boolean useInverseBackground) {
-            P.mForceInverseBackground = useInverseBackground;
-            return this;
-        }
-
-        /**
-         * @hide
-         */
         public Builder setRecycleOnMeasureEnabled(boolean enabled) {
             P.mRecycleOnMeasure = enabled;
             return this;

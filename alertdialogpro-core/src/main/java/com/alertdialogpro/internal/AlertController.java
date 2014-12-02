@@ -614,7 +614,6 @@ public class AlertController {
         public Cursor mCursor;
         public String mLabelColumn;
         public String mIsCheckedColumn;
-        public boolean mForceInverseBackground;
         public AdapterView.OnItemSelectedListener mOnItemSelectedListener;
         public OnPrepareListViewListener mOnPrepareListViewListener;
         public boolean mRecycleOnMeasure = true;

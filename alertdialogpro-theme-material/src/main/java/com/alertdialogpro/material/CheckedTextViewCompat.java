@@ -17,7 +17,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * Compatible CheckedTextView for Pre-Lollipop devices. Draw checkMark on its left side.
+ * Compatible CheckedTextView for Pre-Lollipop devices. Draw checkMark at start.
  */
 public class CheckedTextViewCompat extends TextView implements Checkable {
     private static final int[] CHECKED_TEXT_VIEW_ATTRS = new int[]{
