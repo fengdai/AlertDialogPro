@@ -16,6 +16,9 @@ gen-external-apklibs
 .gradle
 build
 
+# Maven
+target
+
 # Ant
 bin
 gen
