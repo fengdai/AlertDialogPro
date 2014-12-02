@@ -1,0 +1,9 @@
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.0"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 21
+    }
+}
