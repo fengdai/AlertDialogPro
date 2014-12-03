@@ -8,9 +8,9 @@
         <version>7</version>
     </parent>
 
-    <groupId>com.alertdialogpro</groupId>
+    <groupId>com.github.fengdai</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>AlertDialogPro (Parent)</name>
@@ -24,15 +24,13 @@
         <module>alertdialogpro-demo</module>
     </modules>
 
-    <!--
     <repositories>
         <repository>
-            <id>YourRepository</id>
-            <name>YourRepository name</name>
-            <url>http://127.0.0.1/artifactory/repo</url>
+            <id>Sonatype repository</id>
+            <name>Sonatype's Maven repository</name>
+            <url>https://oss.sonatype.org/content/groups/public</url>
         </repository>
     </repositories>
-    -->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -71,7 +69,7 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>

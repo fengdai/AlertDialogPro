@@ -1,9 +1,11 @@
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.0.0"
+    compileSdkVersion Integer.parseInt(rootProject.ANDROID_BUILD_COMPILE_SDK_VERSION)
+    buildToolsVersion rootProject.ANDROID_BUILD_TOOLS_VERSION
 
     defaultConfig {
-        minSdkVersion 7
-        targetSdkVersion 21
+        minSdkVersion Integer.parseInt(rootProject.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(rootProject.ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionCode Integer.parseInt(rootProject.VERSION_CODE)
+        versionName rootProject.VERSION_NAME
     }
 }
