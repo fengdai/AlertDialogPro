@@ -5,4 +5,8 @@
         <attr name="textAllCaps" />
     </declare-styleable>
 
+    <declare-styleable name="ProgressBarCompat">
+        <attr name="borderWidth" format="dimension" />
+    </declare-styleable>
+
 </resources>

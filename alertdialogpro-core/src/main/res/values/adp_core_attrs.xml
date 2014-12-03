@@ -65,6 +65,10 @@
         <!-- As HoneyComb's android:singleChoiceItemLayout.
              Specify your AlertDialogPro's single choice list item layout. -->
         <attr name="adpSingleChoiceItemLayout" format="reference" />
+        <!-- Specify your ProgressDialogPro layout -->
+        <attr name="adpProgressLayout" format="reference" />
+        <!-- Specify your ProgressDialogPro horizontal layout -->
+        <attr name="adpHorizontalProgressLayout" format="reference" />
     </declare-styleable>
 
 </resources>

@@ -62,6 +62,8 @@
 
     <style name="AlertDialogPro.Holo">
         <item name="adpLayout">@layout/adp_alert_dialog_holo</item>
+        <item name="adpProgressLayout">@layout/adp_progress_dialog_holo</item>
+        <item name="adpHorizontalProgressLayout">@layout/adp_progress_dialog_horizontal_holo</item>
         <item name="adpListLayout">@layout/adp_select_dialog_holo</item>
         <item name="adpListItemLayout">@layout/adp_select_dialog_item_holo</item>
         <item name="adpMultiChoiceItemLayout">@layout/adp_select_dialog_multichoice_holo</item>

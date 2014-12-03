@@ -63,10 +63,26 @@
             android:text="Show Message" />
 
         <Button
+                android:id="@+id/showProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/showMessage"
+                android:layout_marginTop="12dp"
+                android:text="Show Progress" />
+
+        <Button
+                android:id="@+id/showProgressHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/showProgress"
+                android:layout_marginTop="12dp"
+                android:text="Show Progress Horizontal" />
+
+        <Button
             android:id="@+id/showList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/showMessage"
+            android:layout_below="@id/showProgressHorizontal"
             android:text="Show List" />
 
         <Button

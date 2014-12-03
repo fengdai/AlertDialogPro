@@ -4,13 +4,12 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.alertdialogpro.AlertDialogPro;
+import com.alertdialogpro.ProgressDialogPro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +50,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         });
 
         findViewById(R.id.showMessage).setOnClickListener(this);
+        findViewById(R.id.showProgress).setOnClickListener(this);
+        findViewById(R.id.showProgressHorizontal).setOnClickListener(this);
         findViewById(R.id.showList).setOnClickListener(this);
         findViewById(R.id.showMultiChoiceList).setOnClickListener(this);
         findViewById(R.id.showSingleChoiceList).setOnClickListener(this);
@@ -63,6 +64,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.showMessage:
                 showMessageAlertDialog();
+                break;
+            case R.id.showProgress:
+                showProgressDialog();
+                break;
+            case R.id.showProgressHorizontal:
+                showProgressHorizontalDialog();
                 break;
             case R.id.showList:
                 showListAlertDialog();
@@ -104,7 +111,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     }
 
-    // Show a message dialog
     private void showMessageAlertDialog() {
         new AlertDialogPro.Builder(this, mTheme).setTitle(R.string.app_name).
                 setMessage("Hello, charming AlertDialogPro!").
@@ -112,7 +118,28 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 show();
     }
 
-    // Show a list dialog
+    private void showProgressDialog() {
+        ProgressDialogPro dialog = new ProgressDialogPro(this, mTheme);
+        dialog.setMessage("Hello, charming ProgressDialogPro!");
+        dialog.setIndeterminate(true);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setProgressStyle(ProgressDialogPro.STYLE_HORIZONTAL);
+        dialog.show();
+    }
+
+    private void showProgressHorizontalDialog() {
+        ProgressDialogPro dialog = new ProgressDialogPro(this, mTheme);
+        dialog.setMessage("Hello, charming ProgressDialogPro!");
+        dialog.setProgressStyle(ProgressDialogPro.STYLE_HORIZONTAL);
+        dialog.setIndeterminate(true);
+        dialog.setProgress(34);
+        dialog.setMax(100);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.show();
+    }
+
     private void showListAlertDialog() {
         final String[] list = new String[]{"Argentina", "Canada", "China (中国)", "Japan (日本)",
                 "United States"};
@@ -128,7 +155,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     private List<String> mCheckedItems = new ArrayList<String>();
 
-    // Show a multi-choice dialog
     private void showMultiChoiceListAlertDialog() {
         final String[] list = new String[]{"Material theme", "Holo theme", "Custom theme"};
         new AlertDialogPro.Builder(this, mTheme).setTitle(R.string.app_name).
@@ -153,7 +179,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     private String mCheckedItem;
 
-    // Show a single-choice dialog
     private void showSingleChoiceListAlertDialog() {
         final String[] list = new String[]{"Female", "Male"};
         int checkedItemIndex = 0;
@@ -200,25 +225,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         public void onClick(DialogInterface dialog, int which) {
             showToast("\"" + mShowWhenClicked + "\"" + " button clicked.");
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 }

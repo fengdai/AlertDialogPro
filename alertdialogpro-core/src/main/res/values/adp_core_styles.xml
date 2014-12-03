@@ -19,6 +19,8 @@
     <style name="AlertDialogPro">
         <!-- The core library has no default style -->
         <item name="adpLayout">@null</item>
+        <item name="adpProgressLayout">@null</item>
+        <item name="adpHorizontalProgressLayout">@null</item>
         <item name="adpListLayout">@null</item>
         <item name="adpListItemLayout">@null</item>
         <item name="adpMultiChoiceItemLayout">@null</item>

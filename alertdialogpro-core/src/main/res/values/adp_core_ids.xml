@@ -30,4 +30,9 @@
 
     <!-- id of dialog's listview -->
     <item name="adp_select_dialog_listview" type="id" />
+
+    <!-- ids of progress dialog children -->
+    <item name="adp_progress" type="id" />
+    <item name="adp_progress_number" type="id" />
+    <item name="adp_progress_percent" type="id" />
 </resources>
