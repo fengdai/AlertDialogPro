@@ -3,4 +3,5 @@ apply from: "$rootDir/android.gradle"
 
 dependencies {
     compile project(':alertdialogpro-core')
+    compile 'com.nineoldandroids:library:2.4.0'
 }

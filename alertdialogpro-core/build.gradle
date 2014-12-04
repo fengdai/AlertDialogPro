@@ -3,5 +3,4 @@ apply from: "$rootDir/android.gradle"
 
 dependencies {
     compile 'com.android.support:appcompat-v7:21.+'
-    compile 'com.nineoldandroids:library:2.4.0+'
 }
