@@ -6,6 +6,7 @@
     android:paddingTop="@dimen/adp_mtrl_alert_dialog_padding_top"
     android:paddingRight="@dimen/adp_mtrl_alert_dialog_padding"
     android:paddingBottom="@dimen/adp_mtrl_alert_dialog_padding_top">
+
     <ProgressBar
         android:id="@id/adp_progress"
         style="?android:attr/progressBarStyleHorizontal"
@@ -24,4 +25,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@id/adp_progress" />
+
 </RelativeLayout>

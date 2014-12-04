@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
-            android:id="@+id/body"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:baselineAligned="false"
-            android:paddingStart="@dimen/adp_mtrl_alert_dialog_padding"
-            android:paddingTop="@dimen/adp_mtrl_alert_dialog_padding_top"
-            android:paddingEnd="@dimen/adp_mtrl_alert_dialog_padding"
-            android:paddingBottom="@dimen/adp_mtrl_alert_dialog_padding_top">
+        android:id="@+id/body"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:paddingLeft="@dimen/adp_mtrl_alert_dialog_padding"
+        android:paddingTop="@dimen/adp_mtrl_alert_dialog_padding_top"
+        android:paddingRight="@dimen/adp_mtrl_alert_dialog_padding"
+        android:paddingBottom="@dimen/adp_mtrl_alert_dialog_padding_top">
 
         <com.alertdialogpro.material.ProgressBarCompat
-                android:id="@id/adp_progress"
-                style="@style/ProgressBarCompat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:max="10000"
-                android:layout_marginRight="@dimen/adp_mtrl_alert_dialog_padding" />
+            android:id="@id/adp_progress"
+            style="@style/ProgressBarCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="10000"
+            android:layout_marginRight="@dimen/adp_mtrl_alert_dialog_padding" />
 
         <TextView
-                android:id="@id/adp_message"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical" />
+            android:id="@id/adp_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
     </LinearLayout>
+
 </FrameLayout>
