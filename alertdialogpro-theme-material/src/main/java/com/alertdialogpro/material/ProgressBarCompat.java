@@ -1,10 +1,11 @@
 package com.alertdialogpro.material;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+
+import com.alertdialogpro.material.drawable.CircularAnimatedDrawable;
 
 public class ProgressBarCompat extends android.widget.ProgressBar {
     private static final int DEFAULT_MATERIAL_BORDER_WIDTH = 4;
@@ -22,23 +23,13 @@ public class ProgressBarCompat extends android.widget.ProgressBar {
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP && isIndeterminate()) {
             final int color = getThemeAttrColor(context, R.attr.colorControlActivated);
+            final float borderWidth = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    DEFAULT_MATERIAL_BORDER_WIDTH,
+                    getResources().getDisplayMetrics()
+            );
+
             if (color != 0) {
-                float borderWidth = TypedValue.applyDimension(
-                        TypedValue.COMPLEX_UNIT_DIP,
-                        DEFAULT_MATERIAL_BORDER_WIDTH,
-                        getResources().getDisplayMetrics()
-                );
-
-                TypedArray a = context.obtainStyledAttributes(
-                        attrs, R.styleable.ProgressBarCompat, defStyleAttr, 0
-                );
-
-                borderWidth = a.getDimension(
-                        R.styleable.ProgressBarCompat_borderWidth, borderWidth
-                );
-
-                a.recycle();
-
                 setIndeterminateDrawable(new CircularAnimatedDrawable(color, borderWidth));
             }
         }
