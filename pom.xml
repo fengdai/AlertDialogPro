@@ -44,6 +44,7 @@
         <android.annotations>23.0.5</android.annotations>
         <android.platform>21</android.platform>
         <android.support.version>21.0.2</android.support.version>
+        <android.nineoldandroids.verion>2.4.0</android.nineoldandroids.verion>
 
         <!-- Plugins -->
         <plugin.maven-compiler-plugin.version>3.2</plugin.maven-compiler-plugin.version>
@@ -89,6 +90,11 @@
                 <artifactId>appcompat-v7</artifactId>
                 <version>${android.support.version}</version>
                 <type>aar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.nineoldandroids</groupId>
+                <artifactId>library</artifactId>
+                <version>${android.nineoldandroids.verion}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -30,6 +30,10 @@
             <version>${project.version}</version>
             <type>aar</type>
         </dependency>
+        <dependency>
+            <groupId>com.nineoldandroids</groupId>
+            <artifactId>library</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

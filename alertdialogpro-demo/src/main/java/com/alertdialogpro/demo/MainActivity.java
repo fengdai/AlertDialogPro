@@ -1,22 +1,22 @@
 package com.alertdialogpro.demo;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.alertdialogpro.AlertDialogPro;
+import com.alertdialogpro.ProgressDialogPro;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-
+    private static final int NATIVE_THEME = Integer.MIN_VALUE;
     private int mTheme = -1;
 
     @Override
@@ -44,18 +44,20 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     case R.id.theme_holo_light:
                         mTheme = R.style.Theme_AlertDialogPro_Holo_Light;
                         break;
-                    default:
+                    case R.id.theme_native:
+                        mTheme = NATIVE_THEME;
                         break;
                 }
             }
         });
 
         findViewById(R.id.showMessage).setOnClickListener(this);
+        findViewById(R.id.showProgress).setOnClickListener(this);
+        findViewById(R.id.showProgressHorizontal).setOnClickListener(this);
         findViewById(R.id.showList).setOnClickListener(this);
         findViewById(R.id.showMultiChoiceList).setOnClickListener(this);
         findViewById(R.id.showSingleChoiceList).setOnClickListener(this);
         findViewById(R.id.showCustomView).setOnClickListener(this);
-        findViewById(R.id.showNativeAlert).setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +65,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.showMessage:
                 showMessageAlertDialog();
+                break;
+            case R.id.showProgress:
+                showProgressDialog();
+                break;
+            case R.id.showProgressHorizontal:
+                showProgressHorizontalDialog();
                 break;
             case R.id.showList:
                 showListAlertDialog();
@@ -76,63 +84,85 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.showCustomView:
                 showCustomViewDialog();
                 break;
-            case R.id.showNativeAlert:
-                showNativeAlert();
-                break;
         }
     }
 
-    private void showNativeAlert() {
-        final String[] list = new String[]{"Material theme", "Holo theme", "Custom theme"};
-        new AlertDialog.Builder(this).setTitle(R.string.app_name).
-                setMultiChoiceItems(list,
-                        new boolean[]{false, false, false},
-                        new DialogInterface.OnMultiChoiceClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                                if (isChecked) {
-                                    mCheckedItems.add(list[which]);
-                                } else {
-                                    mCheckedItems.remove(list[which]);
-                                }
-                                showToast(list[which] + " is " + (isChecked ? "checked" : "unchecked" + "."));
-                            }
-                        }).
-                setNeutralButton("More info", new ButtonClickedListener("More info")).
-                setNegativeButton("Cancel", new ButtonClickedListener("Cancel")).
-                setPositiveButton("Choose", new ButtonClickedListener("Chose " + mCheckedItems.toString())).show();
+    private AlertDialog.Builder createAlertDialogBuilder() {
+        if (mTheme == NATIVE_THEME) {
+            return new AlertDialog.Builder(this);
+        }
 
+        return new AlertDialogPro.Builder(this, mTheme);
     }
 
-    // Show a message dialog
+    private AlertDialog createProgressDialog() {
+        if (mTheme == NATIVE_THEME) {
+            return new ProgressDialog(this);
+        }
+
+        return new ProgressDialogPro(this, mTheme);
+    }
+
     private void showMessageAlertDialog() {
-        new AlertDialogPro.Builder(this, mTheme).setTitle(R.string.app_name).
-                setMessage("Hello, charming AlertDialogPro!").
-                setPositiveButton("Nice Job", new ButtonClickedListener("Dismiss")).
-                show();
+        createAlertDialogBuilder()
+                .setTitle(R.string.app_name)
+                .setMessage("Hello, charming AlertDialogPro!")
+                .setPositiveButton("Nice Job", new ButtonClickedListener("Dismiss"))
+                .show();
     }
 
-    // Show a list dialog
+    private void showProgressDialog() {
+        AlertDialog dialog = createProgressDialog();
+        dialog.setMessage("Hello, charming ProgressDialogPro!");
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.show();
+    }
+
+    private void showProgressHorizontalDialog() {
+        AlertDialog dialog = createProgressDialog();
+        dialog.setMessage("Hello, charming ProgressDialogPro horizontal!");
+
+        if (dialog instanceof ProgressDialog) {
+            ProgressDialog progressDialog = (ProgressDialog) dialog;
+            progressDialog.setProgressStyle(ProgressDialogPro.STYLE_HORIZONTAL);
+            progressDialog.setIndeterminate(true);
+        }
+
+        if (dialog instanceof ProgressDialogPro) {
+            ProgressDialogPro progressDialog = (ProgressDialogPro) dialog;
+            progressDialog.setProgressStyle(ProgressDialogPro.STYLE_HORIZONTAL);
+            progressDialog.setIndeterminate(true);
+        }
+
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.show();
+    }
+
     private void showListAlertDialog() {
         final String[] list = new String[]{"Argentina", "Canada", "China (中国)", "Japan (日本)",
                 "United States"};
-        new AlertDialogPro.Builder(this, mTheme).setTitle("Choose your country").
-                setItems(list, new DialogInterface.OnClickListener() {
+        createAlertDialogBuilder()
+                .setTitle("Choose your country")
+                .setItems(list, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         showToast(list[which]);
                     }
-                }).show();
+                })
+                .show();
     }
 
 
     private List<String> mCheckedItems = new ArrayList<String>();
 
-    // Show a multi-choice dialog
     private void showMultiChoiceListAlertDialog() {
         final String[] list = new String[]{"Material theme", "Holo theme", "Custom theme"};
-        new AlertDialogPro.Builder(this, mTheme).setTitle(R.string.app_name).
-                setMultiChoiceItems(list,
+
+        createAlertDialogBuilder()
+                .setTitle(R.string.app_name)
+                .setMultiChoiceItems(list,
                         new boolean[]{false, false, false},
                         new DialogInterface.OnMultiChoiceClickListener() {
                             @Override
@@ -142,24 +172,32 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                                 } else {
                                     mCheckedItems.remove(list[which]);
                                 }
-                                showToast(list[which] + " is " + (isChecked ? "checked" : "unchecked" + "."));
+                                showToast(
+                                        list[which] + " is "
+                                                + (isChecked ? "checked" : "unchecked" + ".")
+                                );
                             }
-                        }).
-                setNeutralButton("More info", new ButtonClickedListener("More info")).
-                setNegativeButton("Cancel", new ButtonClickedListener("Cancel")).
-                setPositiveButton("Choose", new ButtonClickedListener("Chose " + mCheckedItems.toString())).show();
+                        })
+                .setNeutralButton("More info", new ButtonClickedListener("More info"))
+                .setNegativeButton("Cancel", new ButtonClickedListener("Cancel"))
+                .setPositiveButton(
+                        "Choose",
+                        new ButtonClickedListener("Chose " + mCheckedItems.toString())
+                )
+                .show();
 
     }
 
     private String mCheckedItem;
 
-    // Show a single-choice dialog
     private void showSingleChoiceListAlertDialog() {
         final String[] list = new String[]{"Female", "Male"};
         int checkedItemIndex = 0;
         mCheckedItem = list[checkedItemIndex];
-        new AlertDialogPro.Builder(this, mTheme).setTitle("Edit your gender").
-                setSingleChoiceItems(list,
+
+        createAlertDialogBuilder()
+                .setTitle("Edit your gender")
+                .setSingleChoiceItems(list,
                         checkedItemIndex,
                         new DialogInterface.OnClickListener() {
                             @Override
@@ -167,15 +205,21 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                                 mCheckedItem = list[which];
                                 showToast(mCheckedItem);
                             }
-                        }).
-                setNegativeButton("Cancel", new ButtonClickedListener("Cancel")).
-                setPositiveButton("Save", new ButtonClickedListener(mCheckedItem + " has been chosen.")).show();
+                        })
+                .setNegativeButton("Cancel", new ButtonClickedListener("Cancel"))
+                .setPositiveButton(
+                        "Save",
+                        new ButtonClickedListener(mCheckedItem + " has been chosen.")
+                )
+                .show();
     }
 
     private void showCustomViewDialog() {
-        AlertDialogPro.Builder builder = new AlertDialogPro.Builder(this, mTheme);
-        builder.setTitle("Edit your name").setView(R.layout.input_view).setNegativeButton("Cancel", new ButtonClickedListener("Cancel")).
-                setPositiveButton("Save", null).show();
+        createAlertDialogBuilder()
+                .setTitle("Edit your name")
+                .setView(getLayoutInflater().inflate(R.layout.input_view, null))
+                .setNegativeButton("Cancel", new ButtonClickedListener("Cancel"))
+                .setPositiveButton("Save", null).show();
     }
 
 
@@ -200,25 +244,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         public void onClick(DialogInterface dialog, int which) {
             showToast("\"" + mShowWhenClicked + "\"" + " button clicked.");
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 }
