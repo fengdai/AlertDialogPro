@@ -9,7 +9,7 @@
     </parent>
 
     <groupId>com.github.fengdai</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>alertdialogpro-parent</artifactId>
     <version>0.1.1</version>
     <packaging>pom</packaging>
 
@@ -50,6 +50,8 @@
         <plugin.maven-compiler-plugin.version>3.2</plugin.maven-compiler-plugin.version>
         <plugin.android-maven-plugin.version>4.0.0</plugin.android-maven-plugin.version>
         <plugin.maven-release-plugin.version>2.5.1</plugin.maven-release-plugin.version>
+        <plugin.maven-source-plugin.version>2.4</plugin.maven-source-plugin.version>
+        <plugin.maven-javadoc-plugin.version>2.10.1</plugin.maven-javadoc-plugin.version>
     </properties>
 
     <scm>
@@ -137,6 +139,32 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${plugin.maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${plugin.maven-javadoc-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
