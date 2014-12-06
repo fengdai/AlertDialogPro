@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="Base.Widget.AlertDialogPro.Material.Button" parent="android:Widget.Button">
         <item name="android:background">@drawable/adp_btn_mtrl_dark</item>
         <item name="android:textColor">?attr/colorAccent</item>
@@ -86,9 +85,4 @@
     </style>
 
     <style name="DialogWindowTitle.AlertDialogPro.Material.Light" />
-
-    <style name="ProgressBarCompat" parent="@style/Widget.AppCompat.ProgressBar">
-        <item name="borderWidth">4dp</item>
-    </style>
-
 </resources>

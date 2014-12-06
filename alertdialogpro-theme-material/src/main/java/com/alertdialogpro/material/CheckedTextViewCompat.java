@@ -5,6 +5,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v7.internal.widget.TintManager;
+import android.support.v7.internal.widget.TintTypedArray;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
