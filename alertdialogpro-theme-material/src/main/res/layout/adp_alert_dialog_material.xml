@@ -67,11 +67,9 @@
                     style="?attr/adpMessageTextAppearance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
                     android:paddingLeft="@dimen/adp_mtrl_alert_dialog_padding"
                     android:paddingRight="@dimen/adp_mtrl_alert_dialog_padding"
-                    android:paddingTop="@dimen/adp_mtrl_alert_dialog_padding_top"
-                    android:textAlignment="viewStart" />
+                    android:paddingTop="@dimen/adp_mtrl_alert_dialog_padding_top" />
 
                 <View
                     android:id="@id/adp_textSpacerNoButtons"

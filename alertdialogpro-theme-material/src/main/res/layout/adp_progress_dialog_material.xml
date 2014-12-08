@@ -19,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:max="10000"
+            android:layout_marginEnd="@dimen/adp_mtrl_alert_dialog_padding"
             android:layout_marginRight="@dimen/adp_mtrl_alert_dialog_padding" />
 
         <TextView

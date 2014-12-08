@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:max="10000"
+        android:layout_marginEnd="16dip"
         android:layout_marginRight="16dip" />
 
     <TextView
