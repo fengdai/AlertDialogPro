@@ -53,7 +53,7 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
 
     public CheckedTextViewCompat(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-
+        setBasePadding(isCheckMarkAtStart());
         final TintTypedArray a = TintTypedArray.obtainStyledAttributes(context, attrs, CHECKED_TEXT_VIEW_ATTRS,
                 defStyle, 0);
 
@@ -123,12 +123,12 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
             setMinHeight(d.getIntrinsicHeight());
 
             mCheckMarkWidth = d.getIntrinsicWidth();
-            mBasePadding = getPaddingLeftField();
-            setPaddingLeftField(mCheckMarkWidth + mBasePadding);
             d.setState(getDrawableState());
+        } else {
+            mCheckMarkWidth = 0;
         }
         mCheckMarkDrawable = d;
-        requestLayout();
+        updatePadding();
     }
 
     @Override
@@ -170,18 +170,28 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     @Override
     public void setPadding(int left, int top, int right, int bottom) {
         super.setPadding(left, top, right, bottom);
-        mBasePadding = getPaddingLeftField();
+        setBasePadding(isCheckMarkAtStart());
+        updatePadding();
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    public void setPaddingRelative(int start, int top, int end, int bottom) {
+        super.setPaddingRelative(start, top, end, bottom);
+        setBasePadding(isCheckMarkAtStart());
+        updatePadding();
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     public void onRtlPropertiesChanged(int layoutDirection) {
         super.onRtlPropertiesChanged(layoutDirection);
+        invokeResetPaddingToInitialValues();
+        setBasePadding(isCheckMarkAtStart());
         updatePadding();
     }
 
     private void updatePadding() {
-        invokeResetPaddingToInitialValues();
         int newPadding = (mCheckMarkDrawable != null) ?
                 mCheckMarkWidth + mBasePadding : mBasePadding;
         if (isCheckMarkAtStart()) {
@@ -194,6 +204,14 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
         if (mNeedRequestlayout) {
             requestLayout();
             mNeedRequestlayout = false;
+        }
+    }
+
+    private void setBasePadding(boolean checkmarkAtStart) {
+        if (checkmarkAtStart) {
+            mBasePadding = getPaddingLeftField();
+        } else {
+            mBasePadding = getPaddingRightField();
         }
     }
 
