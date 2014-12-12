@@ -1,153 +1,150 @@
-AlertDialogPro
-==============
-
 [![Build Status](https://travis-ci.org/fengdai/AlertDialogPro.svg?branch=master)](https://travis-ci.org/fengdai/AlertDialogPro)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AlertDialogPro-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1178)
 
-It's not an easy thing to theme the Android's **AlertDialog**, even though you are developing against HoneyComb (which introduced some new APIs like ```android:singleChoiceItemLayout``` -- allows you specify your own single－choice item layout in theme. But **not** enough) or above. **AlertDialogPro** can make this thing easy. It includes (but is not limited to) all AlertDialog's APIs. You can use it the same as using the platform's AlertDialog (just replace ```AlertDialog.Builder``` with ```AlertDialogPro.Builder```) and benefit from some of the other sweet features.
+#AlertDialogPro
 
-There are two theme projects you can use directly: [alertdialogpro-theme-holo](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro-theme-holo) and [alertdialogpro-theme-material](https://github.com/fengdai/AlertDialogPro/tree/master/alertdialogpro-theme-material). One provides holo dialog and the other one provides material dialog. **AlertDialogPro** is very flexible, so you can use it to implement any other theme you want.
+Why AlertDialogPro?
 
-   ![holo](https://github.com/fengdai/AlertDialogPro/blob/master/image/holo_light_dialog_only.png)
-   ![mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_light_dialog_only.png)
-   ![flavored-mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/flavored_material_light.png)
-   ![flavored-mtrl](https://github.com/fengdai/AlertDialogPro/blob/master/image/material_dark_dialog_only.png)
+Theming Android's AlertDialog is not an easy thing. Because some of its attributes are not avaliable on old platform. Even on newer you still can't use ```android:layout``` to specify your own layout, since your views' ids should be consistant with Android's, some of which are not public... AlertDialogPro can make theming a lot easier.
 
+ ![holo-light](https://github.com/fengdai/AlertDialogPro/raw/master/image/holo_light_dialog_only.png)
+   ![mtrl-light](https://github.com/fengdai/AlertDialogPro/raw/master/image/material_light_dialog_only.png)
+   ![flavored-mtrl-light](https://github.com/fengdai/AlertDialogPro/raw/master/image/flavored_material_light.png)
+   ![mtrl-dark](https://github.com/fengdai/AlertDialogPro/raw/master/image/material_dark_dialog_only.png)
 
-Usage
-=====
+#Structure
 
-1. **Build an AlertDialogPro**
+###alertdialogpro-core
 
-   Include **alertdialogpro-core** to your project. And you also need to select a theme project from **alertdialogpro-theme-holo** and **alertdialogpro-theme-material**, and include it to your project too. You can define your own theme if you don't want to use both of them. In this case, you just need to include **alertdialogpro-core** only. Than you can use AlertDialogPro. AlertDialogPro's API is similar to native AlertDialog's. It also provides a **AlertDialogPro.Builder** for building itself.
-   ```java
-   AlertDialogPro.Builder builder = new AlertDialogPro.Builder(getContext());
-   builder.setTitle("Title").
-           setIcon(R.drawable.ic_launcher).
-           setMessage("Message").
-           setNeutralButton("Neutral", null).
-           setPositiveButton("OK", null).
-           setNegativeButton("Cancel", null).
-           show();
-   ```
+Contains core codes for building an AlertDialogPro. Most of it's codes are ported from the latest Android Platform. It doesn't contain any resource file. If you want to implement a brand new theme, use this project directly. Otherwise, you should use alertdialogpro-theme-material or alertdialogpro-theme-holo.
 
-2. **alertdialogpro-theme-holo**
-   
-   This a project which contains Holo resources for **AlertDialogPro**. Anyone who wants a Holo theme can include this project as an addition of alertdialogpro-core. It has two default Holo themes, ```Theme.AlertDialogPro.Holo``` and ```Theme.AlertDialogPro.Holo.Light```. The only thing you need to do is choose a theme from the two, and add it to your application's theme XML file. Your dialog will looks the same "Holo" across almost versions of Android backward to API level 3.
-   1. Specify **AlertDialogPro**'s theme with attribute ```alertDialogProTheme```:
+###alertdialogpro-theme-material
 
-      ```xml
-      <style name="AppTheme" parent="AppBaseTheme">
-        ...
-        <!-- Use Holo dark theme as global theme of this app -->
-        <item name="alertDialogProTheme">@style/Theme.AlertDialogPro.Holo</item>
-      </style>
-      ```
-   2. Your can override global theme with another in code when build dialog. Just specify it to the Builder:
+Based on alertdialogpro-core, gives AlertDialogPro a Material theme.
 
-      ```java
-      // Build a AlertDialogPro with Holo light theme.
-      AlertDialogPro.Builder builder = new AlertDialogPro.Builder(getContext(), R.style.Theme_AlertDialogPro_Holo_Light);
-      ```
-   
-3. **alertdialogpro-theme-material**
+###alertdialogpro-theme-holo (Obsolete)
 
-   Similar to **alertdialogpro-theme-holo**, **alertdialogpro-theme-material** is a project to make material style **AlertDialogPro**. If you want a material dialog, you can simply include it to your project as an addition of **alertdialogpro-core**. Then you can use it's two themes: ```Theme.AlertDialogPro.Material``` and ```Theme.AlertDialogPro.Material.Light``` in your application's theme resource or code. Since it depends on AppCompat-v21, it only support minSdkVersion 7+ now.
-   
-4. **Theme customization**
+Also based on alertdialogpro-core, gives AlertDialogPro a Holo theme.
 
-   With AlertDialogPro, you can theme your dialog easily.
+#Quick Start
+Take **alertdialogpro-theme-material** for example.
 
-   1. If one of the built-in themes can meet almost your requirements, but you want to do some slight changes. You can use following attributes:
+###Download
 
-      ```xml
-      <!-- Minimum height of title panel-->
-      <attr name="adpTitleMinHeight" format="dimension" />
+Grab [latest version](#latest_version) via Gradle:
+```groovy
+dependencies {
+  compile 'com.github.fengdai:alertdialogpro-theme-material:(latest version)'
+}
+```
 
-      <!-- The text appearance for the dialog's message text -->
-      <attr name="adpMessageTextAppearance" format="reference" />
+or Maven:
+```xml
+<dependency>
+  <groupId>com.github.fengdai</groupId>
+  <artifactId>alertdialogpro-theme-material</artifactId>
+  <version>(latest version)</version>
+</dependency>
+```
 
-      <!-- Minimum height of ListView's items -->
-      <attr name="adpListItemMinHeight" format="dimension" />
+###Specify AlertDialogPro's theme
 
-      <!-- The text color for ListView's items -->
-      <attr name="adpListItemTextColor" format="reference|color" />
+In your app's xml file, use attribute ```alertDialogProTheme``` to specify your AlertDialogPro's theme. **alertdialogpro-theme-material** contains two built-in theme: ```Theme.AlertDialogPro.Material``` and ```Theme.AlertDialogPro.Material.Light```. Here, we use the light version:
+```xml
+<style name="YourAppTheme">
+   ...
+  <item name="alertDialogProTheme">@style/Theme.AlertDialogPro.Material.Light</item>
+</style>
+```
 
-      <!-- The text appearance for normal ListView's items -->
-      <attr name="adpListItemTextAppearance" format="reference" />
+###Build an AlertDialogPro
 
-      <!-- The text appearance for "multi-choice" ListView's items -->
-      <attr name="adpListMultiChoiceTextAppearance" format="reference" />
+Use ```AlertDialogPro.Builder``` to build an AlertDialogPro:
+```java
+AlertDialogPro.Builder builder = new AlertDialogPro.Builder(getContext());
+builder.setIcon(R.drawable.icon).
+        setTitle("Title").
+        setMessage("Message Body").
+        setNeutralButton("Neutral", null).
+        setPositiveButton("Positive", null).
+        setNegativeButton("Negative", null).
+        show();
+```
+With the example codes above, you can create an AlertDialogPro which has an icon, a title, a message body and three option buttons. Look into the [sample](https://github.com/fengdai/AlertDialogPro/blob/master/alertdialogpro-demo/src/main/java/com/alertdialogpro/demo/MainActivity.java) to see more usages.
 
-      <!-- The text appearance for "single-choice" ListView's items -->
-      <attr name="adpListSingleChoiceTextAppearance" format="reference" />
+###Flavor built-in themes
 
-      <!-- Divider for the ListView -->
-      <attr name="adpListDivider" format="reference" />
+Built-in themes can't meet your requirement? There are [several attributes](https://github.com/fengdai/AlertDialogPro/blob/master/alertdialogpro-core/src/main/res/values/adp_core_attrs.xml) that you can use to make some slight changes. Here is an example to show how to change the positive button's color:
 
-      <!-- Selector in a ListView -->
-      <attr name="adpListItemBackground" format="reference" />
+1. Define your positive button's style:
+```xml
+<style name="YourButtonStyle" parent="Widget.AlertDialogPro.Material.Light.Button">
+     <item name="android:textColor">@color/adp_positive_button_color</item>
+</style>
+```
 
-      <!-- Style for button bars -->
-      <attr name="adpButtonBarStyle" format="reference" />
+2. Specify button style to your AlertDialogPro's theme with attribute ```adpButtonBarPositiveButtonStyle```:
+```xml
+<style name="FlavoredMaterialLight" parent="Theme.AlertDialogPro.Material.Light">
+      ...
+     <item name="adpButtonBarPositiveButtonStyle">@style/YourButtonStyle</item>
+</style>
+```
+3. Use it in your app's theme:
+```xml
+<item name="alertDialogProTheme">@style/FlavoredMaterialLight</item>
+```
 
-      <!-- Style for buttons within button bars -->
-      <attr name="adpButtonBarButtonStyle" format="reference" />
+Look into [here](https://github.com/fengdai/AlertDialogPro/blob/master/alertdialogpro-core/src/main/res/values/adp_core_attrs.xml) to see all attributes.
 
-      <!-- Style for the "positive" buttons within button bars -->
-      <attr name="adpButtonBarPositiveButtonStyle" format="reference" />
+###Advanced customization
+You can specify your own layout to AlertDialogPro. This can be very useful when you want to use custom views or you want a special dialog layout. Remember to keep your views' ids consistant with [AlertDialogPro's ids](https://github.com/fengdai/AlertDialogPro/blob/master/alertdialogpro-core/src/main/res/values/adp_core_ids.xml).
 
-      <!-- Style for the "negative" buttons within button bars -->
-      <attr name="adpButtonBarNegativeButtonStyle" format="reference" />
+1. Define your AlertDialogPro's style:
+```xml
+<style name="YourAlertDialogProStyle" parent="AlertDialogPro.Material.Light">
+  <!-- Specify your AlertDialogPro's layout -->
+  <item name="adpLayout">@layout/your_alert_dialog</item>
+  <!-- Specify your AlertDialogPro's ListView layout. -->
+  <item name="adpListLayout">@layout/your_list_layout</item>
+  <!-- Specify your AlertDialogPro's list item layout. -->
+  <item name="adpListItemLayout">@layout/your_dialog_item</item>
+  <!-- Specify your AlertDialogPro's multi choice list item layout. -->
+  <item name="adpMultiChoiceItemLayout">@layout/your_multichoice_dialog_item</item>
+  <!-- Specify your AlertDialogPro's single choice list item layout. -->
+  <item name="adpSingleChoiceItemLayout">@layout/your_singlechoice_dialog_item</item>
+</style>
+```
+2. And add it to your AlertDialogPro's theme:
+```xml
+<style name="YourAlertDialogProTheme" parent="Theme.AlertDialogPro.Material.Light">
+  ...
+  <item name="alertDialogProStyle">@style/YourAlertDialogProStyle</item>
+</style>
+```
 
-      <!-- Style for the "neutral" buttons within button bars -->
-      <attr name="adpButtonBarNeutralButtonStyle" format="reference" />
-      ```
-   
-   2. You can also specify your own layout to the AlertDialogPro. This can be very useful when you want to use custom view or you want a very special dialog style.
+3. Use your AlertDialogPro theme in your app's theme:
+```xml
+<item name="alertDialogProTheme">@style/YourAlertDialogProTheme</item>
+```
 
-      ```xml
-      <style name="AlertDialogPro.Material">
-        <!-- As HoneyComb's android:layout.
-             Specify your AlertDialogPro's layout -->
-        <item name="adpLayout">@layout/adp_alert_dialog_material</item>
-        <!-- As HoneyComb's android:listLayout.
-             Specify your AlertDialogPro's ListView layout. -->
-        <item name="adpListLayout">@layout/adp_select_dialog_material</item>
-        <!-- As HoneyComb's android:listItemLayout.
-             Specify your AlertDialogPro's list item layout. -->
-        <item name="adpListItemLayout">@layout/adp_select_dialog_item_material</item>
-        <!-- As HoneyComb's android:multiChoiceItemLayout.
-             Specify your AlertDialogPro's multi choice list item layout. -->
-        <item name="adpMultiChoiceItemLayout">@layout/adp_select_dialog_multichoice_material</item>
-        <!-- As HoneyComb's android:singleChoiceItemLayout.
-             Specify your AlertDialogPro's single choice list item layout. -->
-        <item name="adpSingleChoiceItemLayout">@layout/adp_select_dialog_singlechoice_material</item>
-      </style>
-      ```
-      And add it to your theme:
-   
-      ```xml
-      <item name="alertDialogProStyle">@style/AlertDialogPro.Material</item>
-      ```
+#Migrate From AlertDialog
 
-   3. If none of the built-in themes can meet your requirements. Full customization is also supported. Do as what the **alertdialogpro-theme-holo** or **alertdialogpro-theme-material** did.
+AlertDialogPro's Java API is exactly the same as [AlertDialog's](http://developer.android.com/reference/android/app/AlertDialog.Builder.html). In fact, most of AlertDialogPro's codes are ported from the latest AlertDialog. So the only thing you need to do in your Java codes is replacing ```AlertDialog.Builder``` with ```AlertDialogPro.Builder```.
 
+#<a id="latest_version"></a>Current Version
+Version 0.1.0
 
-Gradle Dependence
-=================
+#Requirements
 
-   Coming soon...
+AlertDialogPro requires at minimum Android 2.1 (API level 7).
 
-
-Thanks
-======
+#Thanks
 
    * This project contains some code ported from The Android Open Source Project. [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
    * Thank [vbauer](https://github.com/vbauer) and his awesome site [Android-Arsenal](https://android-arsenal.com/)
 
-License
-=======
+#License
 
     Copyright 2014 Feng Dai
 
