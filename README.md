@@ -31,7 +31,7 @@ Take **alertdialogpro-theme-material** for example.
 
 ###Download
 
-Grab [latest version](#latest_version) via Gradle:
+Grab [latest version](#Current Version) via Gradle:
 ```groovy
 dependencies {
   compile 'com.github.fengdai:alertdialogpro-theme-material:(latest version)'
@@ -132,8 +132,16 @@ You can specify your own layout to AlertDialogPro. This can be very useful when 
 
 AlertDialogPro's Java API is exactly the same as [AlertDialog's](http://developer.android.com/reference/android/app/AlertDialog.Builder.html). In fact, most of AlertDialogPro's codes are ported from the latest AlertDialog. So the only thing you need to do in your Java codes is replacing ```AlertDialog.Builder``` with ```AlertDialogPro.Builder```.
 
-#<a id="latest_version"></a>Current Version
-Version 0.1.0
+#Current Version
+Version 0.2.0
+
+#Change Log
+####v0.2.0
+* Add ProgressDialogPro
+* Fix bug of CheckedTextedView #30
+
+####v0.1.0
+* Initial version
 
 #Requirements
 

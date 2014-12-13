@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply from: "$rootDir/android.gradle"
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:21.+'
+    compile 'com.android.support:appcompat-v7:21.0.2'
 }
 
 apply from: "$rootDir/maven_push.gradle"
