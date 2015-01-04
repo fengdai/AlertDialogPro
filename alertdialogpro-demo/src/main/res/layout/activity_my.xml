@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -52,11 +53,11 @@
                 android:text="Use Holo Light theme" />
 
             <RadioButton
-                    android:id="@+id/theme_native"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="Use native theme" />
+                android:id="@+id/theme_native"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Use native theme" />
         </RadioGroup>
 
 
@@ -69,20 +70,20 @@
             android:text="Show Message" />
 
         <Button
-                android:id="@+id/showProgress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/showMessage"
-                android:layout_marginTop="12dp"
-                android:text="Show Progress" />
+            android:id="@+id/showProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/showMessage"
+            android:layout_marginTop="12dp"
+            android:text="Show Progress" />
 
         <Button
-                android:id="@+id/showProgressHorizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/showProgress"
-                android:layout_marginTop="12dp"
-                android:text="Show Progress Horizontal" />
+            android:id="@+id/showProgressHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/showProgress"
+            android:layout_marginTop="12dp"
+            android:text="Show Progress Horizontal" />
 
         <Button
             android:id="@+id/showList"

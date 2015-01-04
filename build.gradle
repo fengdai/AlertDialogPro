@@ -8,12 +8,6 @@ buildscript {
 }
 
 allprojects {
-    repositories {
-        mavenCentral()
-    }
-}
-
-allprojects {
 
     version = VERSION_NAME
     group = GROUP

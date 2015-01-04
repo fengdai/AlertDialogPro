@@ -31,10 +31,10 @@ Take **alertdialogpro-theme-material** for example.
 
 ###Download
 
-Grab [latest version](#Current Version) via Gradle:
+Grab latest version via Gradle:
 ```groovy
 dependencies {
-  compile 'com.github.fengdai:alertdialogpro-theme-material:(latest version)'
+  compile 'com.github.fengdai:alertdialogpro-theme-material:0.2.0'
 }
 ```
 
@@ -43,7 +43,7 @@ or Maven:
 <dependency>
   <groupId>com.github.fengdai</groupId>
   <artifactId>alertdialogpro-theme-material</artifactId>
-  <version>(latest version)</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 
@@ -131,9 +131,6 @@ You can specify your own layout to AlertDialogPro. This can be very useful when 
 #Migrate From AlertDialog
 
 AlertDialogPro's Java API is exactly the same as [AlertDialog's](http://developer.android.com/reference/android/app/AlertDialog.Builder.html). In fact, most of AlertDialogPro's codes are ported from the latest AlertDialog. So the only thing you need to do in your Java codes is replacing ```AlertDialog.Builder``` with ```AlertDialogPro.Builder```.
-
-#Current Version
-Version 0.2.0
 
 #Change Log
 ####v0.2.0
