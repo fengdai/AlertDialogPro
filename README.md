@@ -134,10 +134,11 @@ AlertDialogPro's Java API is exactly the same as [AlertDialog's](http://develope
 
 #Change Log
 ####v0.2.1
-* Workaround for issue #17
+* Workaround for issue [#17](https://github.com/fengdai/AlertDialogPro/issues/17)
+
 ####v0.2.0
 * Add ProgressDialogPro
-* Fix bug of CheckedTextedView #30
+* Fix bug of CheckedTextedView [#30](https://github.com/fengdai/AlertDialogPro/issues/30)
 
 ####v0.1.0
 * Initial version
