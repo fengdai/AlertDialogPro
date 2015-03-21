@@ -154,7 +154,8 @@ AlertDialogPro requires at minimum Android 2.1 (API level 7).
 
 #License
 
-    Copyright 2014 Feng Dai
+    Copyright (C) 2014 Feng Dai
+    Copyright (C) 2007 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
