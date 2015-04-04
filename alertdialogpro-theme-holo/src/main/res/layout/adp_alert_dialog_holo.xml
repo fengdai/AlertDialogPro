@@ -113,7 +113,7 @@
 
             <Button
                 android:id="@id/adp_button2"
-                style="?attr/adpButtonBarButtonStyle"
+                style="?attr/adpButtonBarNegativeButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
@@ -122,7 +122,7 @@
 
             <Button
                 android:id="@id/adp_button3"
-                style="?attr/adpButtonBarButtonStyle"
+                style="?attr/adpButtonBarNeutralButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -131,7 +131,7 @@
 
             <Button
                 android:id="@id/adp_button1"
-                style="?attr/adpButtonBarButtonStyle"
+                style="?attr/adpButtonBarPositiveButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"

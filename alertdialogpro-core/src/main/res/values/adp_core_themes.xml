@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Base.Theme.AlertDialogPro" parent="Theme.AppCompat.Dialog"></style>
+    <style name="Base.Theme.AlertDialogPro" parent="Theme.AppCompat.Dialog"/>
 
     <style name="Base.Theme.AlertDialogPro.Light" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:windowNoTitle">true</item>
