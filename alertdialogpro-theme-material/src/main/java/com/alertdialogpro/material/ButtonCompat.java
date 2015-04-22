@@ -22,8 +22,8 @@ public class ButtonCompat extends Button {
         super(context, attrs, defStyle);
 
         TypedArray style = context
-                .obtainStyledAttributes(attrs, R.styleable.CompatTextView, defStyle, 0);
-        boolean allCaps = style.getBoolean(R.styleable.CompatTextView_textAllCaps, false);
+                .obtainStyledAttributes(attrs, R.styleable.AppCompatTextView, defStyle, 0);
+        boolean allCaps = style.getBoolean(R.styleable.AppCompatTextView_textAllCaps, false);
         style.recycle();
 
         if (allCaps) {
