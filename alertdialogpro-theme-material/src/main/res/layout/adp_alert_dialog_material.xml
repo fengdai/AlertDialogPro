@@ -111,11 +111,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <View
+        <android.support.v4.widget.Space
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:visibility="invisible" />
+            android:visibility="invisible"/>
 
         <com.alertdialogpro.material.ButtonCompat
             android:id="@id/adp_button2"

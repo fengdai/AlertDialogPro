@@ -4,7 +4,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -15,7 +15,7 @@ import com.alertdialogpro.ProgressDialogPro;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int NATIVE_THEME = Integer.MIN_VALUE;
     private int mTheme = -1;
 
@@ -52,6 +52,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         });
 
         findViewById(R.id.showMessage).setOnClickListener(this);
+        findViewById(R.id.showLongMessage).setOnClickListener(this);
         findViewById(R.id.showProgress).setOnClickListener(this);
         findViewById(R.id.showProgressHorizontal).setOnClickListener(this);
         findViewById(R.id.showList).setOnClickListener(this);
@@ -65,6 +66,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.showMessage:
                 showMessageAlertDialog();
+                break;
+            case R.id.showLongMessage:
+                showLongMessageAlertDialog();
                 break;
             case R.id.showProgress:
                 showProgressDialog();
@@ -107,6 +111,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         createAlertDialogBuilder()
                 .setTitle(R.string.app_name)
                 .setMessage("Hello, charming AlertDialogPro!")
+                .setPositiveButton("Nice Job", new ButtonClickedListener("Dismiss"))
+                .show();
+    }
+
+    private void showLongMessageAlertDialog(){
+        createAlertDialogBuilder()
+                .setTitle(R.string.app_name)
+                .setMessage("Hello, charming AlertDialogPro! This message is a bit longer than you would expect, so you can see how nicely this dialog behaves on tablets and landscape orientations. The Dialog does not stretch to fill the width but maintains a nice aspect ratio, yeaaa!")
                 .setPositiveButton("Nice Job", new ButtonClickedListener("Dismiss"))
                 .show();
     }
