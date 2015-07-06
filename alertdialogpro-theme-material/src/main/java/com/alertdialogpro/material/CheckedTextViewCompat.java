@@ -32,7 +32,7 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     private int mBasePadding;
     private int mCheckMarkWidth;
 
-    private boolean mNeedRequestlayout;
+    private boolean mNeedRequestLayout;
 
     private static final int[] CHECKED_STATE_SET = {
             android.R.attr.state_checked
@@ -40,8 +40,8 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
 
     private final TintManager mTintManager;
 
-    private Field mPaddingLeftFeild;
-    private Field mPaddingRightFeild;
+    private Field mPaddingLeftField;
+    private Field mPaddingRightField;
 
     public CheckedTextViewCompat(Context context) {
         this(context, null);
@@ -195,15 +195,15 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
         int newPadding = (mCheckMarkDrawable != null) ?
                 mCheckMarkWidth + mBasePadding : mBasePadding;
         if (isCheckMarkAtStart()) {
-            mNeedRequestlayout |= (getPaddingLeftField() != newPadding);
+            mNeedRequestLayout |= (getPaddingLeftField() != newPadding);
             setPaddingLeftField(newPadding);
         } else {
-            mNeedRequestlayout |= (getPaddingRightField() != newPadding);
-            setPaddingRightFeild(newPadding);
+            mNeedRequestLayout |= (getPaddingRightField() != newPadding);
+            setPaddingRightField(newPadding);
         }
-        if (mNeedRequestlayout) {
+        if (mNeedRequestLayout) {
             requestLayout();
-            mNeedRequestlayout = false;
+            mNeedRequestLayout = false;
         }
     }
 
@@ -295,7 +295,6 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
         return populated;
     }
 
-
     private void invokeResetPaddingToInitialValues() {
         try {
             Method resetPaddingToInitialValues = View.class.getDeclaredMethod("resetPaddingToInitialValues");
@@ -312,9 +311,9 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     }
 
     private void ensurePaddingLeftField() {
-        if (mPaddingLeftFeild == null) {
+        if (mPaddingLeftField == null) {
             try {
-                mPaddingLeftFeild = View.class.getDeclaredField("mPaddingLeft");
+                mPaddingLeftField = View.class.getDeclaredField("mPaddingLeft");
             } catch (NoSuchFieldException e) {
                 e.printStackTrace();
             }
@@ -324,7 +323,7 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     private int getPaddingLeftField() {
         ensurePaddingLeftField();
         try {
-            return mPaddingLeftFeild.getInt(this);
+            return mPaddingLeftField.getInt(this);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
@@ -334,16 +333,16 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     private void setPaddingLeftField(int paddingLeft) {
         ensurePaddingLeftField();
         try {
-            mPaddingLeftFeild.setInt(this, paddingLeft);
+            mPaddingLeftField.setInt(this, paddingLeft);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
     }
 
     private void ensurePaddingRightField() {
-        if (mPaddingRightFeild == null) {
+        if (mPaddingRightField == null) {
             try {
-                mPaddingRightFeild = View.class.getDeclaredField("mPaddingRight");
+                mPaddingRightField = View.class.getDeclaredField("mPaddingRight");
             } catch (NoSuchFieldException e) {
                 e.printStackTrace();
             }
@@ -353,17 +352,17 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
     private int getPaddingRightField() {
         ensurePaddingRightField();
         try {
-            return mPaddingRightFeild.getInt(this);
+            return mPaddingRightField.getInt(this);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
         return 0;
     }
 
-    private void setPaddingRightFeild(int paddingRight) {
+    private void setPaddingRightField(int paddingRight) {
         ensurePaddingRightField();
         try {
-            mPaddingRightFeild.setInt(this, paddingRight);
+            mPaddingRightField.setInt(this, paddingRight);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
