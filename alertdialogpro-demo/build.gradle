@@ -2,6 +2,6 @@ apply plugin: 'com.android.application'
 apply from: "$rootDir/android.gradle"
 
 dependencies {
-    compile project(':alertdialogpro-theme-holo')
-    compile project(':alertdialogpro-theme-material')
+    compile 'com.github.fengdai:alertdialogpro-theme-holo:0.2.3'
+    compile 'com.github.fengdai:alertdialogpro-theme-material:0.2.3'
 }
