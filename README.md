@@ -132,29 +132,6 @@ You can specify your own layout to AlertDialogPro. This can be very useful when 
 
 AlertDialogPro's Java API is exactly the same as [AlertDialog's](http://developer.android.com/reference/android/app/AlertDialog.Builder.html). In fact, most of AlertDialogPro's codes are ported from the latest AlertDialog. So the only thing you need to do in your Java codes is replacing ```AlertDialog.Builder``` with ```AlertDialogPro.Builder```.
 
-#Change Log
-####v0.2.5
-* Upgrade to AppCompat 23.1.0
-
-####v0.2.4
-* Upgrade to AppCompat 23.0.0
-
-####v0.2.3
-* Add support for AppCompat 22.1.0
-
-####v0.2.2
-* Fix issue [#45](https://github.com/fengdai/AlertDialogPro/issues/45)
-
-####v0.2.1
-* Workaround for issue [#17](https://github.com/fengdai/AlertDialogPro/issues/17)
-
-####v0.2.0
-* Add ProgressDialogPro
-* Fix bug of CheckedTextedView [#30](https://github.com/fengdai/AlertDialogPro/issues/30)
-
-####v0.1.0
-* Initial version
-
 #Requirements
 
 AlertDialogPro requires at minimum Android 2.1 (API level 7).
