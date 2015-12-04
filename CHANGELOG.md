@@ -1,4 +1,7 @@
 #Change Log
+####v0.2.6
+* Upgrade to AppCompat 23.1.1
+
 ####v0.2.5
 * Upgrade to AppCompat 23.1.0
 

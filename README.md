@@ -34,7 +34,7 @@ Take **alertdialogpro-theme-material** for example.
 Grab latest version via Gradle:
 ```groovy
 dependencies {
-  compile 'com.github.fengdai:alertdialogpro-theme-material:0.2.5'
+  compile 'com.github.fengdai:alertdialogpro-theme-material:0.2.6'
 }
 ```
 
@@ -43,7 +43,7 @@ or Maven:
 <dependency>
   <groupId>com.github.fengdai</groupId>
   <artifactId>alertdialogpro-theme-material</artifactId>
-  <version>0.2.5</version>
+  <version>0.2.6</version>
 </dependency>
 ```
 
