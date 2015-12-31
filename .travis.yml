@@ -6,12 +6,19 @@ android:
     - build-tools-23.0.1
     - extra
 
+after_success:
+  - .buildscript/deploy_snapshot.sh
+
+env:
+  global:
+    - secure: "CaqmEcFSG7ibRFqsT6j6w5pDNWJxswoA/pMWQqgNPEet34xsRHTePbtB/Gk5dMa3Jke8S5sF8dA30xMWj5WqFV73bmbpMCftCJJCQR14rgKZov4zr1sC6ykdGxeQA7RYvLsjUFHCwyojhUVtn+FI/ZJQoq+OQz719ofAMbdeed8="
+    - secure: "C4vOLHYAZsK/tCQxip2Ovn8sqAhB8E6FaC8C9fqbNFVrI4Y4lxhyeC+wbq/+0P3LULc8c6fifnk9d2nPj+2ptsNZKnreVB6pYC6xnFQvOsIU1CqlnrX+Kj61R72YVQywoHO49AwuGtH/S8jAd6LWZZcYvYujwh3XIDqRkkYDp3g="
+
 notifications:
   email: false
+
+sudo: false
 
 cache:
   directories:
   - $HOME/.gradle
-
-script:
-  ./gradlew clean build
