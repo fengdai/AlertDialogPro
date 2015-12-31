@@ -42,13 +42,13 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
     }
 
     /**
-     * Gets one of the buttons used in the dialog.
-     * <p/>
-     * If a button does not exist in the dialog, null will be returned.
+     * Gets one of the buttons used in the dialog. Returns null if the specified
+     * button does not exist or the dialog has not yet been fully created (for
+     * example, via {@link #show()} or {@link #create()}).
      *
      * @param whichButton The identifier of the button that should be returned.
-     *                    For example, this can be
-     *                    {@link DialogInterface#BUTTON_POSITIVE}.
+     *            For example, this can be
+     *            {@link DialogInterface#BUTTON_POSITIVE}.
      * @return The button from the dialog, or null if a button does not exist.
      */
     public Button getButton(int whichButton) {
@@ -398,16 +398,16 @@ public class AlertDialogPro extends AlertDialog implements DialogInterface {
 
         /**
          * Sets the callback that will be called if the dialog is canceled.
-         * <p/>
+         *
          * <p>Even in a cancelable dialog, the dialog may be dismissed for reasons other than
          * being canceled or one of the supplied choices being selected.
          * If you are interested in listening for all cases where the dialog is dismissed
          * and not just when it is canceled, see
          * {@link #setOnDismissListener(android.content.DialogInterface.OnDismissListener) setOnDismissListener}.</p>
-         *
-         * @return This Builder object to allow for chaining of calls to set methods
          * @see #setCancelable(boolean)
          * @see #setOnDismissListener(android.content.DialogInterface.OnDismissListener)
+         *
+         * @return This Builder object to allow for chaining of calls to set methods
          */
         public Builder setOnCancelListener(OnCancelListener onCancelListener) {
             P.mOnCancelListener = onCancelListener;

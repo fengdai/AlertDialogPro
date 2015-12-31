@@ -78,11 +78,6 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
         return mChecked;
     }
 
-    /**
-     * <p>Changes the checked state of this text view.</p>
-     *
-     * @param checked true to check the text, false to uncheck it
-     */
     public void setChecked(boolean checked) {
         if (mChecked != checked) {
             mChecked = checked;
@@ -159,7 +154,6 @@ public class CheckedTextViewCompat extends TextView implements Checkable {
      * Gets the checkmark drawable
      *
      * @return The drawable use to represent the checkmark, if any.
-     * @attr ref android.R.styleable#CheckedTextView_checkMark
      * @see #setCheckMarkDrawable(Drawable)
      * @see #setCheckMarkDrawable(int)
      */
