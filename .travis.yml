@@ -4,7 +4,13 @@ android:
   components:
     - android-23
     - build-tools-23.0.1
-    - extra
+    - extra-android-m2repository
+
+licenses:
+    - android-sdk-license-5be876d5
+
+jdk:
+  - oraclejdk8
 
 after_success:
   - .buildscript/deploy_snapshot.sh
