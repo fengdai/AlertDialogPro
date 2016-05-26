@@ -1,6 +1,10 @@
 [![Build Status](https://travis-ci.org/fengdai/AlertDialogPro.svg?branch=master)](https://travis-ci.org/fengdai/AlertDialogPro)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AlertDialogPro-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1178)
 
+#Deprecated
+
+Please use `android.support.v7.app.AlertDialog` of support-v7.
+
 #AlertDialogPro
 
 Why AlertDialogPro?
