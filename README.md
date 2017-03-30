@@ -1,11 +1,11 @@
 [![Build Status](https://travis-ci.org/fengdai/AlertDialogPro.svg?branch=master)](https://travis-ci.org/fengdai/AlertDialogPro)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AlertDialogPro-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1178)
 
-#Deprecated
+# Deprecated
 
 Please use `android.support.v7.app.AlertDialog` of support-v7.
 
-#AlertDialogPro
+# AlertDialogPro
 
 Why AlertDialogPro?
 
@@ -16,24 +16,24 @@ Theming Android's AlertDialog is not an easy thing. Because some of its attribut
    ![flavored-mtrl-light](https://github.com/fengdai/AlertDialogPro/raw/master/image/flavored_material_light.png)
    ![mtrl-dark](https://github.com/fengdai/AlertDialogPro/raw/master/image/material_dark_dialog_only.png)
 
-#Structure
+# Structure
 
-###alertdialogpro-core
+### alertdialogpro-core
 
 Contains core codes for building an AlertDialogPro. Most of it's codes are ported from the latest Android Platform. It doesn't contain any resource file. If you want to implement a brand new theme, use this project directly. Otherwise, you should use alertdialogpro-theme-material or alertdialogpro-theme-holo.
 
-###alertdialogpro-theme-material
+### alertdialogpro-theme-material
 
 Based on alertdialogpro-core, gives AlertDialogPro a Material theme.
 
-###alertdialogpro-theme-holo (Obsolete)
+### alertdialogpro-theme-holo (Obsolete)
 
 Also based on alertdialogpro-core, gives AlertDialogPro a Holo theme.
 
-#Quick Start
+# Quick Start
 Take **alertdialogpro-theme-material** for example.
 
-###Download
+### Download
 
 Grab latest version via Gradle:
 ```groovy
@@ -51,7 +51,7 @@ or Maven:
 </dependency>
 ```
 
-###Specify AlertDialogPro's theme
+### Specify AlertDialogPro's theme
 
 In your app's xml file, use attribute ```alertDialogProTheme``` to specify your AlertDialogPro's theme. **alertdialogpro-theme-material** contains two built-in theme: ```Theme.AlertDialogPro.Material``` and ```Theme.AlertDialogPro.Material.Light```. Here, we use the light version:
 ```xml
@@ -61,7 +61,7 @@ In your app's xml file, use attribute ```alertDialogProTheme``` to specify your 
 </style>
 ```
 
-###Build an AlertDialogPro
+### Build an AlertDialogPro
 
 Use ```AlertDialogPro.Builder``` to build an AlertDialogPro:
 ```java
@@ -76,7 +76,7 @@ builder.setIcon(R.drawable.icon).
 ```
 With the example codes above, you can create an AlertDialogPro which has an icon, a title, a message body and three option buttons. Look into the [sample](https://github.com/fengdai/AlertDialogPro/blob/master/alertdialogpro-demo/src/main/java/com/alertdialogpro/demo/MainActivity.java) to see more usages.
 
-###Flavor built-in themes
+### Flavor built-in themes
 
 Built-in themes can't meet your requirement? There are [several attributes](https://github.com/fengdai/AlertDialogPro/blob/master/alertdialogpro-core/src/main/res/values/adp_core_attrs.xml) that you can use to make some slight changes. Here is an example to show how to change the positive button's color:
 
@@ -101,7 +101,7 @@ Built-in themes can't meet your requirement? There are [several attributes](http
 
 Look into [here](https://github.com/fengdai/AlertDialogPro/blob/master/alertdialogpro-core/src/main/res/values/adp_core_attrs.xml) to see all attributes.
 
-###Advanced customization
+### Advanced customization
 You can specify your own layout to AlertDialogPro. This can be very useful when you want to use custom views or you want a special dialog layout. Remember to keep your views' ids consistant with [AlertDialogPro's ids](https://github.com/fengdai/AlertDialogPro/blob/master/alertdialogpro-core/src/main/res/values/adp_core_ids.xml).
 
 1. Define your AlertDialogPro's style:
@@ -132,20 +132,20 @@ You can specify your own layout to AlertDialogPro. This can be very useful when 
 <item name="alertDialogProTheme">@style/YourAlertDialogProTheme</item>
 ```
 
-#Migrate From AlertDialog
+# Migrate From AlertDialog
 
 AlertDialogPro's Java API is exactly the same as [AlertDialog's](http://developer.android.com/reference/android/app/AlertDialog.Builder.html). In fact, most of AlertDialogPro's codes are ported from the latest AlertDialog. So the only thing you need to do in your Java codes is replacing ```AlertDialog.Builder``` with ```AlertDialogPro.Builder```.
 
-#Requirements
+# Requirements
 
 AlertDialogPro requires at minimum Android 2.1 (API level 7).
 
-#Thanks
+# Thanks
 
    * This project contains some code ported from The Android Open Source Project. [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
    * Thank [vbauer](https://github.com/vbauer) and his awesome site [Android-Arsenal](https://android-arsenal.com/)
 
-#License
+# License
 
     Copyright (C) 2014 Feng Dai
     Copyright (C) 2007 The Android Open Source Project
